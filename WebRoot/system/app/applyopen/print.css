@@ -1,0 +1,61 @@
+td {
+	font-family: "¿¬Ìå_GB2312";
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.f18 {
+	font-family: "ËÎÌå";
+	font-size: 18px;
+	font-weight: bold;
+	line-height:140%;
+	color: #000000;
+	text-decoration: none;
+}
+.f14 {
+	font-family: "ËÎÌå";
+	font-size: 14px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+div{
+	margin-right: auto;
+	margin-left: auto; 
+	width:100%;
+}
+.printtable{
+	width:100%;
+	text-align:center;
+	padding:4px;
+}
+.printtitle{
+	font-family: "ËÎÌå";
+	font-weight:bold;
+	font-size:22pt;
+	text-align:center;
+	line-height:200%;
+}
+.printlineone{
+	font-family: "·ÂËÎ";
+	font-weight: normal;
+	text-align:right;
+	font-size:15pt;
+	line-height:160%;
+}
+.printlinetwo{
+	font-family: "·ÂËÎ";
+	font-weight: normal;
+	text-align:left;
+	text-indent:2pc;
+	font-size:15pt;
+	line-height:160%;
+}
+.printlinethree{
+	font-family: "·ÂËÎ";
+	font-weight: normal;
+	text-align:left;
+	font-size:15pt;
+	line-height:160%;
+}

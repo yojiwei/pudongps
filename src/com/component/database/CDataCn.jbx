@@ -1,0 +1,16 @@
+[PropertyInfo]
+cn,Connection,false,false, , ,false,<default>
+connection,Connection,false,false, , ,true,<default>
+dbName,String,false,false, , ,false,<default>
+dbType,int,false,false, , ,false,<default>
+driverType,int,false,false, , ,false,<default>
+ip,String,false,false, , ,false,<default>
+isPool,boolean,false,false, , ,false,<default>
+port,String,false,false, , ,false,<default>
+pwd,String,false,false, , ,false,<default>
+uid,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

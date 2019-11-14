@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<!--
+  表单开始
+-->
+  <form-beans>
+	<!--分标准表单-->
+    <form-bean name="newStdForm" type="com.beyondbit.struts.form.NewPowerstdForm" />
+
+    <!--分标准表单-->
+    <form-bean name="stdForm" type="com.beyondbit.struts.form.PowerstdForm" />
+
+    <!--分标准步骤表单-->
+    <form-bean name="stepForm" type="com.beyondbit.struts.form.PowstdStepForm" />
+
+	<!--权力依据表单-->
+    <form-bean name="lawForm" type="com.beyondbit.struts.form.LawForm" />
+
+	<!--权力标准材料操作-->
+    <form-bean name="fileForm" type="com.beyondbit.struts.form.FileForm" />
+
+  </form-beans>
+<!--
+ 表单结束
+-->
+
+
+
+
+<!--
+  操作开始
+-->
+  <action-mappings>
+
+	 <!--分标准操作-->
+    <action name="newStdForm" scope="request"  parameter="method" path="/qlgk/newSaveStd"       type="com.beyondbit.struts.action.SavePowerstdAction">
+      <forward name="forward" path="/qlgk/stdEdit.jsp" />
+    </action>
+
+    <!--分标准操作-->
+    <action name="stdForm" scope="request"  parameter="method" path="/qlgk/saveStd"       type="com.beyondbit.struts.action.SavePowerstdAction">
+      <forward name="forward" path="/qlgk/ajaxEditStd.jsp" />
+    </action>
+
+    <!--分标准步骤操作-->
+    <action name="stepForm" scope="request"  parameter="method" path="/qlgk/saveStep" type="com.beyondbit.struts.action.SavePowstdstepAction">
+      <forward name="forward" path="/qlgk/addstep.jsp" />
+    </action>
+
+    <!--权力依据操作-->
+    <action name="lawForm" scope="request"  parameter="method" path="/qlgk/saveLaw" type="com.beyondbit.struts.action.SaveLawAction">
+      <forward name="forward" path="/qlgk/editlaw.jsp" />
+    </action>
+
+	<!--权力标准材料操作-->
+    <action name="fileForm" scope="request"  parameter="method" path="/qlgk/saveFile" type="com.beyondbit.struts.action.SaveFileAction">
+      <forward name="forward" path="/qlgk/addfile.jsp" />
+    </action>
+
+  </action-mappings>
+<!--
+操作结束
+-->
+  
+  <message-resources parameter="ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,216 @@
+<script language="javascript">
+function fmprint()
+{
+	prid.style.display="none";
+	window.print();
+	window.close();
+}
+
+var args = dialogArguments; //接收参数
+function initPage()
+{
+	var applyname1 = args["applyname"]; //来信人
+	var applyingtime1 = args["applyingtime"]; //来信时间
+	var cw_number1 = args["cw_number"]; //来信编号
+	var applydept1 = args["applydept"];  //地址（单位）
+	var strTel1 = args["strTel"];	   //电话	
+	var strEmail1 = args["strEmail"];
+	var strSubject1 = args["strSubject"];
+	var wd_name1 = args["wd_name"];
+	var strContent1 = args["strContent"];
+	
+	var receivername1 = args["receivername"];
+	var de_requesttime1 = args["de_requesttime"];
+	var co_corropioion1 = args["co_corropioion"];
+	
+	var strFeedback1 = args["feedback"];
+	
+	var len = document.all.length;
+	var obj ; 
+	for (var i=0;i<len;i++)
+	{
+		obj = document.all[i];
+		if (obj.id!=""&&obj.id!="prid"&&obj.id!="fmfeedback1"&&obj.id!="fmfeedback2"&&obj.id!="fmzb1"&&obj.id!="fmzb2"&&obj.id!="fmzb3"&&obj.id!="fmzb4")
+		{
+			if (typeof(eval(obj.id+"1"))!="undefined")
+				eval("obj.innerText = " + obj.id + "1");
+		}
+	}
+}
+
+function initZB() //判断显示与否
+{
+	if(args["receivername"]=="")
+	{
+		document.all.fmzb1.style.display="none";
+		document.all.fmzb2.style.display="none";
+		document.all.fmzb3.style.display="none";
+		document.all.fmzb4.style.display="none";
+	}
+}
+
+function initFeedBack()//同上
+{
+	if(args["feedback"]=="")
+	{
+		document.all.fmfeedback1.style.display="none";
+		document.all.fmfeedback2.style.display="none";
+	}
+}
+</script>
+<script language="javascript" for=window event=onload>
+initFeedBack();
+initZB();
+initPage();
+</script>
+<title>信访打印列表
+</title>
+<style type="text/css">
+<!--
+table {
+	font-size: 10pt;
+}
+body {
+	font-size: 10pt;
+}
+p {
+	font-size: 10pt;
+}
+-->
+</style>
+<table width="98%" align=center>
+  <tr>
+    <td>&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align=center><h2>“上海浦东”门户网站——区长信箱来信</h2>
+    </td>
+  </tr>
+  <tr>
+  <tr>
+    <td align=right><h4>浦东新区信访办公室&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top>
+     <table border=2 cellPadding=0 cellSpacing=0 style="BORDER-COLLAPSE: collapse" width="100%">
+       <tr>
+         <td height=23 width="20%" align=center>来信时间</td>
+         <td align=left id="applyingtime"></td>
+       </tr>
+       <tr>
+         <td height=23 width="20%" align=center>来信编号</td>
+         <td height=23 align=left id="cw_number"></td>
+       </tr>
+       <tr>
+         <td height=23 align=center>区长信箱</td>
+         <td height=23 align=left id="wd_name"></td>
+       </tr>
+       <tr>
+         <td height=23 align=center>来 信 人</td>
+         <td height=23 align=left id="applyname"></td>
+       </tr>
+       <tr>
+         <td align=center>地址（单位）
+         </td>
+         <td height=23 align=left id="applydept">
+         </td>
+       </tr>
+       <tr>
+         <td align=center>联系电话
+         </td>
+         <td height=23 align=left id="strTel">
+         </td>
+       </tr>
+       <tr>
+         <td align=center>电子邮件
+         </td>
+         <td height=23 align=left id="strEmail">
+         </td>
+       </tr>
+       <tr>
+         <td align=center>主&nbsp;&nbsp;&nbsp;&nbsp;题
+         </td>
+         <td height=23 align=left id="strSubject">
+         </td>
+       </tr>
+      </table>
+	   <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	   <tr>
+         <td colspan=2 height="8"></td>
+		</tr>
+       <tr>
+         <td  height=23><h4>正&nbsp;&nbsp;&nbsp;&nbsp;文</h4>
+         </td>
+		 <td>
+         </td>
+       </tr>
+       <tr>
+         <td colspan=2>
+          <table width="96%" align=center>		 
+            <tr>
+             <td height=23 align=left id="strContent">
+             </td>
+            </tr>
+          </table>
+         </td>
+       </tr>
+       <tr id="fmzb1">
+         <td align=center>转办部门
+         </td>
+         <td height=23 align=left><%=receivername%>
+         </td>
+       </tr>
+       <tr id="fmzb2">
+         <td align=center>转办时限
+         </td>
+         <td height=23 align=left id="de_requesttime">
+         </td>
+       </tr>
+       <tr id="fmzb3">
+         <td width="195" align=center colspan=2 height=23>转办部门意见
+         </td>
+       </tr>
+       <tr id="fmzb4">
+         <td colspan=2>
+          <table width="96%" align=center>		  
+            <tr>
+             <td height=23 align=left id="co_corropioion">
+             </td>
+            </tr>
+          </table>
+         </td>
+       </tr>
+       <div>
+       <tr id="fmfeedback1">
+         <td width="195" align=center height=23><h4>信访回复</h4>
+         </td>
+		  <td>
+         </td>
+       </tr>
+       <tr id="fmfeedback2">
+         <td colspan=2>
+          <table width="96%" align=center>		  
+            <tr>
+             <td height=23 align=left id="strFeedback">
+             </td>
+            </tr>
+          </table>
+         </td>
+       </tr>
+       </div>
+     </table>
+    </td>
+  </tr>
+  
+  <tr id="prid" style="display:">
+   <td align=center>
+  
+      <INPUT TYPE="BUTTON" VALUE="打印" onclick="fmprint()">&nbsp;
+      <INPUT TYPE="BUTTON" VALUE="关闭" onclick="window.close()">
+
+   </td>
+  </tr>
+ 
+</table>

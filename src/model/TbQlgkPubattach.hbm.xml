@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkPubattach" 
+    table="TB_QLGK_PUBATTACH"
+>
+
+    <id
+        name="id"
+        type="java.math.BigDecimal"
+        column="ID"
+    >
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        length="50"
+    />
+    <property
+        name="rgtime"
+        type="java.sql.Timestamp"
+        column="RGTIME"
+        length="7"
+    />
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        length="250"
+    />
+    <property
+        name="fileextname"
+        type="java.lang.String"
+        column="FILEEXTNAME"
+        length="50"
+    />
+    <property
+        name="contentsize"
+        type="java.math.BigDecimal"
+        column="CONTENTSIZE"
+        length="22"
+    />
+    <property
+        name="content"
+        type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+        column="CONTENT"
+        lazy="true"
+    />
+    <property
+        name="psstepid"
+        type="java.math.BigDecimal"
+        column="PSSTEPID"
+        length="22"
+    />
+    <property
+        name="stepname"
+        type="java.lang.String"
+        column="STEPNAME"
+        length="100"
+    />
+    <property
+        name="stepid"
+        type="java.math.BigDecimal"
+        column="STEPID"
+        length="22"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

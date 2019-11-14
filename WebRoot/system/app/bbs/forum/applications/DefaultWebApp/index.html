@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;CHARSET=iso-8859-1">
+<meta name="description" content="BEA WebLogic Server">
+
+<meta name="keywords" content="BEA WebLogic Server">
+
+<title>Read Me - Welcome to BEA WebLogic Server</title>
+
+<style>
+  <!-- copied from index pages in depot/docs/acadia/pages and modified feb 2002-->
+
+body {
+ FONT-FAMILY: Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+p {
+ MARGIN-LEFT: 0.2in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.1in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Verdana,Geneva,Arial,Helvetica,sans-serif;
+ FONT-SIZE: 10pt;
+ COLOR: #000000;
+}
+p.cnavbar { 
+ MARGIN-LEFT: 0; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0;  
+ MARGIN-BOTTOM: 0.01in; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif;
+ FONT-SIZE: 8pt;
+ COLOR: #FFFFFF;
+ TEXT-DECORATION: None;
+}
+p.codefont {
+ FONT-FAMILY: Courier;
+ COLOR: #000080;
+}
+p.copyright {
+ FONT-SIZE: 8pt;
+}
+p.dnavbar { 
+ MARGIN-LEFT: 0; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0; 
+ MARGIN-BOTTOM: 0.01in; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: Bold;
+ COLOR: #000000;
+ TEXT-DECORATION: None;
+}
+p.glossdef {
+ MARGIN-LEFT: 0.4in; 
+}
+p.glossterm {
+ FONT-WEIGHT: bold; 
+}
+p.headmain {
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.2in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif;
+ FONT-WEIGHT: bold; 
+ FONT-SIZE: 24pt;
+}
+h1 { 
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.2in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif; 
+ FONT-WEIGHT: bold; 
+ FONT-SIZE: 20pt; 
+ COLOR: #996600;
+}
+h2 { 
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.25in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif; 
+ FONT-WEIGHT: bold; 
+ FONT-SIZE: 16pt; 
+ COLOR: #996600;
+}
+h3 { 
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.25in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif; 
+ FONT-WEIGHT: bold; 
+ FONT-SIZE: 14pt; 
+ COLOR: #996600;
+}
+h4 { 
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.25in; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif; 
+ FONT-WEIGHT: bold;
+ FONT-SIZE: 11pt; 
+ COLOR: #996600;
+}
+p.letterguide { 
+ MARGIN-LEFT: 0.15in; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0.25in; 
+ MARGIN-BOTTOM: 0; 
+ TEXT-ALIGN: center;
+ VERTICAL-ALIGN: middle;
+ FONT-FAMILY: Arial,Helvetica,sans-serif; 
+ FONT-WEIGHT: bold; 
+ FONT-SIZE: 12pt; 
+}
+p.localtopic1sonly {
+ MARGIN-TOP: 0; 
+ MARGIN-LEFT: 0.2in; 
+}
+p.localtopic2 {
+ MARGIN-TOP: 0; 
+ MARGIN-LEFT: 0.4in; 
+}
+p.localtopic3 {
+ MARGIN-TOP: 0; 
+ MARGIN-LEFT: 0.6in; 
+}
+p.navbar { 
+ MARGIN-LEFT: 0; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0; 
+ MARGIN-BOTTOM: 0.01in; 
+ FONT-FAMILY: Arial,Helvetica,sans-serif;
+ FONT-SIZE: 9pt;
+ FONT-WEIGHT: Bold;
+ COLOR: #000000;
+ TEXT-DECORATION: None;
+}
+p.notepara {
+ MARGIN-LEFT: 0.7in;
+}
+p.small {
+ MARGIN-LEFT: 0; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0; 
+ MARGIN-BOTTOM: 0; 
+ FONT-SIZE: 1pt;
+}
+p.table {
+ MARGIN-LEFT: 0; 
+ MARGIN-RIGHT: 0; 
+ MARGIN-TOP: 0; 
+ MARGIN-BOTTOM: 0.1 in; 
+}
+p.title {
+ FONT-WEIGHT: Bold;
+}
+p.titletable {
+ MARGIN-LEFT: 0; 
+ FONT-WEIGHT: Bold;
+}
+ol {
+ MARGIN-RIGHT: 0; 
+ MARGIN-BOTTOM: 0; 
+ FONT-FAMILY: Verdana,Geneva,Arial,Helvetica,sans-serif;
+ FONT-SIZE: 10pt;
+ COLOR: #000000;
+}
+ul,dl {
+ MARGIN-RIGHT: 0; 
+ FONT-FAMILY: Verdana,Geneva,Arial,Helvetica,sans-serif;
+ FONT-SIZE: 10pt;
+ COLOR: #000000;
+}
+pre {
+ MARGIN-LEFT: 0.2in;
+ FONT-FAMILY: Courier;
+ COLOR: #000080;
+}
+code {
+ FONT-FAMILY: Courier;
+ COLOR: #000080;
+}
+a:link {
+ COLOR: #996600;
+}
+a:active {
+ COLOR: #0000CC;
+}
+a:hover {
+ COLOR: #FF0000;
+}
+a:visited {
+ COLOR: #9999CC;
+}
+</style>
+
+</head>
+
+<body bgcolor="#ffffff" link="#3366cc" vlink="#9999cc" alink="#0000cc">
+	  
+	  <!-- BEA LOGO -- wrong image, needs replacing  
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td valign="top" width="145" bgcolor="White" rowspan="3">
+      <img src="lib/readmeimages/bealogo.gif" alt="BEA Logo" border="0">
+    </td>
+  </tr>
+</table> -->
+
+<!-- CONTENT  -->
+
+<!-- top intro paragraph tables -->
+
+<table cellspacing="0" cellpadding="0"  border="0" width="100%"><!-- RED LINE -->
+    <tr>
+     <td  width="100%" bgcolor="#ff0000" height="1">
+     <p class="small">&nbsp;</p>
+     </td>
+     </tr>
+</table>
+
+
+<table border=0 cellspacing="18" cellpadding="0">
+<tr>
+<td valign="top">
+<p>
+ <strong><FONT color=#cc0000>Welcome to BEA WebLogic Server™ 7.0!</FONT></strong> 
+ As the #1 Web application server, WebLogic Server 
+ implements J2EE 1.3 technologies, Web services, and other leading Internet 
+ standards to provide a reliable framework for highly available, scalable, 
+ and secure e-business applications. </p>  
+ </td>
+ </tr>
+</table>
+
+<table cellspacing="0" cellpadding="0"  border="0" width="100%"><!-- RED LINE -->
+<tr>
+<td  width="100%" bgcolor="#ff0000" height="1">
+<p class="small">&nbsp;</p>
+</td>
+</tr>
+</table>
+
+<table border=0 width="100%" cellspacing="8" >
+<tr><!-- Beginning of column 1 of 3 -->
+<td VALIGN="top" width="30%"><!-- Beginning of embedded column for header -->
+<table CELLPADDING="0" CELLSPACING="0" BORDER="0">
+<tr><!-- took out cd.jpg <td WIDTH="50" VALIGN="TOP">
+<img src="lib/readmeimages/cd.jpg" WIDTH="45" HEIGHT="45"> </td>-->
+
+<td>
+<h3><FONT color=#cc0000>Advice for 
+            Administrators</FONT>  </h3>
+<p >
+For installation, upgrade, or administration 
+tasks, here are some important changes: </p>
+</td>
+</tr>
+</table>
+
+ 
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>
+<a HREF="http://e-docs.bea.com/wls/docs70/install/index.html">
+New Installer and Menus </a> </h4>
+
+<p>
+A new installer and configuration tool simplifies the process, and the 
+menu items have changed. To open a Console, start a server and set a 
+browser to localhost:7001/console.
+</p>
+     
+  
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/install/index.html">
+New Domain Configuration and Directory Structure</a>
+</h4>
+
+<p>
+A new directory structure lets you generate
+pre-configured domains in any location. Also the
+locations of the examples and petstore domains have changed.
+</p>          
+ 
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>
+<a HREF="http://e-docs.bea.com/wls/docs70/security.html">
+Unified User Profiles</a>
+</h4>
+
+<p>
+Administrators can use multiple LDAP data stores to 
+build a unified user profiling system. 
+ACLs can be converted automatically 
+to the LDAP-based technology.</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>
+<a HREF="http://e-docs.bea.com/wls/docs70/admin.html">
+Console Enhancements</a>
+</h4>
+
+<p>
+Improvements to the Administration Console
+include new server health monitoring metrics; an interface 
+to support massive deployments; additional
+control over server startup and shutdown; and
+support for multiple Network Interface Cards (NICs).
+</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>
+<a HREF="http://e-docs.bea.com/wls/docs70/upgrade/index.html">
+Upgrade Information</a>
+</h4>
+
+<p>
+How to 
+upgrade WebLogic Server and your WebLogic Server applications.</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>&nbsp; 
+<a HREF="http://e-docs.bea.com/wls/docs70/notes/index.html">
+Release Notes </a>
+</h4>
+
+<p>
+ What's new, plus known and resolved problems for 
+this BEA WebLogic Server release. </p>
+    
+
+</td><!-- the end of column 1 -->
+
+<td width="5%" valign="top" bgcolor=#ffffff><p class="small">&nbsp;</p></td><!-- empty spacer column 1-->
+
+<td VALIGN="top" width="30%"><!-- start of column 2 --><!-- embedded table to place pliers.jpg -->
+<table border="0" width="100%">
+<tr> 
+<td>
+<h3><FONT color=#cc0000>Tips for Developers</FONT>  </h3>
+
+<p> 
+Try out the new features:</p>
+         
+</td>
+</tr>
+</table><!-- end of embedded table --><!-- The remainder of column 2 -->
+        
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/tools.html">
+Use the New Developer Tools</a></h4>
+<p> 
+<a href="http://edocs.bea.com/workshop/docs70/index.html">
+<font color="#cc000"><strong>WebLogic Workshop</strong></font></a> empowers 
+business application developers to create, test, and deploy enterprise-class 
+Web service applications. You don't have to be a J2EE expert to build Web 
+services with WebLogic Workshop -- our simple visual development tool makes 
+it easy to access enterprise resources and other Web services. Because WebLogic 
+Workshop is built on top of BEA WebLogic Server, your Web services are ready to 
+deploy on a BEA WebLogic Server within your organization.
+<br><br>
+<STRONG><FONT color=#cc0000>WebLogic Builder</FONT> </STRONG> 
+prepares Java files for quick deployment 
+to the application server, and 
+<STRONG><FONT color=#cc0000>WebLogic EJBGen</FONT> </STRONG>  
+combines numerous EJB deployment files into one, simplifying development and 
+maintenance.</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>&nbsp;
+<a HREF="http://e-docs.bea.com/wls/docs70/webServices/index.html">
+Try Out the New Web Services Features</a>           
+</h4>
+
+<p>
+Web services support user-defined data types and one-way asynchronous operations.  
+A Web service can intercept SOAP messages for further processing. 
+New Ant tasks automatically generate important components and package 
+the service into a deployable EAR file.
+A new Web service deployment descriptor file completely describes a Web service.
+</p>          
+          
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/security.html">
+Investigate the New Security Infrastructure</a>
+</h4>
+
+<p>
+A completely redesigned security framework exposes 
+a set of fully implemented Service Provider Interfaces for authentication, 
+authorization, auditing, and PKI management. Modules from third-party 
+security vendors can plug right into the WebLogic Server framework. A new 
+role-based authorization module can be applied to all J2EE and non-J2EE 
+resources. An embedded entitlement engine makes it easy to create 
+prose-based rules for dynamically assigning roles and access privileges.</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>  
+<a HREF="http://e-docs.bea.com/wls/docs70/jcom/index.html"> 
+Access COM Objects</a>
+</h4>
+
+<p>
+WebLogic jCOM is a bi-directional COM-Java 
+bridging tool that developers can use to access Component Object Model 
+(COM) components as though they were Java objects, and to access pure Java 
+objects as if they were COM components.</p>
+  
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11>
+<a HREF="http://e-docs.bea.com/wls/docs70/jsp/index.html">
+Cache JSPs, Pages, URLs, and File Types</a>
+</h4>
+
+<p>
+The CacheFilter enables you to 
+configure caching for entire pages, URLS, JSPs, and certain file types. Because cache filters act on forwards() and includes(), they allow you to cache forwarded and included pages from a jsp/servlet. Use 
+cache filters to improve the performance of your applications.
+</p>             
+      
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/jms/index.html">
+Enhance Availability and Cluster Failover</a> 
+</h4>     
+
+<p>      
+Use the new Java Message Service (JMS) distributed destinations feature to map a single
+virtual destination to a set of physical destinations on
+multiple servers within a cluster. 
+</p>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/jms.html">
+Connect with Message Service Providers</a>
+</h4>
+    
+<p>
+The new foreign message service 
+bridge connects WebLogic JMS with third-party message service providers.
+</p>
+
+
+      
+          
+
+
+</td><!-- end of column 2 -->
+
+<td width="5%" valign="top" bgcolor=#ffffff><p class="small">&nbsp;</p></td><!-- empty spacer column -->
+
+<td VALIGN="top" width="30%"><!-- start of column 3 --><!-- embedded table to place header.jpg -->
+<table border="0" width="100%">
+<tr>
+
+<td>
+<h3><FONT color=#cc0000>Hints for Evaluators 
+            </FONT>
+   
+</h3>
+<p>
+To explore this latest release, check out:
+</p>
+  
+</td>
+</tr>
+</table><!-- end of embedded table --><!-- The remainder of column 3 -->
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/notes/new.html">
+What's New</a>
+</h4>
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+<a HREF="http://e-docs.bea.com/wls/docs70/intro/index.html">
+Introduction</a>
+</h4>
+
+<p>An introduction to WebLogic Server and WebLogic 
+Workshop features and the J2EE application architecture. 
+</p>      
+
+<h4>
+<IMG height=11 src="lib/readmeimages/redarrow.gif" width=11> 
+BEA Resources for Learning 
+</h4>
+
+<p>
+The <strong><FONT color=#cc0000>Pet Store</FONT> </strong> 
+sample application demonstrates 
+WebLogic Server features. Pet Store is available from
+the Start menu. 
+</p>
+
+<p>
+<strong><FONT color=#cc0000>Code examples</FONT> </strong> 
+for WebLogic Server, if 
+installed, are available from the Start menu.
+</p>
+
+<p>
+<a HREF="http://support.bea.com/"> 
+Support and AskBEA</a>
+</p>
+ 
+<p>
+<a HREF="http://newsgroups.bea.com/">
+Newsgroups</a>
+</p>
+
+<p>
+<a HREF="http://e-docs.bea.com/wls/docs70/index.html">
+Documentation</a>
+</p>
+
+<p>
+<a HREF="http://dev2dev/index.jsp">
+dev2dev Online</a>
+</p>          
+ 
+<p>&nbsp;</p>
+             
+</td>
+</tr>
+</table>
+
+<!-- FOOTER -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td align="left">
+      <p class="copyright">Last updated: March 2002</p>
+    </td>
+  </tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0" width="100%"><!-- RED LINE -->
+   <tr> 
+    <td  width="100%" bgcolor="#ff0000" height="1">
+    <p class="small">&nbsp;</p>
+    </td>
+    </tr>
+</table> 
+
+
+ <p class="copyright"><a href="http://www.bea.com">Home</a> | 
+        <a href="http://www.bea.com/about/index.html" target="_top">Corporate Info</a> | 
+        <a href="http://www.bea.com/press/index.html" target="_top">News</a> | 
+        <a href="http://www.bea.com/solutions/index.html" target="_top">Solutions</a> | 
+        <a href="http://www.bea.com/products/index.html" target="_top">Products</a> | 
+        <a href="http://www.bea.com/partners/index.html" target="_top">Partners</a> | 
+        <a href="http://www.bea.com/services.html" target="_top">Services</a> | 
+        <a href="http://www.bea.com/events/index.html" target="_top">Events</a> | 
+        <a href="http://www.bea.com/download.html" target="_top">Download</a> | 
+        <a href="http://www.bea.com/purchase.html" target="_top">How to Buy</a>
+        <br>Copyright © 2002, BEA Systems, Inc. All rights reserved. 
+        <br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+        <br> <a href="http://www.bea.com/contact/index.html" target="_top">Contact BEA</a> 
+      </p>
+
+</body>
+</html>

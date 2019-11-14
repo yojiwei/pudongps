@@ -1,0 +1,33 @@
+.bottom_line_news {
+	margin-bottom:2px;
+	padding:10px;
+}
+.bottom_line_news h3 {
+	background-color:#F1F1F1;
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:20px;
+	padding:6px;
+}
+.bottom_line_news h3 span {
+	background-repeat:no-repeat;
+	font:normal normal normal 12px/20px "ËÎÌו";
+	margin:10px;
+	padding-left:22px;
+}
+.bottom_line_news h3 span.sub1 {
+	background-image:url("avRtU_11.gif");
+}
+.bottom_line_news h3 span.sub2 {
+	background-image:url("avRtU_12.gif");
+}
+.bottom_line_news h3 span.sub3 {
+	background-image:url("avRtU_13.gif");
+}
+.bottom_line_news h3 span a {
+	text-decoration:underline;
+}
+.bottom_line_news h3 span a:link,
+.bottom_line_news h3 span a:visited {
+	color:#CC0000;
+}

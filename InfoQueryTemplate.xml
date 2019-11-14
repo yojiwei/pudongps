@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<DEP_DataExchangeData>
+	<OperationType NOTNULL="N" COMPARETO="操作方式">LBOA</OperationType>
+	<MessageTitle NOTNULL="N" COMPARETO="标题">标题</MessageTitle>
+	<MessageID NOTNULL="N" COMPARETO="ID">11</MessageID>
+	<queryDeptcode NOTNULL="Y" COMPARETO="查询单位代号" REGEX="^X[A-Z][0-9]$"></queryDeptcode>
+	<startTime NOTNULL="N" COMPARETO="开始时间">2007-12-07</startTime>
+	<endTime NOTNULL="N"  COMPARETO="结束时间">2007-12-07</endTime>
+	<SourceUnitCode NOTNULL="Y" COMPARETO="源单位代号">3118</SourceUnitCode>
+	<SourceCaseCode NOTNULL="Y" COMPARETO="消息来源事项代号">369</SourceCaseCode>
+	<DestUnitCode NOTNULL="Y" COMPARETO="目标单位代号">216</DestUnitCode>
+	<DestCaseCode NOTNULL="Y" COMPARETO="消息目标事项代号">371</DestCaseCode>
+	<InterFaceCode NOTNULL="Y" COMPARETO="消息提交的目标接口代号">324</InterFaceCode>
+	<Sender NOTNULL="N" COMPARETO="发送人姓名">XXXX</Sender>
+	<SendTime NOTNULL="N" COMPARETO="发送消息时间">2007-12-07</SendTime>
+	<EndTime NOTNULL="N" COMPARETO="收到消息时间">2007-12-07</EndTime>
+</DEP_DataExchangeData>

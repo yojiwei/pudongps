@@ -1,0 +1,10 @@
+package com.component.sqlserver.database;
+/**
+ * Á´½ÓsqlserverÊý¾Ý¿â
+ * @author Administrator
+ *
+ */
+public class SqlDataCn {
+	public void SqlDataCn(){}
+
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<DEP_DataExchangeData>
+	<OperationType>LBOA</OperationType>
+	<MessageTitle>标题</MessageTitle>
+	<MessageID>11</MessageID>
+	<!-- MessageBody-->
+		<!-- infoopen-->
+			<!-- 事项在信息公开服务系统的主键-->
+			<id NOTNULL="Y" COMPARETO="事项主键"></id>
+			<!-- 事项处理方式 0垃圾，1待处理，3补正申请，5同意公开、同意部分公开，6非《规定》所指政府信息、信息不存在、国家秘密、法律法规规定的其他情形、危及安全稳定、申请人主动撤销、过程中且影响安全稳定、商业秘密、个人隐私、非本机关职权范围、非政府信息公开申请、重复申请，7第三方意见征询-->
+			<status NOTNULL="Y" COMPARETO="事项处理方式" REGEX="^[0,1,3,5,6,7]$"></status>
+			<!-- 事项处理状态 －1垃圾，0未办结业务，1材料预审，2未处理，3待补正，5已完成，7第三方意见征询，8处理中-->
+			<step NOTNULL="Y" COMPARETO="事项处理状态" REGEX="^[-1,0,1,2,3,5,7,8]$"></step>
+			<!-- 事项处理的时间-->
+			<dealtime NOTNULL="Y" COMPARETO="事项处理的时间"></dealtime>
+			<!-- 事项处理时的补充意见，备注-->
+			<lastmessage NOTNULL="N" COMPARETO="事项处理时的补充意见，备注">
+				<![CDATA[]]>
+			</lastmessage>
+		<!-- /infoopen-->
+		<!-- recallParam-->
+			<SourceUnitCode NOTNULL="Y" COMPARETO="源单位代号">3118</SourceUnitCode>
+			<SourceCaseCode NOTNULL="Y" COMPARETO="消息来源事项代号">369</SourceCaseCode>
+			<!-- DestUnit-->
+				<DestUnitCode NOTNULL="Y" COMPARETO="目标单位代号">216</DestUnitCode>
+				<DestCaseCode NOTNULL="Y" COMPARETO="消息目标事项代号">371</DestCaseCode>
+				<InterFaceCode NOTNULL="Y" COMPARETO="消息提交的目标接口代号">324</InterFaceCode>
+			<!-- /DestUnit-->
+			<Sender NOTNULL="N" COMPARETO="发送人姓名">环保局承办人</Sender>
+			<SendTime NOTNULL="N" COMPARETO="发送消息时间" >2007-12-07</SendTime>
+			<EndTime NOTNULL="N" COMPARETO="收到消息时间">2007-12-07</EndTime>
+		<!-- /recallParam-->
+	<!-- /MessageBody-->
+</DEP_DataExchangeData>

@@ -1,0 +1,236 @@
+td {
+	font-size: 12px;
+	line-height: 140%;
+}
+a:link {
+	font-size: 12px;
+	color: #565656;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	color: #565656;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #565656;
+	text-decoration: underline;
+}
+a.oneRed:link {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+a.oneRed:visited {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+a.oneRed:hover {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: underline;
+	letter-spacing: 2px;
+}
+a.twoRed:link {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+a.twoRed:visited {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+a.twoRed:hover {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: underline;
+	letter-spacing: 2px;
+}
+a.threeRed:link {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+a.threeRed:visited {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+a.threeRed:hover {
+	font-family: "·ÂËÎ_GB2312";
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+	letter-spacing: 1px;
+}
+a.white:link {
+	color: #FFFFFF;
+}
+a.white:visited {
+	color: #FFFFFF;
+}
+a.white:hover {
+	color: #FFFFFF;
+}
+a.red:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+a.red:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+a.red:hover {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+	letter-spacing: 1px;
+}
+a.L14:link {
+	font-size: 14px;
+	color: #565656;
+	text-decoration: none;
+}
+a.L14:visited {
+	font-size: 14px;
+	color: #565656;
+	text-decoration: none;
+}
+a.L14:hover {
+	font-size: 14px;
+	color: #565656;
+	text-decoration: underline;
+}
+.f12W {
+	font-size: 12px;
+	line-height: 130%;
+	letter-spacing: 1px;
+}
+.f12WH {
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 1px;
+}
+
+.f12b {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12b:link {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12b:visited {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12b:hover {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.f12H {
+	font-size: 12px;
+	line-height: 160%;
+}
+.High {
+	line-height: 26px;
+}
+
+.f13 {
+	font-size: 13px;
+	line-height: 130%;
+}
+.f14 {
+	font-size: 14px;
+	text-decoration: none;
+}
+.f14H {
+	font-size: 14px;
+	text-decoration: none;
+	line-height: 160%;
+}
+.f14E {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.f15W {
+	font-size: 15px;
+	text-decoration: none;
+	letter-spacing: 2px;
+}
+.input-text01 {
+	font-size: 12px;
+	line-height: 15px;
+	height: 17px;
+	border-top: 1px solid #716F64;
+	border-right: 1px solid #F1EFE2;
+	border-bottom: 1px solid #F1EFE2;
+	border-left: 1px solid #716F64;
+	background-color: transparent;
+}
+.select-01 {
+	font-size: 12px;
+	line-height: 15px;
+	height: 19px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ACA899;
+	border-right-color: #F1EFE2;
+	border-bottom-color: #F1EFE2;
+	border-left-color: #ACA899;
+}
+.f12j {
+	letter-spacing: 3px;
+	text-decoration: none;
+}
+a.banner:link {
+	text-indent: 1px;
+}
+a.banner:visited {
+	text-indent: 1px;
+}
+a.banner:hover {
+	text-indent: 1px;
+}.f13j {
+	letter-spacing: 3px;
+	text-decoration: none;
+	font-size: 13px;
+}

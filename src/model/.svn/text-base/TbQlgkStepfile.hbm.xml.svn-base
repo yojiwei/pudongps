@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkStepfile" 
+    table="TB_QLGK_STEPFILES"
+>
+
+    <id
+        name="sfid"
+        type="java.lang.Integer"
+        column="SFID"
+    >
+        <generator class="increment" />
+    </id>
+
+    <property
+        name="sid"
+        type="java.math.BigDecimal"
+        column="SID"
+        length="22"
+    />
+    <property
+        name="psfid"
+        type="java.math.BigDecimal"
+        column="PSFID"
+        length="22"
+    />
+    <property
+        name="ismust"
+        type="java.lang.String"
+        column="ISMUST"
+        length="1"
+    />
+    <property
+        name="isinput"
+        type="java.lang.String"
+        column="ISINPUT"
+        length="1"
+    />
+    <property
+        name="isoutput"
+        type="java.lang.String"
+        column="ISOUTPUT"
+        length="1"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

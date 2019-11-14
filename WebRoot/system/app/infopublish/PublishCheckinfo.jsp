@@ -1,0 +1,389 @@
+<%@page contentType="text/html; charset=GBK"%>
+<%@include file="../skin/head.jsp"%>
+
+<script LANGUAGE="javascript" src="./common/common.js"></script>
+
+<%
+	String ctTitle = "";
+	String ctKeywords = "";
+	String ctUrl = "";
+	String ctSource = "";
+	String ctCreateTime = "";
+	String ctFileFlag = "";
+	String sjId = "";
+	String sjName = "";
+	String ctFocusFlag = "";
+	String ctInsertTime = "";
+	String ctBrowseNum = "";
+	String ctFeedbackFlag = "";
+	String ctContent = "";
+	String tcId = "";
+	String tcSenderId = "";
+	String IN_INFOTYPE="",IN_MEDIATYPE="",IN_DESCRIPTION="",IN_CATEGORY="",IN_CATCHNUM="",IN_FILENUM="",ct_contentflag="";
+	
+	CMySelf mySelf = (CMySelf)session.getAttribute("mySelf");
+
+	String ctId = CTools.dealString(request.getParameter("ct_id"));
+	//update20080122
+
+CDataCn dCn=null;   //新建数据库连接对象
+CDataImpl dImpl=null;  //新建数据接口对象
+
+try {
+ dCn = new CDataCn(); 
+ dImpl = new CDataImpl(dCn); 
+	String sqlStr = "select c.*,ct_content,t.tc_id,t.tc_senderid from tb_content c,tb_taskcenter t ,tb_contentdetail d where d.ct_id=c.ct_id and c.ct_id='" + ctId + "' and t.ct_id = c.ct_id and tc_isfinished='1' and tc_receiverid='" + mySelf.getMyID() + "' and rownum=1";
+	out.println(sqlStr);
+	Hashtable content = dImpl.getDataInfo(sqlStr);
+	if(content!=null)
+	{
+		ctTitle = content.get("ct_title").toString();
+		ctKeywords=content.get("ct_keywords").toString() ;
+		ctUrl=content.get("ct_url").toString() ;
+		ctSource=content.get("ct_source").toString() ;
+		ctCreateTime=content.get("ct_create_time").toString() ;
+		ctFileFlag=content.get("ct_fileflag").toString();
+		sjId=content.get("sj_id").toString() ;
+		sjName=content.get("sj_name").toString();
+		ctFocusFlag=content.get("ct_focus_flag").toString();
+		ctInsertTime=CTools.dealNumber(content.get("ct_inserttime").toString());
+		ctBrowseNum=CTools.dealNumber(content.get("ct_browse_num").toString());
+		ctFeedbackFlag = content.get("ct_feedback_flag").toString();
+		ctContent = content.get("ct_content").toString();
+		tcId = content.get("tc_id").toString();
+		tcSenderId = content.get("tc_senderid").toString();
+		
+		IN_INFOTYPE = content.get("in_infotype").toString();
+		IN_MEDIATYPE = content.get("in_mediatype").toString();
+		IN_DESCRIPTION = content.get("in_description").toString();
+		IN_CATEGORY = content.get("in_category").toString();
+		IN_CATCHNUM = content.get("in_catchnum").toString();
+		IN_FILENUM = content.get("in_filenum").toString();
+		ct_contentflag = content.get("ct_contentflag").toString();
+	}
+	
+	//mySelf.setSJRole();
+	
+%>
+<html> 
+	<head>
+		<title>JSP for PublishForm form</title>
+	</head>
+	<body>
+		<form name="PublishForm" action="publishResult.jsp" method="post" enctype="multipart/form-data">
+		<table class="main-table" width="100%">
+		<tr class="title1" align=center>
+	      	<td>信息发布</td>
+	    </tr>
+	    <tr>
+	     	<td width="100%">
+	     		<table width="100%" class="content-table" height="1">
+					 <tr class="line-even" >
+			            <td width="19%" align="right">主题：</td>
+			            <td width="81%" ><input type="text" name="ctTitle"  class="text-line" size="80" value="<%=ctTitle%>"/>
+			            </td>
+			          </tr>	
+			       
+			          <tr class="line-even" >
+			            <td width="19%" align="right">关键字：</td>
+			            <td width="81%" ><input type="text" name="ctKeywords" class="text-line" size="80" value="<%=ctKeywords%>" />
+			            </td>
+			          </tr>
+			          <tr class="line-even" >
+			            <td width="19%" align="right">链接地址：</td>
+			            <td width="81%" ><input type="text" name="ctUrl" class="text-line"  size="80" value="<%=ctUrl%>"/>
+			            </td>
+			          </tr>
+			           <tr class="line-even" >
+			            <td width="19%" align="right">来源：</td>
+			            <td width="81%" ><input type="text" name="ctSource" class="text-line" size="80" value="<%=ctSource%>"/>
+			            </td>
+			          </tr>
+			          <tr class="line-even" >
+			            <td width="19%" align="right">发布时间：</td>
+			            <td width="81%" ><input type="text" name="ctCreateTime" class="text-line" value="<%=ctCreateTime%>" readonly="true" onclick="javascript:showCal()" style="cursor:hand"/>
+			            </td>
+			          </tr>
+			          <tr class="line-even" >
+			            <td width="19%" align="right">发布形式：</td>
+			            <td width="81%" ><input type="radio" name="ctFileFlag" value="0" <%if(ctFileFlag.equals("0")) out.println("checked");%>/>内容<input type="radio" name="ctFileFlag" value="1" <%if(ctFileFlag.equals("1")) out.println("checked");%>/>文件
+			            <html:errors name="ctFileFlag"/>
+			            </td>
+			          </tr>
+			          <tr class="line-even" >
+			            <td width="19%" align="right">所属栏目：</td>
+			            <td width="81%" >			            
+			            <input type="hidden" name="sjId" class="text-line" style="cursor:hand" value="<%=sjId%>" />
+			            <input type="text" name="sjName" class="text-line" style="cursor:hand" onclick="javascript:fnSelectSJ(0)" readonly="true" size="80" value="<%=sjName%>" />
+			            <input type="hidden" name="authoIds" value="<%=mySelf.getSjIds()%>" />
+			            <input type="hidden" name="authoNames" value="<%=mySelf.getSjNames()%>" />
+			            </td>
+			          </tr>
+			           <tr class="line-even" >
+			            <td width="19%" align="right">特别提醒：</td>
+			            <td width="81%" ><input type="checkbox" name="ctFocusFlag" class="text-line" value="1" <%if(ctFocusFlag.equals("1")) out.println("checked");%>/>
+			            </td>
+			          </tr>
+			           <tr class="line-even" >
+			            <td width="19%" align="right">录入时间：</td>
+			          
+			            <td width="81%" ><input type="text" name="ctInsertTime" class="text-line" value="<%= ctInsertTime%>"  readonly="true" />
+			            </td>
+			          </tr>
+			          <!--tr class="line-even" >
+			            <td width="19%" align="right">浏览人次：</td>
+			            <td width="81%" ><input type="text" name="ctBrowseNum" class="text-line" value="<%=ctBrowseNum%>" readonly/>
+			            </td>
+			          </tr-->
+			           <!--tr class="line-even" >
+			            <td width="19%" align="right">信息反馈：</td>
+			            <td width="81%" ><input type="checkbox" name="ctFeedbackFlag" value="1" <%if(ctFocusFlag.equals("1")) out.println("checked");%>/>
+			            </td>
+			          </tr-->
+			          
+			          <tr class="line-odd" >
+								<td width="19%" align="right">公开类别：</td>
+								<td width="81%">
+									<select name="IN_CATEGORY" class=select-a >
+										<option value="1" <%=(IN_CATEGORY.equals("1"))?"selected":""%>>主动公开</option>
+										<option value="2" <%=(IN_CATEGORY.equals("2"))?"selected":""%>>依申请公开</option>
+									 </select>
+								</td>
+							</tr>
+							<tr class="line-even">
+								<td width="19%" align="right" >内容描述：</td>
+								<td width="81%" ><input type="text" class="text-line" size="45" name="IN_DESCRIPTION" maxlength="150"  value="<%=IN_DESCRIPTION%>">
+								</td>
+							</tr>
+				                        <tr class="line-odd" >
+				                                <td width="19%" align="right">载体类型：</td>
+				                                <td width="81%">
+				                                        <select name="IN_MEDIATYPE" class=select-a >
+				        					<option value="1" <%=(IN_MEDIATYPE.equals("1"))?"selected":""%>>纸质</option>
+				                                                <option value="2" <%=(IN_MEDIATYPE.equals("2"))?"selected":""%>>胶卷</option>
+										<option value="3" <%=(IN_MEDIATYPE.equals("3"))?"selected":""%>>磁带</option>
+										<option value="4" <%=(IN_MEDIATYPE.equals("4"))?"selected":""%>>磁盘</option>
+										<option value="5" <%=(IN_MEDIATYPE.equals("5"))?"selected":""%>>光盘</option>
+										<option value="6" <%=(IN_MEDIATYPE.equals("6"))?"selected":""%>>其他</option>
+				                                         </select>
+				                                </td>
+							</tr>
+				                        <tr class="line-even" >
+				                                <td width="19%" align="right">记录形式：</td>
+				                                <td width="81%">
+				                                        <select name="IN_INFOTYPE" class=select-a >
+				                                                <option value="1" <%=(IN_INFOTYPE.equals("1"))?"selected":""%>>文本</option>
+				                                                <option value="2" <%=(IN_INFOTYPE.equals("2"))?"selected":""%>>图表</option>
+				                                                <option value="3" <%=(IN_INFOTYPE.equals("3"))?"selected":""%>>照片</option>
+				                                                <option value="4" <%=(IN_INFOTYPE.equals("4"))?"selected":""%>>影像</option>
+				                                                <option value="5" <%=(IN_INFOTYPE.equals("5"))?"selected":""%>>其他</option>
+				                                         </select>
+				                                </td>
+							</tr>
+							
+							</table>
+							</td>
+							</tr>
+							
+			          <tr class="line-even" id="infoopen" style="display:<%if(ct_contentflag.equals("0")||ct_contentflag.equals("")) out.println("none");%>">
+			          	<TD colspan="2">
+			          		<table border="0" width="100%" class="content-table">
+							          <tr class="line-even" >
+								<td width="19%" align="right">索取号：</td>
+								<td width="81%" ><input type="text" class="text-line" size="45" name="IN_CATCHNUM" maxlength="150"  value="<%=IN_CATCHNUM%>" <%if(ctPublishFlag.equals("1")) out.print("readonly");%>>
+								</td>
+							</tr>
+				
+				          	<tr class="line-even" >
+				                                <td width="19%" align="right">文件编号：</td>
+				                                <td width="81%" ><input type="text" class="text-line" size="45" name="IN_FILENUM" maxlength="150"  value="<%=IN_FILENUM%>" <%if(ctPublishFlag.equals("1")) out.print("readonly");%>>
+				                        </td>
+							</tr>
+							
+							
+							<tr class="line-odd" >
+								<td width="19%" align="right">公开类别：</td>
+								<td width="81%">
+									<select name="IN_CATEGORY" class=select-a <%if(ctPublishFlag.equals("1")) out.print("disabled");%>>
+										<option value="1" <%=(IN_CATEGORY.equals("1"))?"selected":""%>>主动公开</option>
+										<option value="2" <%=(IN_CATEGORY.equals("2"))?"selected":""%>>依申请公开</option>
+									 </select>
+								</td>
+							</tr>
+							<tr class="line-even">
+								<td width="19%" align="right" >内容描述：</td>
+								<td width="81%" ><input type="text" class="text-line" size="45" name="IN_DESCRIPTION" maxlength="150"  value="<%=IN_DESCRIPTION%>" <%if(ctPublishFlag.equals("1")) out.print("readonly");%>>
+								</td>
+							</tr>
+				                        <tr class="line-odd" >
+				                                <td width="19%" align="right">载体类型：</td>
+				                                <td width="81%">
+				                                        <select name="IN_MEDIATYPE" class=select-a <%if(ctPublishFlag.equals("1")) out.print("disabled");%>>
+				        					<option value="1" <%=(IN_MEDIATYPE.equals("1"))?"selected":""%>>纸质</option>
+				                                                <option value="2" <%=(IN_MEDIATYPE.equals("2"))?"selected":""%>>胶卷</option>
+										<option value="3" <%=(IN_MEDIATYPE.equals("3"))?"selected":""%>>磁带</option>
+										<option value="4" <%=(IN_MEDIATYPE.equals("4"))?"selected":""%>>磁盘</option>
+										<option value="5" <%=(IN_MEDIATYPE.equals("5"))?"selected":""%>>光盘</option>
+										<option value="6" <%=(IN_MEDIATYPE.equals("6"))?"selected":""%>>其他</option>
+				                                         </select>
+				                                </td>
+							</tr>
+				                        <tr class="line-even" >
+				                                <td width="19%" align="right">记录形式：</td>
+				                                <td width="81%">
+				                                        <select name="IN_INFOTYPE" class=select-a <%if(ctPublishFlag.equals("1")) out.print("disabled");%>>
+				                                                <option value="1" <%=(IN_INFOTYPE.equals("1"))?"selected":""%>>文本</option>
+				                                                <option value="2" <%=(IN_INFOTYPE.equals("2"))?"selected":""%>>图表</option>
+				                                                <option value="3" <%=(IN_INFOTYPE.equals("3"))?"selected":""%>>照片</option>
+				                                                <option value="4" <%=(IN_INFOTYPE.equals("4"))?"selected":""%>>影像</option>
+				                                                <option value="5" <%=(IN_INFOTYPE.equals("5"))?"selected":""%>>其他</option>
+				                                         </select>
+				                                </td>
+							</tr>
+							
+							</table>
+							</td>
+							</tr>
+			          <tr class="line-even">
+				            <td align="left" height="20" colspan=2> 
+				            <iframe id="demo" style="HEIGHT: 400px; TOP: 5px; WIDTH: 100%" src="/system/common/editor/editor.htm">
+				            </iframe>
+				            <!-- iframe id="eWebEditor1" width="100%" height="350" frameborder="0" scrolling="no" src="/system/common/eWebEditor/eWebEditor.jsp?id=CT_content"></iframe-->
+				              <input type="hidden" id="CT_content" name="CT_content" value='<%=ctContent%>'/>
+							 </td>
+          			</tr>
+          			<tr class="odd">
+					   <td width="100%" colspan="4">
+							<hr style='border-top-style: dotted; border-top-width: 1; border-bottom-style: dotted; border-bottom-width: 1' size=0 noshade color=#000000>
+							以下是已上传的附件：
+					   </td>
+					</tr>
+					<tr>
+						<td class="row" id="TdInfo1" width="100%" colspan="4">
+							<hr style='border-top-style: dotted; border-top-width: 1; border-bottom-style: dotted; border-bottom-width: 1' size=0 noshade color=#000000>
+						</td>
+					</tr>
+					<tr class="line-even" >
+			            <td width="19%" align="right">审核意见：</td>
+			            <td width="81%" ><textarea name="tcMemo" cols="60" rows="5"></textarea>
+			            </td>
+			          </tr>
+			           <tr class="line-even" >
+			            <td width="19%" align="right">审核人：</td>
+			            <td width="81%" ><input type="text" name="checkPerson" value="1" class="text-line" value="<%=mySelf.getMyName()%>"/>
+			            <input type="text" value="<%=tcSenderId%>" name="tcSenderId" />
+			            <input type="text" name="checkPersonId" value="1" class="text-line" value="<%=Long.toString(mySelf.getMyID())%>"/>
+			            
+			            <input type="text" value="<%=new CDate().getThisday()%>" name="tcTime" />
+			            </td>
+			          </tr>
+					</tr>
+					</tr>
+			          <tr class="line-even">
+				            <td align="center" height="20" colspan=2>
+				            
+				            <input type="button" name="通过" class="bttn" onclick="return checkform(3)" value="通过">
+				            <input type="button" name="退回" class="bttn" onclick="return checkform(3)" value="退回">
+				            <input type="reset" value="重置" class="bttn" />
+				            </td>
+          			</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<input type="hidden" name="infoStatus" />
+		<input type="hidden" name="tcStatus" value="1" />
+		<INPUT type="hidden" name="tcParentId" value="<%=tcId%>" />
+		<input type="hidden" name="dtId" value="<%=Long.toString(mySelf.getDtId())%>"/>
+		<INPUT type="hidden" name="urId" value="<%=Long.toString(mySelf.getMyID())%>">
+		<INPUT type="hidden" name="ctId" value="<%=ctId%>">
+		<INPUT type="hidden" name="orgSjId" value=",<%=sjId%>">
+		</html:form>
+		
+	</body>
+</html>
+<script language="vbscript">
+		'新增附件
+function AddAttach1()
+dim count_obj,tr_obj,td_obj,file_obj,form_obj,count,table_obj
+dim button_obj,countview_obj
+dim str1,str2
+
+set form_obj=document.getElementById("PublishForm")
+set fj_obj=document.getElementById("TdInfo1")
+if fj_obj.innertext="无附件" then
+   fj_obj.innertext=""
+end if
+
+set count_obj=document.getElementById("count_obj")
+if (count_obj is nothing) then
+	set count_obj=document.createElement("input")
+	count_obj.type="hidden"
+	count_obj.id="count_obj"
+	count_obj.value=1
+
+	form_obj.appendChild(count_obj)
+	count=1
+	count_obj.value=1
+else
+	set count_obj=document.getElementById("count_obj")
+	count=cint(count_obj.value)+1
+	count_obj.value=count
+end if
+
+set div_obj=document.createElement("div")
+div_obj.id="div_"&cstr(count)
+fj_obj.appendchild(div_obj)
+str1 = "<hr style='border-top-style: dotted; border-top-width: 1; border-bottom-style: dotted; border-bottom-width: 1' dotted; border-top-width: 1; border-bottom-style: dotted; border-bottom-width: 1 size=0 noshade color=#000000>"
+str1 = str1 & "附件名称："
+str1 = str1 & "<input type='file' name='file1' size=30 class='text-line' id=file' >"
+str2="<input type='hidden' name='fjsm1'  size=30  class='text-line' maxlength=100 id='fjsm1'>"
+
+str3="&nbsp;<img src='../images/dialog/delete.gif' class=hand onclick='vbscript:delthis1("+""""+div_obj.id+""""+")' id='button1' name='button1'>"
+div_obj.innerHtml=str1 + str2 + str3
+end function
+
+'删除函数
+function delthis1(id)
+dim child,parent
+set child_t=document.getElementById(id)
+if  (child_t is nothing ) then
+	alert("对象为空")
+else
+	call DelMain1(child_t)
+end if
+set parent=document.getElementById("TdInfo1")
+if parent.hasChildNodes() =false then
+   parent.innerText="无附件"
+end if
+end function
+
+function DelMain1(obj)
+dim length,i,tt
+set tt=document.getElementById("table_obj")
+if (obj.haschildNodes) then
+ length=obj.childNodes.length
+ for i=(length-1) to 0 step -1
+	 call DelMain1(obj.childNodes(i))
+	 if obj.childNodes.length=0 then
+		obj.removeNode(false)
+	 end if
+ next
+else
+obj.removeNode(false)
+end if
+end function
+</script>
+<%
+  dImpl.closeStmt();
+  dCn.closeCn();
+  } catch (Exception ex) {
+	System.out.println(new java.util.Date() + "--"
+			+ request.getServletPath() + " : " + ex.getMessage());
+} finally {
+	if(dImpl != null)
+	dImpl.closeStmt();
+	if(dCn != null)
+	dCn.closeCn();
+}
+%>

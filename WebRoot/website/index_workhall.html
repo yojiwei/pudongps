@@ -1,0 +1,430 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="../images/Index/css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+}
+body,td,th {
+	font-size: 12px;
+	color: #333333;
+}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+}
+.STYLE2 {color: #FFFFFF;margin-right:4px}
+-->
+</style>
+<script language="javascript">
+function show(n)    
+{       
+     var o = document.getElementById('work').getElementsByTagName("a");    
+     var c = document.getElementById('work_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = '',c[i].style.display = 'none',i++ );    
+     o[n].className = 'over';    
+     c[n].style.display = 'block';       
+}
+function show1(n)    
+{      
+     var o = document.getElementById('online').getElementsByTagName("a");    
+     var c = document.getElementById('online_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = '',c[i].style.display = 'none',i++ ); 
+     o[n].className = 'over';    
+     c[n].style.display = 'block'; 
+}
+function show2(n)    
+{       
+     var o = document.getElementById('Feedback').getElementsByTagName("a");    
+     var c = document.getElementById('Feedback_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = '',c[i].style.display = 'none',i++ );    
+     o[n].className = 'over';    
+     c[n].style.display = 'block';       
+}
+//新增
+function show2_1(n)
+{       
+     var o = document.getElementById('Feedback').getElementsByTagName("a");    
+     var c = document.getElementById('Feedback_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = 'a_1',c[i].style.display = 'none',i++ );    
+     o[n].className = 'over';    
+     c[n].style.display = 'block';   
+     var ac = document.getElementById('more');
+	 	 ac.style.display='';
+}
+function show2_2(n)
+{       
+     var o = document.getElementById('Feedback').getElementsByTagName("a");    
+     var c = document.getElementById('Feedback_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = '',c[i].style.display = 'none',i++ );    
+     o[n].className = 'over_1';    
+     c[n].style.display = 'block';   
+     var ac = document.getElementById('more');
+	   ac.style.display='none';  
+}
+//
+function change(n)    
+{       
+     var o = document.getElementById('Main').getElementsByTagName("a");    
+     var c = document.getElementById('Main_c').getElementsByTagName("div");    
+     for(i = 0; l = o.length, i < l; o[i].className = '',c[i].style.display = 'none',i++ );    
+     o[n].className = 'over';    
+     c[n].style.display = 'block';       
+}
+function st(o,s){
+	var v = document.createElement("input");
+	v.type = "hidden";
+	v.name = "cw_id";
+	v.id = "cw_id";
+	v.value = o;
+	var f = document.createElement("form");
+	f.name = "formData";
+	f.action = "http://usercenter.pudong.gov.cn/website/workHall/workList.jsp?sj_dir="+s+"&pardir=workHall";
+	f.method = "post";
+	f.appendChild(v);
+	document.body.appendChild(f);
+	f.submit();
+}
+
+function getlist(o,t){
+	try{
+		var s,str;
+		eval("document.formWSearch." + t + ".length = 0");
+		eval("document.formWSearch." + t + ".options[0] = new Option('--','0');");
+		switch(eval("document.formWSearch."+o+".value")){
+			case "0":
+				s = false;
+				break;
+			case "1":
+				s = true;
+				str = document.all.deptlist.value;
+				break;
+			case "2":
+				s = true;
+				str = document.all.sortlist.value;
+				break;
+			default:
+				c = "1";
+				break
+		}
+		if(s){
+			var a = str.split(";");
+			for(i = 0; i < a.length; i++){
+				var b = a[i].split(",");
+				eval("document.formWSearch." + t + ".options["+i+"] = new Option('"+b[1]+"','"+b[0]+"');");
+			}
+		}
+	}catch(e){
+		//nothing
+	}
+}
+</script>
+<body>
+
+<table width="519" border="0" cellspacing="0" cellpadding="0">
+<tr>
+  <td class="z_bg_02a"><div align="right" class="STYLE2"><a href="http://usercenter.pudong.gov.cn/website/workHall/index.jsp"><font color="#FFFFFF">[进入专栏]</font></a></div></td>
+</tr>
+<tr>
+  <td>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td valign="top">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td height="6"></td>
+	</tr>
+	</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+	<td>
+	<div class="work">
+<div id="work">
+<ul> 
+<li style="margin-left:0px;"><a href="javascript://" onMouseOver="show(0)" class="over">市民办事</a></li>
+<li><a href="javascript://" onMouseOver="show(1)">企业办事</a></li>
+<li><a href="javascript://" onMouseOver="show(2)">特别关爱</a></li>
+</ul>
+</div>
+<div id="work_c">
+<div style="display:block;">
+<table width="260">
+<tr height="30">
+
+		<td><a href="o45" onClick="javascript:st('o45','perMore');return false;" class="three">[出生]</a></td>
+		
+		<td><a href="o126" onClick="javascript:st('o126','perMore');return false;" class="three">[优抚]</a></td>
+		
+		<td><a href="o127" onClick="javascript:st('o127','perMore');return false;" class="three">[法律]</a></td>
+		
+		<td><a href="o44" onClick="javascript:st('o44','perMore');return false;" class="three">[户籍]</a></td>
+		
+		<td><a href="o46" onClick="javascript:st('o46','perMore');return false;" class="three">[就学]</a></td>
+		</tr><tr>
+		<td><a href="o37" onClick="javascript:st('o37','perMore');return false;" class="three">[兵役]</a></td>
+		
+		<td><a href="o41" onClick="javascript:st('o41','perMore');return false;" class="three">[就业]</a></td>
+		
+		<td><a href="o42" onClick="javascript:st('o42','perMore');return false;" class="three">[培训]</a></td>
+		
+		<td><a href="o43" onClick="javascript:st('o43','perMore');return false;" class="three">[居住]</a></td>
+		<td><a href='http://usercenter.pudong.gov.cn/website/workHall/workList.jsp?sj_dir=perMore&pardir=workHall#listTitle'>[更多]</a></td>
+</tr></table>
+</div>
+<div> 
+<table width="260">
+<tr height="30">
+	
+		<td><a href="o54" onClick="javascript:st('o54','enMore');return false;" class="three">[开业变更]</a></td>
+		
+		<td><a href="o55" onClick="javascript:st('o55','enMore');return false;" class="three">[行业准入]</a></td>
+		
+		<td><a href="o56" onClick="javascript:st('o56','enMore');return false;" class="three">[项目申报]</a></td>
+		
+		<td><a href="o57" onClick="javascript:st('o57','enMore');return false;" class="three">[土地房产]</a></td>
+		</tr><tr>
+		<td><a href="o58" onClick="javascript:st('o58','enMore');return false;" class="three">[办理年检]</a></td>
+		
+		<td><a href="o59" onClick="javascript:st('o59','enMore');return false;" class="three">[财政税收]</a></td>
+		
+		<td><a href="o60" onClick="javascript:st('o60','enMore');return false;" class="three">[劳动保障]</a></td>
+		<td><a href='http://usercenter.pudong.gov.cn/website/workHall/workList.jsp?sj_dir=enMore&pardir=workHall#listTitle'>[更多]</a></td>
+</tr></table>
+</div>
+<div> 
+<table width="260">
+<tr height="30">
+	
+			<td><a href="o115" onClick="javascript:st('o115','speMore');return false;" class="three">[妇女]</a></td>
+		
+			<td><a href="o116" onClick="javascript:st('o116','speMore');return false;" class="three">[儿童]</a></td>
+		
+			<td><a href="o117" onClick="javascript:st('o117','speMore');return false;" class="three">[老人]</a></td>
+		
+			<td><a href="o118" onClick="javascript:st('o118','speMore');return false;" class="three">[残疾人]</a></td>
+		</tr><tr>
+			<td><a href="o119" onClick="javascript:st('o119','speMore');return false;" class="three">[特困人员]</a></td>
+		
+			<td><a href="o120" onClick="javascript:st('o120','speMore');return false;" class="three">[优抚对象]</a></td>
+		
+			<td><a href="o121" onClick="javascript:st('o121','speMore');return false;" class="three">[港澳台同胞]</a></td>
+		<td><a href='http://usercenter.pudong.gov.cn/website/workHall/workList.jsp?sj_dir=speMore&pardir=workHall#listTitle'>[更多]</a></td>
+</tr></table>
+</div>
+</div>	
+</td>
+</tr>
+<tr>
+<td>
+<div class="online">
+<div id="online">
+<ul> 
+<li><a href="javascript://" onMouseOver="show1(0)" class="over">在线受理</a></li>
+<li><a href="javascript://" onMouseOver="show1(1)">表格下载</a></li>
+<li><a href="http://usercenter.pudong.gov.cn/website/usercenter" onMouseOver="show1(2)">状态查询</a></li>
+<!--li><div style="valign:center;margin-top:3px">&nbsp;&nbsp;&nbsp;<img src="../images/index/statusquery.gif" style="cursor:hand" onclick="window.location.href='http://usercenter.pudong.gov.cn/website/usercenter/index.jsp'"/></div></li-->
+</ul>
+</div>
+<div id="online_c">
+<!--在线受理-->
+<div style="display:block">
+<ul>
+
+<li>·<a href="http://www.zjfwzx.com" class="three"><font color="#FF0000">张江一表制</font></a></li>
+
+<li>·<a href="http://61.129.65.86/website/waishi/index.jsp?pr_id=o152" class="three"><font color=red>新区外事办网上办事</font></a></li>
+
+<li>·<a href="http://www.csj.sh.gov.cn/gb/csj/wsbs/sw/userobject1ai15.html" class="three">网上报税</a></li>
+
+<li>·<a href="http://www.csj.sh.gov.cn/gb/csj/wsbs/sw/userobject1ai22.html" class="three">防伪税控增值税专用发票抵扣联网上认证</a></li>
+
+</ul>
+</div>
+<!--在线受理-->
+<!--表格下载-->
+<iframe id=downFrm name=downFrm style="width:0px;height:0px;"></iframe>
+<div>	
+<ul>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o192" title="下载该表格" target="downFrm">浦东新区跨省市调动职工登记表</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o50" title="下载该表格" target="downFrm">新建自助网点安全防范设施建设方案审..</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o43" title="下载该表格" target="downFrm">《上海市食品卫生许可证申请书》（适..</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o42" title="下载该表格" target="downFrm">《上海市食品卫生许可证申请书》（适..</a></li>
+
+</ul>
+</div>
+<!--表格下载-->
+<!--状态查询所用（为了不显示成白页）-->
+<div>
+<ul>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o192" title="下载该表格" target="downFrm">浦东新区跨省市调动职工登记表</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o50" title="下载该表格" target="downFrm">新建自助网点安全防范设施建设方案审..</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o43" title="下载该表格" target="downFrm">《上海市食品卫生许可证申请书》（适..</a></li>
+
+<li>·<A HREF="http://usercenter.pudong.gov.cn/website/workHall/Govdownload.jsp?pa_id=o42" title="下载该表格" target="downFrm">《上海市食品卫生许可证申请书》（适..</a></li>
+
+</ul>	
+</div>
+<!--状态查询所用-->
+</div>
+</div>
+</td>
+</tr>
+</table>
+	</td>
+	<td class="z_bg_05">&nbsp;</td>
+	<td valign="top">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td height="6"></td>
+	</tr>
+	</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<form name="formWSearch" action="http://usercenter.pudong.gov.cn/website/workHall/SList.jsp" target="_blank" method="post">
+	<table width="100%" height="90" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+		<td height="29" class="z_bg_06"><strong>办事检索</strong></td>
+	  </tr>
+	  <tr>
+		<td><div align="center">
+		  <select name="sType" style="width:111px;" onChange="javascript:getlist('sType','sValue');">
+			<option value="0">请选择搜索方式</option>
+			<option value="1">按办事机构</option>
+			<option value="2">按分类办事</option>
+		  </select>
+		  <select name="sValue" style="width:111px;">
+		  <option value="0">--</option>
+		  </select>
+
+<input type="hidden" name="deptlist" value="42,发展和改革委员会;30,经济委员会(农业委员会);44,社会发展局;2,科学技术委员会;1140,劳动和社会保障局(民政局);32,建设和交通委员会;47,财政局;51,司法局;46,环境保护和市容卫生管理局;37,监察委员会;36,人事局;38,文化和广播电视管理局;76,民族和宗教事务办公室;39,台办;41,侨办;31,公安局浦东分局;49,工商行政管理局浦东新区分局;55,质监局;56,食品药品监督管理局浦东新区分局;64,国资委;57,投资办;35,民防办公室;33,档案局;1130,陆家嘴功能区域;1131,张江功能区域;1132,金桥功能区域;1133,外高桥功能区域;1134,三林世博功能区域;1135,川沙功能区域（川沙新镇）;142,潍坊新村街道;144,陆家嘴街道;1160,金杨新村街道;1158,洋泾街道;1161,沪东新村街道;1164,周家渡街道;1162,浦兴路街道;141,上钢新村街道;1163,南码头路街道;125,东明路街道;143,塘桥街道;136,合庆镇;126,花木街道;135,张江镇;134,北蔡镇;127,三林镇;128,高桥镇;132,唐镇;130,高行镇;129,高东镇;133,曹路镇;131,金桥镇;20054,康桥镇;20065,老港镇;20064,万祥镇;20060,泥城镇;20059,新场镇;20058,周浦镇;20055,宣桥镇;20052,申港街道;20053,芦潮港镇;20057,大团镇;20056,书院镇;20061,祝桥镇;20062,六灶镇;20063,航头镇;20066,惠南镇">
+
+  <input type="hidden" name="sortlist" value="o44,规划建设;o49,土地房产;o19,工商物价;o20,公安司法;o18,环保绿化;o21,档案工作;o23,防灾救灾;o26,交通运输;o28,财税金融;o37,港澳台工作;o36,侨务工作;o35,民族宗教;o34,科学技术;o33,文教体育;o32,农林水利;o31,安全生产;o30,旅游会展;o29,经济贸易;o40,统计规划;o39,食监药监;o38,质量监督;o27,公用事业;o24,城乡建设;o22,对外事务;o15,民政事务;o16,医疗卫生;o13,劳动保障;o17,人才人事;o41,其他">
+</div></td>
+</tr>
+<tr>
+<td height="22"><table width="224" height="22" border="0" align="center" cellpadding="0" cellspacing="0" class="s_021">
+  <tr>
+	<td><input name="kWord" type="text" class="s_02"  value="请输入关键字" onFocus="javascript:this.select();"/></td><input type="hidden" name="sj_dir" value="workHall">
+	<td><img src="../images/Index/so1.gif" width="52" height="21" onClick="javascript:document.formWSearch.submit();"  style="cursor:hand"/></td>
+  </tr>
+</table>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td height="5"></td>
+	</tr>
+  </table></td>
+</tr>
+</table>
+</form>
+	</td>
+	</tr>
+	<tr>
+	<td>
+<div class="Feedback">
+<div id="Feedback">
+    <ul> 
+      <li><a href="javascript://" onMouseOver="show2_1(0)" class="over">办事反馈</a></li>
+      <li><a href="javascript://" onMouseOver="show2_2(1)" class="a_1">外资项目审批</a></li>
+      <li style="padding-top:8px" id=more><span style="cursor:hand;" onClick="javascript:window.location.href='http://usercenter.pudong.gov.cn/website/workHall/feedbackMore.jsp';">更多&gt;&gt;</span></li>
+    </ul>
+</div>
+<div id="Feedback_c">
+<!--办事反馈-->
+  <div style="display:block">
+   	<ul>
+	
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/usercenter/index.jsp" class="three">申请外事类网上办事认证证书处理完成：</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/usercenter/index.jsp" class="three">申请外事类网上办事认证证书处理完成：</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/usercenter/index.jsp" class="three">您申请的项目“A-TEX A/SJ..</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/usercenter/index.jsp" class="three">您申请的项目“HOZ COMPAN..</a></li>
+		
+    </ul>
+  </div>
+<!--办事反馈-->
+<!--外资项目审批-->
+  <div>
+   	<ul>
+	
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/workHall/contentwzw.jsp?wz_id=o1309" class="three">瀛石企业管理（上海）有限公司  经..</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/workHall/contentwzw.jsp?wz_id=o1308" class="three">锋线机电贸易（上海）有限公司（商贸..</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/workHall/contentwzw.jsp?wz_id=o1307" class="three">麦考勃气动输送工程（上海）有限公司..</a></li>
+		
+		<li>·<a href="http://usercenter.pudong.gov.cn/website/workHall/contentwzw.jsp?wz_id=o1306" class="three">信进平贸易（上海）有限公司（商贸）..</a></li>
+		
+    </ul>
+  </div>
+<!--外资项目审批-->
+</div>
+</div>
+	</td>
+	</tr>
+	</table>
+  </td>
+  </tr>
+</table>
+<!--适应首页所做修改-->
+  </td>
+  </tr>
+</table>
+  </td>
+  </tr>
+</table>
+<!--适应首页所做修改-->
+<!--场景服务--->
+<table width="519" border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td class="z_bg_03"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	  <td><img src="../images/Index/fw_01.gif" width="93" height="39" /><a href="http://www.pudong.gov.cn/website/SceneService/fertility/index.htm" target="_blank"><img src="../images/Index/fw_06.gif" width="101" height="39" border="0" /></a><img src="../images/Index/fw_03.gif" width="3" height="39" /><a href="http://www.pudong.gov.cn/website/SceneService/census/index.htm" target="_blank"><img src="../images/Index/fw_05.gif" width="101" height="39" border="0" /></a><img src="../images/index/fw_03.gif" width="3" height="39" /><a href="http://www.pudong.gov.cn/website/dynamictemplate/building.htm"><img src="../images/Index/fw_04.gif" width="101" height="39" border="0" /></a><img src="../images/Index/fw_03.gif" width="3" height="39" /><a href="http://www.pudong.gov.cn/WebSite/SceneService/Marry/index.htm" target="_blank"><img src="../images/Index/fw_02.gif" width="101" height="39" border="0" /></a></td>
+	</tr>
+  </table>
+ <!-- //适应首页所做修改
+  </td>
+  </tr>
+</table>
+-->
+<!--场景服务--->
+

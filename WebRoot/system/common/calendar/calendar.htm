@@ -1,0 +1,214 @@
+<html>
+<head>
+	<meta http-equiv='content-type' content='text/html; charset=gb2312'>
+	<title>日历</title>
+</head>
+
+<script language=javascript for='obCal' event='onscriptletevent( eventName, eventData )'>
+	alert(333);
+	if ( eventName == "ondatechange" ) {
+		window.returnValue = eventData;
+		window.close();
+	}
+</script>
+<body bgcolor=white topmargin=0 leftmargin=0>
+<!--OBJECT data=calendar2.htm id=obCal 
+style="HEIGHT: 160px; LEFT: 0px; TOP: 0px; WIDTH: 200px" 
+type=text/x-scriptlet></OBJECT-->
+
+
+<html>
+<head>
+	<meta http-equiv='content-type' content='text/html; charset=gb2312'>
+	<title>日历</title>
+	<style>
+		select	{ font-family: arial; font-size: 11; font-weight: bold; color: white; background-color: rgb(58,110,165); cursor: hand; }
+		table	{ font-family: arial; font-size: 11; color: white; font-weight: bold; }
+		td		{ text-align: center; vertical-align: middle; }
+		.click	{ color: black; background-color: white; border: 2 inset gray; cursor: hand; }
+		.focus	{ border: 2 outset white; cursor: hand; }
+		.normal { cursor: hand; }
+	</style>
+</head>
+
+<script language=javascript>
+	var _obDate;
+	var _obCell;
+	
+	// init window event
+	//window.onload	= on_load;
+	window.onerror	= on_error;
+
+	// public method
+	function setDate( obDate ) {
+		_obDate = obDate;
+		drawCal();
+	}
+	
+	// event method
+	function on_error() {
+		alert( arguments[0] );
+	}
+	
+	function on_load() {
+		var obBody = document.all( "tblCal" );
+		for ( var i=0; i<6; i++ ) {
+			var obRow = obBody.insertRow();
+			for ( var j=0; j<7; j++ ) {
+				var obCell = obRow.insertCell();
+				obCell.id = "d" + (i*7+j);
+				obCell.width = "10%";
+				obCell.height = 18;
+			}
+		}
+		var obDate = new Date();
+		var iYear = obDate.getFullYear();
+		for ( i=iYear-80; i<iYear+20; i++ ) {
+			var obOption = document.createElement( "OPTION" );
+			obOption.value = i; obOption.text = i;
+			selYear.add( obOption );
+		}
+		_obDate = obDate;
+		drawCal();
+	}
+	
+	function on_cell_focus() {
+		var obCell = event.srcElement;
+		if ( obCell.className != "click" && 
+			obCell.className != "focus" ) {
+			obCell.className = "focus";
+		}
+	}
+	
+	function on_cell_blur() {
+		var obCell = event.srcElement;
+		if ( obCell.className != "click" && 
+			obCell.className != "normal") {
+			obCell.className = "normal";
+		}
+	}
+	
+	function on_cell_click() {
+		var obCell = event.srcElement;
+		if ( obCell.className != "click" ) {
+			_obCell.className = "normal";
+			_obCell = obCell;
+			_obCell.className = "click";
+		}
+		
+		// raise event
+		var obDate = new Date( selYear.value, selMonth.value, _obCell.innerText );
+		//alert(obDate);
+		//window.external.raiseEvent( "ondatechange", obDate );
+		parent.returnValue = obDate;
+		parent.close();
+	}
+	
+	function on_prev_month() {
+		var iMonth = _obDate.getMonth();
+		_obDate.setMonth( iMonth-1 );
+		drawCal();
+	}
+	
+	function on_next_month() {
+		var iMonth = _obDate.getMonth();
+		_obDate.setMonth( iMonth+1 );
+		_obCell.className = "normal";
+		drawCal();
+	}
+	
+	function on_month_change() {
+		_obDate.setMonth( selMonth.value );
+		_obCell.className = "normal";
+		drawCal();
+	}
+	
+	function on_year_change() {
+		_obDate.setYear( selYear.value );
+		_obCell.className = "normal";
+		drawCal();
+	}
+	
+	// private method
+	function drawCal() {
+	    try{
+		var iYear	= _obDate.getFullYear();	// xxxx
+		var iMonth	= _obDate.getMonth();		// 0-11
+		var iDate	= _obDate.getDate();		// 1-31
+
+		var obDate1 = new Date( iYear, iMonth, 1 );				// 这个月的1日
+		var iDate1 = Date.parse( obDate1 );
+		var obDate2 = new Date( iYear, iMonth+1, 1 );				// 下个月的1日
+		var iDate2 = Date.parse( obDate2 );
+		
+		var iDays = ( iDate2 - iDate1 ) / ( 1000 * 3600 * 24 );		// 这个月有多少天 ?
+		var iDay1 = obDate1.getDay();			// 0-6				// 这个月的1日是星期几 ?
+
+		var obCell;
+		for ( var i=0; i<7*6; i++ ) {
+			obCell = document.all( "d"+i );
+			if ( i < iDay1 ||  i >= iDay1+iDays ) {
+				obCell.innerText = " ";
+			} else {
+				obCell.innerText = (i-iDay1) + 1;
+				obCell.className = "normal";
+				obCell.onmouseover	= on_cell_focus;
+				obCell.onmouseout	= on_cell_blur;
+				obCell.onclick		= on_cell_click;
+			}
+		}
+		
+		// init calendar
+		_obCell = document.all( "d" + (iDay1+iDate-1) );
+		_obCell.className = "click";
+		selYear.value = iYear;
+		selMonth.value = iMonth;
+	     } catch(e){};
+	}
+</script>
+
+<body bgcolor=white topmargin=0 leftmargin=0>
+
+<table id=tblCal cellpadding=0 cellspacing=0 width='100%' height='100%' bgcolor='#50808B'>
+	<tr>
+		<td onclick='on_prev_month();'>&lt;&lt;</td>
+		<td colspan=5>
+			<select name="selMonth" size="1" class="month" onchange="on_month_change();">
+				<option value=0>一月</option>
+				<option value=1>二月</option>
+				<option value=2>三月</option>
+				<option value=3>四月</option>
+				<option value=4>五月</option>
+				<option value=5>六月</option>
+				<option value=6>七月</option>
+				<option value=7>八月</option>
+				<option value=8>九月</option>
+				<option value=9>十月</option>
+				<option value=10>十一月</option>
+				<option value=11>十二月</option>
+			</select>
+			<select name="selYear" size=1 class="year" onchange="on_year_change();"></select>
+		</td>
+		<td onclick='on_next_month();'>&gt;&gt;</td>
+	</tr>
+	<tr style='font-family: 宋体; font-size: 12; color: yellow; '>
+		<td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td>
+	</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+<button onclick='window.close()' style="WIDTH: 200px"  >关闭/Close</button>
+
+<script language=javascript for=window event=onload>
+	setDate( dialogArguments );
+	on_load();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+td {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+input-text01 {
+	border-top-width: 2px;
+	border-top-color: #000000;
+	border-left-width: 2px;
+	border-left-color: #000000;
+}
+a:link {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.f12c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.f12w {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12w:link {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12w:visited {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.f12w:hover {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.f13h {
+	font-size: 13px;
+	color: #000000;
+	text-decoration: none;
+	letter-spacing: 4px;
+}

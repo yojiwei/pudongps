@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkPowerstdlog" 
+    table="TB_QLGK_POWERSTDLOG"
+>
+
+    <id
+        name="id"
+        type="java.math.BigDecimal"
+        column="ID"
+    >
+        <generator class="increment" />
+    </id>
+
+    <property
+        name="updatetime"
+        type="java.sql.Timestamp"
+        column="UPDATETIME"
+        length="7"
+    />
+    <property
+        name="powerstdId"
+        type="java.lang.Integer"
+        column="POWERSTD_ID"
+        length="6"
+    />
+    <property
+        name="subpowerstdId"
+        type="java.math.BigDecimal"
+        column="SUBPOWERSTD_ID"
+        length="22"
+    />
+    <property
+        name="powerprocessId"
+        type="java.math.BigDecimal"
+        column="POWERPROCESS_ID"
+        length="22"
+    />
+    <property
+        name="updatetype"
+        type="java.math.BigDecimal"
+        column="UPDATETYPE"
+        length="22"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+[PropertyInfo]
+bykind,String,false,false, , ,true,<default>
+constedate,String,false,false, , ,true,<default>
+consteorgan,String,false,false, , ,true,<default>
+describe,String,false,false, , ,true,<default>
+id,String,false,false, , ,true,<default>
+lawname,String,false,false, , ,true,<default>
+psid,String,false,false, , ,false,<default>
+spsid,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

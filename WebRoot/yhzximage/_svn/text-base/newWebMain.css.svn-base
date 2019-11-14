@@ -1,0 +1,126 @@
+TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 140%
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #565656; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #565656; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #565656; TEXT-DECORATION: underline
+}
+A.oneRed:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+A.oneRed:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+A.oneRed:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: underline
+}
+A.twoRed:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+A.twoRed:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+A.twoRed:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 2px; TEXT-DECORATION: underline
+}
+A.threeRed:link {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+A.threeRed:visited {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+A.threeRed:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "·ÂËÎ_GB2312"; LETTER-SPACING: 1px; TEXT-DECORATION: underline
+}
+A.white:link {
+	COLOR: #ffffff
+}
+A.white:visited {
+	COLOR: #ffffff
+}
+A.white:hover {
+	COLOR: #ffffff
+}
+A.red:link {
+	FONT-SIZE: 12px; COLOR: #ff0000; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+A.red:visited {
+	FONT-SIZE: 12px; COLOR: #ff0000; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+A.red:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; LETTER-SPACING: 1px; TEXT-DECORATION: underline
+}
+A.L14:link {
+	FONT-SIZE: 14px; COLOR: #565656; TEXT-DECORATION: none
+}
+A.L14:visited {
+	FONT-SIZE: 14px; COLOR: #565656; TEXT-DECORATION: none
+}
+A.L14:hover {
+	FONT-SIZE: 14px; COLOR: #565656; TEXT-DECORATION: underline
+}
+.f12W {
+	FONT-SIZE: 12px; LINE-HEIGHT: 130%; LETTER-SPACING: 1px
+}
+.f12WH {
+	FONT-SIZE: 12px; LINE-HEIGHT: 180%; LETTER-SPACING: 1px
+}
+.f12b {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.f12b:link {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.f12b:visited {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.f12b:hover {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.f12H {
+	FONT-SIZE: 12px; LINE-HEIGHT: 160%
+}
+.High {
+	LINE-HEIGHT: 26px
+}
+.f13 {
+	FONT-SIZE: 13px; LINE-HEIGHT: 130%
+}
+.f14 {
+	FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+.f14H {
+	FONT-SIZE: 14px; LINE-HEIGHT: 160%; TEXT-DECORATION: none
+}
+.f14E {
+	FONT-SIZE: 14px; FONT-FAMILY: "Times New Roman", Times, serif; LETTER-SPACING: 1px
+}
+.f15W {
+	FONT-SIZE: 15px; LETTER-SPACING: 2px; TEXT-DECORATION: none
+}
+.input-text01 {
+	BORDER-RIGHT: #f1efe2 1px solid; BORDER-TOP: #716f64 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #716f64 1px solid; LINE-HEIGHT: 15px; BORDER-BOTTOM: #f1efe2 1px solid; HEIGHT: 17px; BACKGROUND-COLOR: transparent
+}
+.select-01 {
+	BORDER-RIGHT: #f1efe2 1px solid; BORDER-TOP: #aca899 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #aca899 1px solid; LINE-HEIGHT: 15px; BORDER-BOTTOM: #f1efe2 1px solid; HEIGHT: 19px
+}
+.f12j {
+	LETTER-SPACING: 3px; TEXT-DECORATION: none
+}
+A.banner:link {
+	TEXT-INDENT: 1px
+}
+A.banner:visited {
+	TEXT-INDENT: 1px
+}
+A.banner:hover {
+	TEXT-INDENT: 1px
+}
+.f13j {
+	FONT-SIZE: 13px; LETTER-SPACING: 3px; TEXT-DECORATION: none
+}

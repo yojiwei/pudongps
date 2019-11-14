@@ -1,0 +1,51 @@
+.bottom {
+	COLOR: #000000; FONT-SIZE: 9pt; LINE-HEIGHT: 30px; TEXT-DECORATION: none
+}
+.top {
+	COLOR: #ffffff; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.hui {
+	COLOR: #666666; FONT-SIZE: 9pt
+}
+.black {
+	COLOR: #ffffff; FONT-SIZE: 9pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A.yellow:hover {
+	COLOR: #ffff00; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.yellow {
+	COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.input:hover {
+	COLOR: #ffff00; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.input {
+	COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff9900; FONT-SIZE: 9pt; TEXT-DECORATION: underline
+}
+A {
+	COLOR: #ffffff; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+DIV {
+	FONT-SIZE: 9pt
+}
+SELECT {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 9pt; LETTER-SPACING: normal; TEXT-INDENT: 9pt; VERTICAL-ALIGN: baseline; WORD-SPACING: normal
+}
+TD {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 16pt
+}
+.wenzi {
+	COLOR: #000000; FONT-SIZE: 9pt
+}
+INPUT {
+	BACKGROUND-ATTACHMENT: fixed; BACKGROUND-COLOR: #e0e0e0; BACKGROUND-POSITION: center center; BORDER-BOTTOM: #000000 1px inset; BORDER-LEFT: #000000 1px inset; BORDER-RIGHT: #000000 1px inset; BORDER-TOP: #000000 1px inset; COLOR: #0000ff; FONT-SIZE: 9pt; MARGIN: 1px; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+TEXTAREA {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 9pt
+}
+INPUT.book {
+	BACKGROUND-COLOR: #eefcff; BORDER-BOTTOM: 1px solid; BORDER-LEFT: 0px solid; BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; COLOR: #ffffff; FONT-SIZE: 9pt; LINE-HEIGHT: 25px
+}

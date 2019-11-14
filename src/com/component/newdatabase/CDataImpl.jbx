@@ -1,0 +1,37 @@
+[PropertyInfo]
+ADDNEW,int,false,false, , ,false,<default>
+clobValue,Hashtable,false,false, , ,true,<default>
+currentId,long,false,false, , ,true,<default>
+dataContent,Hashtable,false,false, , ,false,<default>
+dataInfo,Hashtable,false,false, , ,true,<default>
+dataType,Hashtable,false,false, , ,false,<default>
+delSql,String,false,false, , ,false,<default>
+EDIT,int,false,false, , ,false,<default>
+inputContent,String,false,false, , ,true,<default>
+mode,int,false,false, , ,false,<default>
+NULL,int,false,false, , ,false,<default>
+numCols,int,false,false, , ,false,<default>
+page,int,false,false, , ,false,<default>
+pageCount,int,false,false, , ,true,<default>
+pageNo,int,false,false, , ,true,<default>
+pageSize,int,false,false, , ,true,<default>
+pageSql,String,false,false, , ,false,<default>
+pageUrl,String,false,false, , ,true,<default>
+primaryFieldName,String,false,false, , ,true,<default>
+pStmt,PreparedStatement,false,false, , ,false,<default>
+rowCount,long,false,false, , ,true,<default>
+rs,ResultSet,false,false, , ,false,<default>
+rsmd,ResultSetMetaData,false,false, , ,false,<default>
+rsPage,ResultSet,false,false, , ,false,<default>
+sql,String,false,false, , ,true,<default>
+strPrimaryFieldName,String,false,false, , ,false,<default>
+strTableName,String,false,false, , ,false,<default>
+tableName,String,false,false, , ,true,<default>
+TAILDEFAULT,int,false,false, , ,false,<default>
+TAILLIST,int,false,false, , ,false,<default>
+TAILTEXT,int,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,96 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #ffffff; FONT-SIZE: 9pt; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #c0c0c0; SCROLLBAR-ARROW-COLOR: #575757; SCROLLBAR-TRACK-COLOR: #ffffff; FONT-FAMILY: "ËÎÌו"; SCROLLBAR-DARKSHADOW-COLOR: #c0c0c0
+}
+A:link {
+	FONT-SIZE: 9pt; COLOR: #07048c; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 9pt; COLOR: #330099; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 9pt; COLOR: #fa85ae; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: #006666; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A.top:link {
+	COLOR: #000000; TEXT-DECORATION: none; ont-style: normal; ont-size: 9pt
+}
+A.top:visited {
+	COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none; ont-size: 9pt
+}
+A.top:active {
+	COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none; ont-size: 9pt
+}
+A.top:hover {
+	COLOR: #006666; FONT-STYLE: normal; TEXT-DECORATION: none; ont-size: 9pt
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+TD {
+	FONT-SIZE: 9pt
+}
+.show_title {
+	BORDER-RIGHT: black 0px double; BORDER-TOP: black 0px double; FONT-WEIGHT: bold; FONT-SIZE: 13pt; BORDER-LEFT: black 0px double; COLOR: #0a35a7; TEXT-INDENT: 0pt; BORDER-BOTTOM: #0a35a7 3px double; LETTER-SPACING: 5pt; HEIGHT: 15px
+}
+.objText {
+	BORDER-RIGHT: #003c74 1px solid; BORDER-TOP: #003c74 1px solid; BORDER-LEFT: #003c74 1px solid; BORDER-BOTTOM: #003c74 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.objText_err {
+	BORDER-RIGHT: #003c74 1px solid; BORDER-TOP: #003c74 1px solid; BORDER-LEFT: #003c74 1px solid; BORDER-BOTTOM: #003c74 1px solid; BACKGROUND-COLOR: #ffdaa2
+}
+.objText_1 {
+	BORDER-RIGHT: #003c74 1px solid; BORDER-TOP: #003c74 1px solid; BORDER-LEFT: #003c74 1px solid; BORDER-BOTTOM: #003c74 1px solid; BACKGROUND-COLOR: #f8fcff
+}
+.objText_readonly {
+	BORDER-RIGHT: #0033ff 1px solid; BORDER-TOP: #0033ff 1px solid; BORDER-LEFT: #0033ff 1px solid; BORDER-BOTTOM: #0033ff 1px solid; BACKGROUND-COLOR: #f8fcff
+}
+A.bt:link {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A.bt:visited {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A.bt:active {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A.bt:hover {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+TD.td_bt {
+	BACKGROUND-IMAGE: url(005.gif); VERTICAL-ALIGN: middle; WIDTH: 60px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; TEXT-ALIGN: center
+}
+TD.td_bt_1 {
+	BACKGROUND-IMAGE: url(004.gif); VERTICAL-ALIGN: middle; WIDTH: 60px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; TEXT-ALIGN: center
+}
+TABLE.outList_table {
+	WIDTH: 95%; BACKGROUND-COLOR: #2c93f7; TEXT-ALIGN: center
+}
+TABLE.inList_table {
+	FONT-SIZE: 9pt; WIDTH: 100%; BACKGROUND-COLOR: #eff7ff; TEXT-ALIGN: center
+}
+TR.tr_header {
+	FONT-SIZE: 10pt; COLOR: #ffffff; HEIGHT: 25px; BACKGROUND-COLOR: #2c93f7; TEXT-ALIGN: center
+}
+TD.td_header {
+	FONT-SIZE: 10pt; COLOR: #ffffff; HEIGHT: 25px; BACKGROUND-COLOR: #2c93f7; TEXT-ALIGN: center
+}
+TR.tr_body {
+	FONT-SIZE: 10pt; HEIGHT: 20px; BACKGROUND-COLOR: #f7efff; TEXT-ALIGN: center
+}
+.objBut {
+	BORDER-RIGHT: #003c74 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #003c74 1px solid; PADDING-LEFT: 2px; BACKGROUND-IMAGE: url(bt_bg.gif); BORDER-LEFT: #003c74 1px solid; CURSOR: hand; COLOR: #707070; PADDING-TOP: 1px; BORDER-BOTTOM: #003c74 1px solid; LETTER-SPACING: 2px; HEIGHT: 22px
+}
+.objFile {
+	BORDER-RIGHT: #003c74 1px solid; BORDER-TOP: #003c74 1px solid; BORDER-LEFT: #003c74 1px solid; WIDTH: 90%; BORDER-BOTTOM: #003c74 1px solid; BACKGROUND-COLOR: #f8fcff
+}
+.objTextarea {
+	BORDER-RIGHT: #003c74 1px solid; BORDER-TOP: #003c74 1px solid; BORDER-LEFT: #003c74 1px solid; WIDTH: 95%; BORDER-BOTTOM: #003c74 1px solid; BACKGROUND-COLOR: #f8fcff
+}
+.objSel {
+	WIDTH: 100px; BACKGROUND-COLOR: #f8fcff
+}
+.viewDetail {
+	FONT-SIZE: 10pt; LINE-HEIGHT: 1.5; LETTER-SPACING: 1px
+}

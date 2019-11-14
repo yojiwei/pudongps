@@ -1,0 +1,41 @@
+package com.beyondbit.config;
+
+
+import java.io.*;
+import java.util.Iterator;
+
+import com.beyondbit.config.impl.DaoConfigImpl;
+
+public abstract class DaoConfig {
+    private static DaoConfig config ;
+    static {
+        try {
+            config = new DaoConfigImpl ();
+        } catch (Exception ex) {
+            ex.printStackTrace() ;
+        }
+    }
+    public static DaoConfig getInstance() {
+        return config;
+    }
+    
+    public  abstract String getVersion();
+    
+    public  abstract String getDriver();
+
+    public  abstract String getConnectionURL();
+
+    public abstract int getMaxActive();
+
+    public abstract int getMaxWait();
+
+    public abstract boolean getDefaultAutoCommit();
+
+    public abstract boolean getDefaultReadOnly();
+
+    public abstract String getUsername();
+
+    public abstract String getPassword();
+
+    public abstract String getProperty(String key,String defaultValue);
+}

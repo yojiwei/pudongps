@@ -1,0 +1,54 @@
+STYLE typetextcss BODY {
+	BACKGROUND: url(bg.gif) #ffffff; FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+A {
+	COLOR: #333399; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.post {
+	FONT-WEIGHT: bold
+}
+.header {
+	BACKGROUND-COLOR: #efefef; COLOR: #000066; FONT-FAMILY: 宋体; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.botnav {
+	BACKGROUND-COLOR: #778899; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.category {
+	BACKGROUND-COLOR: #efefef
+}
+.tablerow {
+	COLOR: #000000
+}
+.nav {
+	FONT-WEIGHT: bold
+}
+.postauthor {
+	FONT-WEIGHT: bold
+}
+.navtd {
+	BACKGROUND-COLOR: #778899; COLOR: #ffffff; TEXT-DECORATION: none
+}
+TR {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+TD {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+DIV {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+P {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+SELECT {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+INPUT {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+TEXTAREA {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}

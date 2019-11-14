@@ -1,0 +1,33 @@
+[PropertyInfo]
+_activeFlag,int,false,false, , ,false,<default>
+_address,String,false,false, , ,false,<default>
+_email,String,false,false, , ,false,<default>
+_id,String,false,false, , ,false,<default>
+_istemp,String,false,false, , ,false,<default>
+_login,boolean,false,false, , ,false,<default>
+_pwd,String,false,false, , ,false,<default>
+_tel,String,false,false, , ,false,<default>
+_uid,String,false,false, , ,false,<default>
+_userKind,String,false,false, , ,false,<default>
+_userName,String,false,false, , ,false,<default>
+_websiteKind,String,false,false, , ,false,<default>
+_zip,String,false,false, , ,false,<default>
+activeFlag,int,false,false, , ,true,<default>
+address,String,false,false, , ,true,<default>
+email,String,false,false, , ,true,<default>
+id,String,false,false, , ,true,<default>
+istemp,String,false,false, , ,true,<default>
+log,CLog,false,false, , ,false,<default>
+login,boolean,false,false, , ,true,<default>
+pwd,String,false,false, , ,true,<default>
+tel,String,false,false, , ,true,<default>
+uid,String,false,false, , ,true,<default>
+userKind,String,false,false, , ,true,<default>
+userName,String,false,false, , ,true,<default>
+wsid,String,false,false, , ,true,<default>
+zip,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

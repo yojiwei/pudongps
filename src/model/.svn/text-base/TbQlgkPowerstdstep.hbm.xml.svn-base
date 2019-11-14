@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkPowerstdstep" 
+    table="TB_QLGK_POWERSTDSTEP"  lazy="false"
+ 
+>
+
+    <id
+        name="stepid"
+        type="java.lang.Integer"
+        column="STEPID"
+    >
+        <generator class="increment" />
+    </id>
+
+    <property
+        name="stepname"
+        type="java.lang.String"
+        column="STEPNAME"
+        length="500"
+    />
+    <property
+        name="psid"
+        type="java.math.BigDecimal"
+        column="PSID"
+        length="22"
+    />
+    <property
+        name="rolename"
+        type="java.lang.String"
+        column="ROLENAME"
+        length="200"
+    />
+    <property
+        name="prevstepid"
+        type="java.lang.String"
+        column="PREVSTEPID"
+        length="200"
+    />
+    <property
+        name="nextstepid"
+        type="java.lang.String"
+        column="NEXTSTEPID"
+        length="200"
+    />
+    <property
+        name="iskey"
+        type="java.math.BigDecimal"
+        column="ISKEY"
+        length="22"
+    />
+    <property
+        name="isinner"
+        type="java.math.BigDecimal"
+        column="ISINNER"
+        length="22"
+    />
+    <property
+        name="maxduetimelimit"
+        type="java.math.BigDecimal"
+        column="MAXDUETIMELIMIT"
+        length="22"
+    />
+    <property
+        name="maxpslimit"
+        type="java.math.BigDecimal"
+        column="MAXPSLIMIT"
+        length="22"
+    />
+	<property
+        name="maxpslimitunit"
+        type="java.lang.String"
+        column="MAXPSLIMITUNIT"
+        length="64"
+    />
+    <property
+        name="groupname"
+        type="java.lang.String"
+        column="GROUPNAME"
+        length="500"
+    />
+    <property
+        name="des"
+        type="java.lang.String"
+        column="DES"
+    />
+    
+   
+    <property
+        name="audiodesname"
+        type="java.lang.String"
+        column="AUDIODESNAME"
+        length="256"
+    />
+    <property
+        name="audiodestype"
+        type="java.lang.String"
+        column="AUDIODESTYPE"
+        length="64"
+    />
+    <property
+        name="audiodesdata"
+        type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+        column="AUDIODESDATA"
+        lazy="true"
+    />
+	 <property
+        name="diagrampic"
+        type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+        column="DIAGRAMPIC"
+        lazy="true"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to TbQlgkSubpowerstd -->
+    <many-to-one
+        name="tbQlgkSubpowerstd"
+        class="com.beyondbit.hibernate.TbQlgkSubpowerstd"
+        not-null="true"
+    >
+        <column name="SUBPOWERSTD_ID" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

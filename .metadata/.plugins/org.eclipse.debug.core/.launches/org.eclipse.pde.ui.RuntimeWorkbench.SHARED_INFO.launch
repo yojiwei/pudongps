@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<stringAttribute key="run" value="com.genuitec.myeclipse.perspective.myeclipseperspective"/>
+<booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+</launchConfiguration>

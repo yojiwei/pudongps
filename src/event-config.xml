@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appevents>
+	<event id="QZXX" name="区长信箱" url="/website/index.jsp" class="com.app.event.QZXXEvent" />
+</appevents>

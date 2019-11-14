@@ -1,0 +1,68 @@
+
+
+
+<!--
+ * $Header: /export/CVSroot/ioffice/webapps/webmail/webmail-compose.jsp,v 1.29 2001/08/20 02:56:59 zq Exp $
+ * $Revision: 1.29 $
+ * $Date: 2001/08/20 02:56:59 $
+ -->
+
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="Content-Language" content="zh-cn">
+<LINK REL=StyleSheet HREF="../css/ioffice.css" TYPE="text/css">
+<TITLE>iOffice2000 - WebMail新建邮件</TITLE>
+
+<script language="JavaScript">
+function submitForm(act)
+{
+	if (act == "Send") {
+	    var msg  = checkItem(document.MailComposerForm.to.value, 1, 4096, IS_NOT_NULL);
+            if (msg != MSG_CHECK_SUCCESS ){
+                alert("收件人" + msg);
+                return false;
+            }
+        }
+        if(document.MailComposerForm.dispHTML.checked == true ){
+            document.MailComposerForm.content.value = getHTMLCode();
+        }
+	document.MailComposerForm.action.value = act;
+	document.MailComposerForm.submit();
+}
+
+function getHTMLCode()
+{
+    return ifrmRE.getHTML();
+}
+
+function setEditText()
+{
+          ifrmRE.setHTML("document.MailComposerForm.content.value");
+}
+
+function setHTMLCode()
+{
+	ifrmRE.setHTML("aaa");
+}
+
+function toggleInputMode()
+{
+        if(document.MailComposerForm.dispHTML.checked == true ){
+                document.all.htmlinput.style.display = ""
+                document.all.content.style.display = "none"
+        }else{
+                document.all.htmlinput.style.display = "none"
+                document.all.content.style.display = ""
+        }
+}
+</script>
+</HEAD>
+
+<BODY onLoad="setEditText();">
+
+<form name="MailComposerForm" method="POST" action="webmail-compose.do" enctype="multipart/form-data">
+   <IFRAME id="ifrmRE" style="position:relative: left:0; top:5; height:350; width:100%" src="editor.htm">
+   </IFRAME>
+</form>
+</BODY>
+</HTML>

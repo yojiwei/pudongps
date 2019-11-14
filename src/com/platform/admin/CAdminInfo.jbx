@@ -1,0 +1,9 @@
+[PropertyInfo]
+_sql,String,false,false, , ,false,<default>
+allModules,long,false,false, , ,true,<default>
+rs,ResultSet,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkLaw" 
+    table="TB_QLGK_LAW"
+>
+
+    <id
+        name="id"
+        type="java.lang.Integer"
+        column="ID"
+    >
+        <generator class="increment" />
+    </id>
+    <property
+        name="lawbasic"
+        type="java.lang.String"
+        column="LAWBASIC"
+    />
+    <property
+        name="lawname"
+        type="java.lang.String"
+        column="LAWNAME"
+        length="1000"
+    />
+  
+    <property
+        name="authorityby"
+        type="java.lang.String"
+        column="AUTHORITYBY"
+        length="512"
+    />
+    <property
+        name="bykind"
+        type="java.lang.String"
+        column="BYKIND"
+        length="128"
+    />
+    <property
+        name="consteorgan"
+        type="java.lang.String"
+        column="CONSTEORGAN"
+        length="512"
+    />
+    <property
+        name="constedate"
+        type="java.sql.Timestamp"
+        column="CONSTEDATE"
+        length="7"
+    />
+   <property
+        name="describe"
+        type="org.springframework.orm.hibernate3.support.ClobStringType"
+        column="DESCRIBE" 
+        lazy="true"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to TbQlgkPowerstd -->
+    <many-to-one
+        name="tbQlgkPowerstd"
+        class="com.beyondbit.hibernate.TbQlgkPowerstd"
+        not-null="true"
+    >
+        <column name="PSID" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

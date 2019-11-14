@@ -1,0 +1,145 @@
+A:link
+{
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+A:active
+{
+    COLOR: #FF9000;
+    TEXT-DECORATION: underline
+}
+A:hover
+{
+    COLOR: #FF9000;
+    TEXT-DECORATION: underline
+}
+BODY
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+P
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+TD
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+SELECT
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+INPUT
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+TEXTAREA
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: "宋体"
+}
+BODY
+{
+    background-color:#ffffff;
+    MARGIN-TOP: 0px;
+    MARGIN-BOTTOM: 0px;
+    MARGIN-LEFT: 0px;
+    MARGIN-RIGHT: 0px
+}
+.title
+{
+    FONT-SIZE: 14px;
+    LINE-HEIGHT: 110%;
+    TEXT-DECORATION: none
+}
+.main-table
+{
+    FONT-SIZE: 10pt;
+    BORDER-LEFT-COLOR: #9fb7c0;
+    BORDER-BOTTOM-COLOR: #9fb7c0;
+    BORDER-TOP-COLOR: #9fb7c0;
+    TEXT-DECORATION: blink;
+    BORDER-RIGHT-COLOR: #9fb7c0;
+}
+.user-table
+{
+    FONT-SIZE: 12px;
+    BORDER-LEFT-COLOR: #9fb7c0;
+    BORDER-RIGHT-COLOR: #9fb7c0;
+    BORDER-TOP-COLOR: #9fb7c0;
+    BORDER-BOTTOM-COLOR: #9fb7c0;
+    TEXT-DECORATION: blink;
+}
+.bttn
+{
+    BORDER-RIGHT: #54a3f1 1px outset;
+    BORDER-TOP: #54a3f1 1px outset;
+    BORDER-LEFT: #54a3f1 1px outset;
+    BORDER-BOTTOM: #54a3f1 1px outset;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: center
+}
+.shadow-title
+{
+    color:FFA200;
+    font-family:宋体,Serif,bold;
+    font-size:14px;
+    font-weight:bold;
+    height:20px;
+    filter:Shadow(Color=#ebebeb,Direction=120);
+}
+.line-title
+{
+    FONT-SIZE: 14px;
+    LINE-HEIGHT: 100%;
+    BACKGROUND-COLOR: #4C80B3
+}
+.line-odd
+{
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 15pt;
+    BACKGROUND-COLOR: #BFD2E5
+}
+.line-even
+{
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 15pt;
+    BACKGROUND-COLOR: #f2f2f2
+}
+.color1
+{
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 100%;
+    BACKGROUND-COLOR: #FFB400
+}
+.color2
+{
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 100%;
+    BACKGROUND-COLOR: #000000
+}
+.color3
+{
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 100%;
+    BACKGROUND-COLOR: #014A94
+}
+body {
+	SCROLLBAR-FACE-COLOR: #6392BD; 
+	SCROLLBAR-HIGHLIGHT-COLOR: white; 
+	SCROLLBAR-SHADOW-COLOR: #6392BD; 
+	SCROLLBAR-3DLIGHT-COLOR: #6392BD; 
+	SCROLLBAR-ARROW-COLOR: white; 
+	SCROLLBAR-DARKSHADOW-COLOR: white; 
+	SCROLLBAR-BASE-COLOR: #6392BD;
+	}

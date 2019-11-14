@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkSubpowerstd" 
+    table="TB_QLGK_SUBPOWERSTD"
+>
+
+    <id
+        name="id"
+        type="java.lang.Integer"
+        column="ID"
+    >
+        <generator class="increment" />
+    </id>
+  <property
+        name="aunitid"
+        type="java.math.BigDecimal"
+        column="AUNITID"
+        length="22"
+    />
+    <property
+        name="auserid"
+        type="java.lang.String"
+        column="AUSERID"
+        length="200"
+    />
+    <property
+        name="ausername"
+        type="java.lang.String"
+        column="AUSERNAME"
+        length="200"
+    />
+    <property
+        name="ajob"
+        type="java.lang.String"
+        column="AJOB"
+        length="200"
+    />
+	  <property
+        name="bunitid"
+        type="java.math.BigDecimal"
+        column="BUNITID"
+        length="22"
+    />
+    <property
+        name="buserid"
+        type="java.lang.String"
+        column="BUSERID"
+        length="200"
+    />
+    <property
+        name="busername"
+        type="java.lang.String"
+        column="BUSERNAME"
+        length="200"
+    />
+    <property
+        name="bjob"
+        type="java.lang.String"
+        column="BJOB"
+        length="200"
+    />
+	 <property
+        name="checkunitid"
+        type="java.math.BigDecimal"
+        column="CHECKUNITID"
+        length="22"
+    />
+    <property
+        name="checkdate"
+        type="java.sql.Timestamp"
+        column="CHECKDATE"
+        length="7"
+    />
+    <property
+        name="checkuserid"
+        type="java.lang.String"
+        column="CHECKUSERID"
+        length="200"
+    />
+	  <property
+        name="checkunitname"
+        type="java.lang.String"
+        column="CHECKUNITNAME"
+        length="500"
+    />
+	 <property
+        name="checkunitcode"
+        type="java.lang.String"
+        column="CHECKUNITCODE"
+        length="500"
+    />
+	 <property
+        name="pslimitunit"
+        type="java.lang.String"
+        column="PSLIMITUNIT"
+        length="64"
+    />
+	 <property
+        name="duetimelimit"
+        type="java.math.BigDecimal"
+        column="DUETIMELIMIT"
+        length="22"
+    />
+    <property
+        name="pslimit"
+        type="java.math.BigDecimal"
+        column="PSLIMIT"
+        length="22"
+    />
+    <property
+        name="checkusername"
+        type="java.lang.String"
+        column="CHECKUSERNAME"
+        length="200"
+    />
+    <property
+        name="createunitid"
+        type="java.lang.String"
+        column="CREATEUNITID"
+        length="50"
+    />
+    <property
+        name="createunitname"
+        type="java.lang.String"
+        column="CREATEUNITNAME"
+        length="50"
+    />
+    <property
+        name="createuserid"
+        type="java.lang.String"
+        column="CREATEUSERID"
+        length="50"
+    />
+    <property
+        name="createusername"
+        type="java.lang.String"
+        column="CREATEUSERNAME"
+        length="50"
+    />
+    <property
+        name="createtime"
+        type="java.sql.Timestamp"
+        column="CREATETIME"
+        length="7"
+    />
+    <property
+        name="state"
+        type="java.math.BigDecimal"
+        column="STATE"
+        length="22"
+    />
+	   <property
+        name="aunitname"
+        type="java.lang.String"
+        column="AUNITNAME"
+        length="500"
+    />
+	 <property
+        name="cb"
+        type="java.lang.String"
+        column="CB"
+        length="2000"
+    />
+	 <property
+        name="zt"
+        type="java.lang.String"
+        column="ZT"
+        length="2000"
+    />
+	<property
+        name="attr1id"
+        type="java.math.BigDecimal"
+        column="ATTR1ID"
+        length="22"
+    />
+	<property
+        name="attr1name"
+        type="java.lang.String"
+        column="ATTR1NAME"
+        length="100"
+    />
+    <property
+        name="bunitname"
+        type="java.lang.String"
+        column="BUNITNAME"
+        length="500"
+    />
+	<property
+        name="createuserjob"
+        type="java.lang.String"
+        column="CREATEUSERJOB"
+        length="50"
+    />
+	 <property
+        name="txtafter"
+        type="java.lang.String"
+        column="TXTAFTER"
+        length="500"
+    />
+	<property
+        name="txtbefore"
+        type="java.lang.String"
+        column="TXTBEFORE"
+        length="500"
+    />
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to TbQlgkPowerstdstep -->
+    <set
+        name="tbQlgkPowerstdsteps"
+        lazy="false"
+        inverse="true"
+		cascade="none"
+		order-by="STEPID asc"
+		 >
+        <key>
+            <column name="SUBPOWERSTD_ID" />
+        </key>
+        <one-to-many 
+            class="com.beyondbit.hibernate.TbQlgkPowerstdstep"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to TbQlgkPowerstd -->
+    <many-to-one
+        name="tbQlgkPowerstd"
+        class="com.beyondbit.hibernate.TbQlgkPowerstd"
+        not-null="true"
+    >
+        <column name="POWERSTD_ID" />
+    </many-to-one>
+	<!-- bi-directional one-to-many association to TbQlgkLaw -->
+   <!-- <set
+        name="tbQlgkLaws"
+        lazy="false"
+        inverse="true"
+		cascade="none"
+    >
+        <key>
+            <column name="SUBPOWERSTD_ID" />
+        </key>
+        <one-to-many 
+            class="com.beyondbit.hibernate.TbQlgkLaw"
+        />
+    </set>
+	-->
+</class>
+</hibernate-mapping>

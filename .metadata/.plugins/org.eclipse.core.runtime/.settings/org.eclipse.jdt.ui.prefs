@@ -1,0 +1,13 @@
+#Wed Mar 28 14:10:38 CST 2007
+useQuickDiffPrefPage=true
+tabWidthPropagated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<templates/>
+useAnnotationsPrefPage=true
+command=C\:\\j2sdk1.4.2_08\\bin\\javadoc.exe
+org.eclipse.jface.textfont=1|Courier New|10|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=8
+eclipse.preferences.version=1
+fontPropagated=true

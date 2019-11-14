@@ -1,0 +1,69 @@
+<!--If your domain is active, please do not edit the config.xml file. Any changes made to that file while the domain is active will not have any effect on the domain's configuration and are likely to be lost. If your domain is inactive, you may edit this file with an XML editor. If you do so, please refer to the BEA Weblogic Server Configuration Reference documentation available from http://e-docs.bea.com/wls/docs61/config_xml/index.html.  In general, we recommend that changes to your configuration file be made through the Administration Console.-->
+
+<Domain Name="forum">
+ <Server
+  Name="forum"
+  NativeIOEnabled="true"
+  ListenAddress=""
+  ListenPort="7001" >
+
+
+ <SSL
+   Name="forum"
+   ListenPort="7002"
+   HostnameVerificationIgnored="true"
+   Enabled="true"
+   ServerCertificateFileName="democert.pem"
+   ServerPrivateKeyAlias="demokey"
+   ServerPrivateKeyPassPhrase="pkpassword"
+  />
+
+
+    <WebServer
+      DefaultWebApp="DefaultWebApp"
+      LogFileName="access.log"
+      LoggingEnabled="true"
+      Name="forum"
+    />
+  <Log
+   FileName="weblogic.log"
+  />
+  </Server>
+
+
+
+
+
+
+  <Application
+    Deployed="true"
+    Name="DefaultWebApp"
+    Path="./applications"
+  >
+    <WebAppComponent
+      Name="DefaultWebApp"
+      Targets="forum"
+      URI="DefaultWebApp"
+    />
+  </Application>
+
+  <Application
+    Name="certificate"
+    Path="./applications">
+    <WebAppComponent
+      Name="certificate"
+      Targets="forum"
+      URI="certificate.war"
+    />
+  </Application>
+
+ <Security
+  Name="forum"
+  GuestDisabled="false"
+ />
+
+ <Log
+  FileName="wl-domain.log"
+ />
+
+</Domain>

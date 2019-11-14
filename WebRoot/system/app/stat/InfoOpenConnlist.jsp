@@ -1,0 +1,206 @@
+<%@ page contentType="text/html; charset=GBK" %>
+<%@include file="/system/app/skin/head.jsp"%>
+<%
+  //update20080122
+
+CDataCn dCn=null;   //新建数据库连接对象
+CDataImpl dImpl=null;  //新建数据接口对象
+
+try {
+ dCn = new CDataCn(); 
+ dImpl = new CDataImpl(dCn); 
+  String beginTime = "";
+  String endTime = "";
+  String cp_name = "";
+  String dt_id = "";
+  String sqlStr = "";//选事项
+  String sqlStr_dt = "";//选部门
+  String sqlStr_cw1 = "";//选在办总数
+  String sqlStr_cw2 = "";//选在办超时
+  String sqlStr_cw3 = "";//选已办总数
+  String sqlStr_cw4 = "";//选已办超时
+  Hashtable content_cw = null;//选事项
+  Hashtable content_cw1 = null;//选在办总数
+  Hashtable content_cw2 = null;//选在办超时
+  Hashtable content_cw3 = null;//选已办总数
+  Hashtable content_cw4 = null;//选已办超时
+  String cp = CTools.dealString(request.getParameter("cp"));
+  String cp_id = "";
+  String cp_upid = "";
+  String dtId = CTools.dealString(request.getParameter("dt_id"));
+  String sqlWhere = dtId.equals("0")?"":" and a.dt_id='" + dtId + "'";
+  int count1 = 0;
+  int count2 = 0;
+  int count3 = 0;
+  int count4 = 0;
+  int count5 = 0;
+
+
+  beginTime = CTools.dealString(request.getParameter("beginTime")).trim();
+  endTime = CTools.dealString(request.getParameter("endTime")).trim();
+
+ sqlStr_dt = "select dt_id,dt_name from tb_deptinfo　where 1=1 " + sqlWhere + " order by dt_sequence";
+%>
+ <table class="main-table" width="100%" id="data">
+ <tr>
+  <td width="100%">
+   <table class="content-table" width="100%">
+          <tr class="title1" >
+            <td align="center" colspan="5">
+			<table>
+                <tr>
+                  <td >依申请公开汇总统计表</td>
+                  <td width="30" align="right" >
+                    <!--<img src="../../skin/default/images/split.gif" align="middle" border="0">-->
+                    <!--<img src="../../skin/default/images/puncher09.gif" border="0" title="打印" style="cursor:hand" onclick="javascript:window.open('statPrjReportPrint.asp','_Blank','width=500,height=500,noresize=1,scrollbars=1');" align="absmiddle" WIDTH="18	" HEIGHT="18">                     <img src="../../skin/default/images/split.gif" align="middle" border="0">                     -->
+                    <img src="../../images/dialog/return.gif" border="0" onclick="javascript:history.back();" title="返回" style="cursor:hand" align="absmiddle" WIDTH="14" HEIGHT="14">&nbsp;
+                    <!--<img src="../../skin/default/images/split.gif" align="middle" border="0">-->
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr class="bttn">
+            <td width="40" class="outset-table" nowrap >序号</td>
+            <td width="50" class="outset-table" nowrap align="center">部门</td>
+            <td width="65" class="outset-talbe" nowrap >总收数</td>
+            <td class="outset-table" nowrap >在办</td>
+            <td class="outset-table" nowrap >已办</td>
+          </tr>
+          <%
+          Vector vPage = dImpl.splitPage(sqlStr_dt,request,200);
+             if (vPage!=null)
+             {
+				 for (int i=0;i<vPage.size();i++)
+				 {
+				Hashtable content = (Hashtable)vPage.get(i);
+				dt_id = content.get("dt_id").toString();
+
+				%>
+				<tr width="100%" <%if (i%2==0) out.print("class='line-even'");else out.print("class='line-odd'");%>>
+					<td align="center"><%=i+1%>
+					</td>
+					<td align="center"><%=content.get("dt_name").toString()%>
+					</td>
+					<%
+					  sqlStr = "select count(a.io_id) as cw_id ";
+					  sqlStr += " from tb_infoopen a ";
+					  sqlStr += "where a.dt_id='"+dt_id+"'";
+
+					  if (!beginTime.equals(""))
+					  {
+					 	sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') > to_date('" + beginTime + "','yyyy-mm-dd') ";
+					  }
+					  if (!endTime.equals(""))
+					  {
+						sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') < to_date('" + endTime + "','yyyy-mm-dd')";
+					  }
+					  content_cw = dImpl.getDataInfo(sqlStr);
+					  count1 += Integer.parseInt(content_cw.get("cw_id").toString());
+					%>
+					<td align="center"><%=content_cw.get("cw_id").toString()%></td>
+                     <%
+                      sqlStr_cw1 = "select count(a.io_id) as cw_id";
+					  sqlStr_cw1 += " from tb_infoopen a  ";
+					  sqlStr_cw1 += "where a.io_status='1' and a.dt_id='"+dt_id+"'";
+					   if (!beginTime.equals(""))
+					  {
+					 	sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') > to_date('" + beginTime + "','yyyy-mm-dd') ";
+					  }
+					  if (!endTime.equals(""))
+					  {
+						sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') < to_date('" + endTime + "','yyyy-mm-dd')";
+					  }
+					  content_cw1 = dImpl.getDataInfo(sqlStr_cw1);
+					  count2 += Integer.parseInt(content_cw1.get("cw_id").toString());
+					%>
+					<td align="center"><%=content_cw1.get("cw_id").toString()%></td>
+					  <%
+                      sqlStr_cw1 = "select count(a.io_id) as cw_id";
+					  sqlStr_cw1 += " from tb_infoopen a  ";
+					  sqlStr_cw1 += "where a.io_status='3' and a.dt_id= '"+dt_id+"'";
+
+					   if (!beginTime.equals(""))
+					  {
+					 	sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') > to_date('" + beginTime + "','yyyy-mm-dd') ";
+					  }
+					  if (!endTime.equals(""))
+					  {
+						sqlStr += " and to_date(a.io_send_time,'yyyy-mm-dd') < to_date('" + endTime + "','yyyy-mm-dd')";
+					  }
+					  content_cw2 = dImpl.getDataInfo(sqlStr_cw1);
+					  count3 += Integer.parseInt(content_cw2.get("cw_id").toString());
+					%>
+					<td align="center"><%=content_cw2.get("cw_id").toString()%></td>
+
+				</tr>
+				<%
+				        }
+				%>
+				<tr class="line-even">
+				        <td align="center">合计
+					</td>
+					<td align="center">
+					</td>
+					<td align="center"><%=count1%>
+					</td>
+					<td align="center"><%=count2%>
+					</td>
+					<td align="center"><%=count3%>
+					</td>
+
+				</tr>
+				<%
+				}
+				else
+				{
+					out.print("<tr class='line-even'><td colspan='9'>没有匹配记录</td></tr>");
+				}
+				%>
+        </table>
+		</td>
+	</tr>
+
+
+</table>
+<SCRIPT LANGUAGE="javascript">
+<!--
+function AutomateExcel()
+{
+// Start Excel and get Application object.
+var oXL = new ActiveXObject("Excel.Application");
+// Get a new workbook.
+var oWB = oXL.Workbooks.Add();
+var oSheet = oWB.ActiveSheet;
+var table = document.all.data;
+var hang = table.rows.length;
+
+var lie = table.rows(0).cells.length;
+
+// Add table headers going cell by cell.
+for (i=0;i<hang;i++)
+{
+for (j=0;j<lie;j++)
+{
+oSheet.Cells(i+1,j+1).value = table.rows(i).cells(j).innerText;
+}
+
+}
+oXL.Visible = true;
+oXL.UserControl = true;
+}
+//-->
+</SCRIPT>
+<%
+dImpl.closeStmt();
+dCn.closeCn();
+} catch (Exception ex) {
+	System.out.println(new java.util.Date() + "--"
+			+ request.getServletPath() + " : " + ex.getMessage());
+} finally {
+	if(dImpl != null)
+	dImpl.closeStmt();
+	if(dCn != null)
+	dCn.closeCn();
+}
+%>
+<%@include file="/system/app/skin/bottom.jsp"%><br>

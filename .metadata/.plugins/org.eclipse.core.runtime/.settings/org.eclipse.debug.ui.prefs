@@ -1,0 +1,3 @@
+#Tue Jul 03 11:08:47 CST 2007
+eclipse.preferences.version=1
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<launchPerspectives>\r\n<launchPerspective configurationType\="org.eclipse.pde.ui.RuntimeWorkbench" mode\="run" perspective\="com.genuitec.myeclipse.perspective.myeclipseperspective"/>\r\n</launchPerspectives>\r\n

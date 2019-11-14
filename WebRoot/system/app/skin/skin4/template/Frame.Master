@@ -1,0 +1,98 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Frame.master.cs" Inherits="WebAdmin.skin.skin2.template.Frame" %>
+<!--    页面类型：框架页面    -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="../skin/skin2/css/style.css" rel="stylesheet" type="text/css" />
+    <title></title>
+
+    <script>
+        function setUrl(lefturl,righturl)
+        {
+            document.all.menu.src=lefturl;
+            document.all.right.src=righturl;
+        }
+        function resize()
+        {
+            var bodyHeight=parseInt(parent.document.getElementById("leftFrame").height);
+            document.all.menu.style.height=bodyHeight-29;
+            document.all.right.style.height=document.all.menu.style.height;
+        }
+    </script>
+</head>
+<body onload="resize();">
+    <form id="form1" runat="server">
+        <table width="100%" height="763" border="0" cellpadding="0" cellspacing="0" class="table">
+            <tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF">
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="28" align="left" valign="bottom" background="../skin/skin2/images/centerbg.jpg">
+                                <table width="100%" height="26" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="58%" align="left" valign="middle">
+                                            <table height="24" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="33" align="center" valign="middle">
+                                                        <img src="../skin/skin2/images/ico/ico_list.gif" width="16" height="16" /></td>
+                                                    <td align="left" valign="middle">
+                                                        <p class="STYLE1">
+                                                            <!--    模块名称开始    -->
+                                                            <asp:ContentPlaceHolder ID="ModuleName" runat="server">
+                                                            </asp:ContentPlaceHolder>
+                                                            <!--    模块名称结束    -->
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="200" height="732" align="center" valign="top" style="border-right: #88A3B7 1px solid;
+                                border-top: #ffffff 1px solid; border-left: none; border-bottom: none;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="5%" height="23" background="../skin/skin2/images/list_bg.jpg">
+                                            &nbsp;</td>
+                                        <td width="95%" align="left" valign="middle" background="../skin/skin2/images/list_bg.jpg">
+                                            <!--    功能名称开始    -->
+                                            <asp:ContentPlaceHolder ID="FunctionName" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                            <!--    功能名称结束    -->
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="85%" height="420" border="0" cellpadding="0" cellspacing="0" class="zts">
+                                    <tr>
+                                        <td height="420" align="left" valign="top">
+                                            <!--    左侧框架开始    -->
+                                            <iframe height="400" name="menu" src="" width="100%" frameborder="NO" border="0"
+                                                framespacing="0"></iframe>
+                                            <!--    左侧框架结束    -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="left" bgcolor="#DEE3ED" height="100%" valign="top" id="tdFrame">
+                                <!--    右侧框架开始    -->
+                                <iframe width="100%" height="400" id="right" name="right" src="" class="outset-table"
+                                    frameborder="NO" border="0" scrolling="auto" framespacing="0" noresize align="middle">
+                                </iframe>
+                                <asp:contentplaceholder id="Script" runat="server">
+                                </asp:contentplaceholder>
+                                <!--    右侧框架结束    -->
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[PropertyInfo]
+day,String,false,false, , ,true,<default>
+fullTime,String,false,false, , ,true,<default>
+nowDay,int,false,false, , ,true,<default>
+nowHour,String,false,false, , ,true,<default>
+nowMinute,String,false,false, , ,true,<default>
+nowMonth,int,false,false, , ,true,<default>
+nowSecond,String,false,false, , ,true,<default>
+nowTime,String,false,false, , ,true,<default>
+nowYear,int,false,false, , ,true,<default>
+theTime,String,false,false, , ,true,<default>
+thisday,String,false,false, , ,true,<default>
+thisTime,int,false,false, , ,true,<default>
+today,Date,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

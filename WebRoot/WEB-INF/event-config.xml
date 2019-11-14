@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+<appevents >
+	<event id="QZXX" name="区长信箱" url="/system/app/wardenmail/AppealList.jsp?cw_status=1" class="com.app.event.QZXXEvent" modelid="441" />
+	<event id="TS" name="网上投诉" url="/system/app/appeal/AppealList.jsp?cw_status=1" class="com.app.event.TSEvent" modelid="374" />
+	<event id="XF" name="信访处理" url="/system/app/complaint/AppealList.jsp?cw_status=1" class="com.app.event.XFEvent" modelid="374" />
+	<event id="RDXX" name="人大信箱" url="/system/app/peoconf/AppealList.jsp?cw_status=1" class="com.app.event.RDXXEvent" modelid="450" />
+	<event id="FYXX" name="法院信箱" url="/system/app/court/AppealList.jsp?cw_status=1" class="com.app.event.FYXXEvent" modelid="450" />
+</appevents>

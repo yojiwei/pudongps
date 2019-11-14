@@ -1,0 +1,66 @@
+<style type="text/css">
+body {
+background: #ffffff URL("bg.gif");
+background-color: #ffffff;
+font-family: 宋体;
+font-size: 9pt;
+}
+
+a {
+color: #333399;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+.post {
+font-weight: bold;
+}
+
+.header {
+color: #000066;
+background-color: #efefef;
+font-family: 宋体;
+font-weight: bold;
+font-size: 9pt;
+}
+
+.botnav {
+color: #ffffff;
+background-color: #778899;
+font-weight: bold;
+}
+
+.category {
+background-color: #efefef;
+}
+
+.tablerow {
+color: #000000;
+}
+
+.nav {
+font-weight: bold;
+}
+
+.postauthor {
+font-weight: bold;
+}
+
+.navtd {
+color: #ffffff;
+background-color: #778899;
+text-decoration: none;
+}
+
+
+ TR	{ FONT-FAMILY: 宋体; FONT-SIZE: 9pt; }
+ TD	{ FONT-FAMILY: 宋体; FONT-SIZE: 9pt; }
+ DIV    { FONT-FAMILY: 宋体; FONT-SIZE: 9pt; }
+ P	{ FONT-FAMILY: 宋体; FONT-SIZE: 9pt; }
+select    { font-family: 宋体; font-size: 9pt;}
+input     { font-family: 宋体; font-size: 9pt; background-color: #FFFFFF}
+textarea  { font-family: 宋体; font-size: 9pt; background-color: #FFFFFF}
+</style>

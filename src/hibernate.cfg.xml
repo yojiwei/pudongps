@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="foo">
+		<property name="show_sql">true</property>
+		<mapping resource="model/TbQlgkPowerstdlog.hbm.xml"/>
+		<mapping resource="model/TbQlgkPowerstd.hbm.xml"/>
+		<mapping resource="model/TbQlgkSubPowerstd.hbm.xml"/>
+		<mapping resource="model/TbQlgkLaw.hbm.xml"/>
+		<mapping resource="model/TbQlgkPowerstdstep.hbm.xml"/>
+		<mapping resource="model/TbQlgkPsfile.hbm.xml"/>
+		<mapping resource="model/TbQlgkStepfile.hbm.xml"/>
+		<mapping resource="model/TbQlgkPscategory.hbm.xml"/>
+		<mapping resource="model/TbQlgkCBUNIT.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

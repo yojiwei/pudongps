@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="gb2312" ?> 
+<Root>
+	<TreeNode Title="CSDN论坛"> 
+		<TreeNode Title="我的专家门诊">
+			<TreeNode Title="我的问题" Href="我的问题" /> 
+			<TreeNode Title="我参与问题" Href="http://expert.csdn.net/Expert/member/MyForum.asp?typenum=2&amp;frame=true&amp;csdnstyle=" /> 
+			<TreeNode Title="我得分问题" Href="http://expert.csdn.net/Expert/member/MyForum.asp?typenum=3&amp;frame=true&amp;csdnstyle=" /> 
+			<TreeNode Title="我的专家分" Href="http://expert.csdn.net/Expert/member/MyExpertPoint.asp?frame=true&amp;csdnstyle=" /> 
+			<TreeNode Title="我的收藏夹" Href="http://expert.csdn.net/MyFavorite/My_Favorite.asp?frame=true&amp;csdnstyle=" /> 
+			<TreeNode Title="短消息" Href="http://expert.csdn.net/Message_Board/NewMessage.asp?typestate=0&amp;frame=true&amp;csdnstyle=" /> 
+		</TreeNode>
+
+		<TreeNode Title="Web开发" Href="http://expert.csdn.net/Expert/ForumsList.asp?roomid=3&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=">
+			<TreeNode Title="ASP" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=301&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+			<TreeNode Title="JSP" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=5409&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+			<TreeNode Title="Javascript" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=304&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+			<TreeNode Title="XML/SOAP" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=306&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+		</TreeNode>
+
+		<TreeNode Title=".NET">
+			<TreeNode Title="C#" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=5201&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+			<TreeNode Title="ASP.NET" Href="http://expert.csdn.net/Expert/ForumList.asp?roomid=5202&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+		</TreeNode>
+
+		<TreeNode Title="MS-SQL SERVER" Href="http://expert.csdn.net/Expert/ForumsList.asp?roomid=57&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+		<TreeNode Title="软件工程/管理" Href="http://expert.csdn.net/Expert/ForumsList.asp?roomid=4&amp;typenum=1&amp;xmlsrc=&amp;csdnstyle=" /> 
+
+	</TreeNode>
+
+	<TreeNode Title="CSDN会员">
+
+		<TreeNode Title="个人信息设置"> 
+			<TreeNode Title="基本信息" Href="http://www.csdn.net/member/register.asp" /> 
+			<TreeNode Title="激活文件BBS" Href="http://www.csdn.net/member/activeFilebbs.asp" /> 
+			<TreeNode Title="邮递表选择" Href="http://www.csdn.net/member/maillist.asp" /> 
+			<TreeNode Title="修改email" Href="http://www.csdn.net/member.shtm" /> 
+			<TreeNode Title="修改密码" Href="http://www.csdn.net/member.shtm" /> 
+		</TreeNode>
+
+		<TreeNode Title="我的文档"> 
+			<TreeNode Title="最新文档" Href="http://www.csdn.net/Develop/New_Article_List/1.shtm" /> 
+			<TreeNode Title="我的分类" Href="http://www.csdn.net/Develop/MyClass/List_MyClass.asp" /> 
+			<TreeNode Title="我的文档" Href="http://www.csdn.net/Develop/My_Article.asp" /> 
+			<TreeNode Title="发表文章" Href="http://www.csdn.net/Develop/Add_Article.asp" /> 
+		</TreeNode>
+
+	</TreeNode>
+
+	<TreeNode Title="名家专栏"> 
+		<TreeNode Title="侯捷" Href="http://jjhou.csdn.net/" /> 
+		<TreeNode Title="蔡学镛" Href="http://www.csdn.net/develop/author/cxy/" /> 
+		<TreeNode Title="周奕" Href="http://www.csdn.net/develop/author/ColumnAuthor/zhouyi/" /> 
+		<TreeNode Title="潘爱民" Href="http://www.csdn.net/develop/author/pam/" /> 
+		<TreeNode Title="蒋涛" Href="http://www.csdn.net/develop/author/jiangtao/" /> 
+		<TreeNode Title="王森" Href="http://www.csdn.net/develop/author/ColumnAuthor/moli/" /> 
+		<TreeNode Title="刘韧" Href="http://www.csdn.net/develop/author/ColumnAuthor/liurendonews/" /> 
+		<TreeNode Title="李学凌" Href="http://www.csdn.net/develop/author/ColumnAuthor/lxl/" /> 
+		<TreeNode Title="王国荣" Href="http://www.csdn.net/develop/author/ColumnAuthor/wgr/" /> 
+		<TreeNode Title="何致億" Href="http://www.csdn.net/develop/author/ColumnAuthor/hochihyi/" /> 
+		<TreeNode Title="柴晓路" Href="http://chaixiaolu.member.csdn.net/" /> 
+		<TreeNode Title="陈榕" Href="http://www.csdn.net/develop/author/columnauthor/chenrong/" /> 
+		<TreeNode Title="Joshua Kerievsky" Href="http://www.csdn.net/develop/author/ColumnAuthor/Kerievsky/" /> 
+		<TreeNode Title="李潘龙" Href="http://www.csdn.net/develop/author/netauthor/global_boy/" /> 
+	</TreeNode>
+</Root>
+

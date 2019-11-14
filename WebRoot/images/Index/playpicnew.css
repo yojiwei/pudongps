@@ -1,0 +1,53 @@
+div.lsqPicPlayerLayer
+{
+	position:relative;
+	border:1px solid #909090;
+}
+div.lsqPicPlayerLayer p
+{
+	position:absolute;
+	right:3px;
+	bottom:3px;
+	padding:0;
+	width:70%;
+	background-color:#993399;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Alpha(startX=0, startY=0, finishX=100, finishY=100,style=1,opacity=0,finishOpacity=100);
+}
+div.lsqPicPlayerLayer p a
+{
+	cursor:pointer;
+	border-left:1px solid #FFF;
+	padding:0 5px;
+	background-color:#000;
+	color:#FFF;
+	font-family:Arial;
+}
+div.lsqPicPlayerLayer p a.current
+{
+	background-color:#F00;
+}
+div.lsqPicPlayerLayer div
+{
+	width: 100%;
+	/*filter: progid:DXImageTransform.Microsoft.RevealTrans(Transition=23);
+	filter: BlendTrans(duration=1);*/
+}
+div.lsqPicPlayerLayer div.plr
+{
+	display: none;
+	background-color: #FFF;
+}
+div.lsqPicPlayerLayer div.plr h4
+{
+	display: none;
+	cursor: pointer;
+	height: 28px;
+	background-color: #f1f1ff;
+	line-height:28px;
+	text-align:center;
+}
+div.lsqPicPlayerLayer div.plr img
+{
+	
+}

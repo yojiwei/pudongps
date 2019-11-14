@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <!-- 数据源的配置 //-->
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+    <!-- property name="url" value="jdbc:oracle:thin:@192.168.5.61:1521:soft2db"/-->
+    <!-- property name="username" value="pudongweb"/-->
+    <!-- property name="password" value="123456"/-->
+    <!-- 本地测试 -->
+    <property name="url" value="jdbc:oracle:thin:@31.6.130.122:1521:soft2db"/>
+    <property name="username" value="pudongps"/>
+    <property name="password" value="123456"/>
+  </bean>
+  <!-- 以下是： 处理Blob类型的特殊声明 //-->
+  <!--
+  <bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor" lazy-init="true"/>
+  <bean id="lobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler" lazy-init="true">
+    <property name="nativeJdbcExtractor">
+      <ref local="nativeJdbcExtractor"/>
+    </property>
+  </bean>
+-->
+<bean id="lobHandler" lazy-init="true"   class="org.springframework.jdbc.support.lob.OracleLobHandler">
+        <property name="nativeJdbcExtractor">
+            <ref bean="nativeJdbcExtractor"/>
+        </property>
+</bean> 
+
+<bean id="nativeJdbcExtractor" lazy-init="true"   class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor"/>
+
+
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <!-- 为处理Blob类型字段的句柄声明 //-->
+    <property name="lobHandler" ref="lobHandler"/>
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+        <prop key="hibernate.show_sql">true</prop>
+        <prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+      </props>
+    </property>
+    <property name="mappingDirectoryLocations">
+      <list>
+        <value>classpath:/model</value>
+      </list>
+    </property>
+  </bean>
+
+  <!-- DAO 的IoC配置//-->
+  <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+<!--
+  <bean id="tfileDAO" class="sshfile.dao.TfileDAOHibernate">
+    <property name="hibernateTemplate" ref="hibernateTemplate" />
+  </bean>
+-->
+
+
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <!-- 事务处理的AOP配置 //-->
+  
+  <bean id="txProxyTemplate" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="transactionManager" ref="transactionManager"/>
+    <property name="transactionAttributes">
+      <props>
+         <prop key="load*">PROPAGATION_REQUIRED,readOnly</prop>
+         <prop key="save*">PROPAGATION_REQUIRED</prop>
+         <prop key="del*">PROPAGATION_REQUIRED</prop>
+         <prop key="list*">PROPAGATION_REQUIRED,readOnly</prop>
+      </props>
+    </property>
+  </bean>
+ <bean id="commonDao" parent="txProxyTemplate">
+    <property name="target">
+      <bean class="com.beyondbit.struts.dao.CommonDao">
+          <property name="hibernateTemplate" ref="hibernateTemplate" />
+      </bean>
+    </property>
+  </bean>
+<!--
+ <bean id="stepSave" parent="txProxyTemplate">
+    <property name="target">
+      <bean class="com.beyondbit.struts.dao.PowerstdStepDao">
+          <property name="hibernateTemplate" ref="hibernateTemplate" />
+      </bean>
+    </property>
+  </bean>-->
+  <!--<bean id="fileService" parent="txProxyTemplate">
+    <property name="target">
+      <bean class="sshfile.service.FileServiceImpl">
+        <property name="tfileDAO" ref="tfileDAO"/>
+      </bean>
+    </property>
+  </bean>-->
+	<!--<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="transactionAttributeSource">
+			<bean class="org.springframework.transaction.annotation.AnnotationTransactionAttributeSource"/>
+		</property>
+	</bean>
+
+
+	  <bean id="siteService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="target" ref="siteServiceTarget"/>
+		<property name="transactionAttributes">
+		<props>
+		<prop key="test*">PROPAGATION_REQUIRED,readOnly</prop>
+		<prop key="save*">PROPAGATION_REQUIRED</prop>
+		<prop key="delete*">PROPAGATION_REQUIRED</prop>
+		</props>
+		</property>
+	 </bean>
+
+	<bean id="siteServiceTarget" class="com.beyondbit.struts.action.SavePowstdstepAction" singleton="true">
+		
+	</bean>-->
+
+	<!-- ResourceBundle -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+	  <property name="basename" value="views"/>
+	</bean>
+	<bean id="viewResolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	  <property name="prefix" value="/WEB-INF/jsp/"/>
+	  <property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>

@@ -1,0 +1,473 @@
+K 25
+svn:wc:ra_dav:version-url
+V 206
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess
+END
+UserNameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UserNameImpl.java
+END
+PSLimitImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 223
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSLimitImpl.java
+END
+UploadDateImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UploadDateImpl.java
+END
+EndDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/EndDate.java
+END
+MaxPSLimitImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/MaxPSLimitImpl.java
+END
+PowerProcessListImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 232
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessListImpl.java
+END
+PowerProcessSteps.java
+K 25
+svn:wc:ra_dav:version-url
+V 229
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessSteps.java
+END
+DES.java
+K 25
+svn:wc:ra_dav:version-url
+V 215
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/DES.java
+END
+IsOutOfPSLimitImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 230
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOutOfPSLimitImpl.java
+END
+UserName.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UserName.java
+END
+MemoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/MemoImpl.java
+END
+PSLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSLimit.java
+END
+UploadDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UploadDate.java
+END
+MaxPSLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/MaxPSLimit.java
+END
+PowerProcessList.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessList.java
+END
+CompanyNameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 227
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CompanyNameImpl.java
+END
+SequenceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/SequenceImpl.java
+END
+IsOutOfPSLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOutOfPSLimit.java
+END
+Memo.java
+K 25
+svn:wc:ra_dav:version-url
+V 216
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/Memo.java
+END
+ResidentNameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/ResidentNameImpl.java
+END
+CreateUserIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CreateUserIDImpl.java
+END
+SuperviseDESImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/SuperviseDESImpl.java
+END
+CompanyName.java
+K 25
+svn:wc:ra_dav:version-url
+V 223
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CompanyName.java
+END
+Sequence.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/Sequence.java
+END
+PowerProcessStepImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 232
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessStepImpl.java
+END
+ResidentName.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/ResidentName.java
+END
+CreateUserID.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CreateUserID.java
+END
+SuperviseDES.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/SuperviseDES.java
+END
+IsOverstepImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOverstepImpl.java
+END
+IsOutOfDueTimeLimitImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 235
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOutOfDueTimeLimitImpl.java
+END
+PowerProcessStep.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessStep.java
+END
+Unmarshallable.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/Unmarshallable.java
+END
+CodeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CodeImpl.java
+END
+PSCodeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSCodeImpl.java
+END
+NameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/NameImpl.java
+END
+IsOverstep.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOverstep.java
+END
+IsOutOfDueTimeLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 231
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOutOfDueTimeLimit.java
+END
+BeginDateImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 225
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/BeginDateImpl.java
+END
+IsFinishedImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsFinishedImpl.java
+END
+RoleNamesImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 225
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/RoleNamesImpl.java
+END
+Code.java
+K 25
+svn:wc:ra_dav:version-url
+V 216
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/Code.java
+END
+UserIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UserIDImpl.java
+END
+PSCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSCode.java
+END
+PowerProcessImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 228
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessImpl.java
+END
+IDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IDImpl.java
+END
+DueTimeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 223
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/DueTimeImpl.java
+END
+Name.java
+K 25
+svn:wc:ra_dav:version-url
+V 216
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/Name.java
+END
+BeginDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 221
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/BeginDate.java
+END
+MaxDueTimeLimitImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 231
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/MaxDueTimeLimitImpl.java
+END
+IsFinished.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsFinished.java
+END
+CreateUserNameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 230
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CreateUserNameImpl.java
+END
+RoleNames.java
+K 25
+svn:wc:ra_dav:version-url
+V 221
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/RoleNames.java
+END
+UserID.java
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UserID.java
+END
+PowerProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcess.java
+END
+UnitCodeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitCodeImpl.java
+END
+ID.java
+K 25
+svn:wc:ra_dav:version-url
+V 214
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/ID.java
+END
+DueTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/DueTime.java
+END
+MaxDueTimeLimit.java
+K 25
+svn:wc:ra_dav:version-url
+V 227
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/MaxDueTimeLimit.java
+END
+PPSIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 221
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PPSIDImpl.java
+END
+UnitNameImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitNameImpl.java
+END
+StateImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 221
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/StateImpl.java
+END
+CreateUserName.java
+K 25
+svn:wc:ra_dav:version-url
+V 226
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/CreateUserName.java
+END
+PowerProcessListUnmarshaller.java
+K 25
+svn:wc:ra_dav:version-url
+V 240
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessListUnmarshaller.java
+END
+UnitCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitCode.java
+END
+PSStepIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 224
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSStepIDImpl.java
+END
+PPIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PPIDImpl.java
+END
+UnitIDImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitIDImpl.java
+END
+PPSID.java
+K 25
+svn:wc:ra_dav:version-url
+V 217
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PPSID.java
+END
+IsOpenImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 222
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOpenImpl.java
+END
+State.java
+K 25
+svn:wc:ra_dav:version-url
+V 217
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/State.java
+END
+UnitName.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitName.java
+END
+EndDateImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 223
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/EndDateImpl.java
+END
+PSStepID.java
+K 25
+svn:wc:ra_dav:version-url
+V 220
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PSStepID.java
+END
+PowerProcessStepsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 233
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PowerProcessStepsImpl.java
+END
+PPID.java
+K 25
+svn:wc:ra_dav:version-url
+V 216
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/PPID.java
+END
+UnitID.java
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/UnitID.java
+END
+DESImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/DESImpl.java
+END
+IsOpen.java
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/src/com/beyondbit/xmlparse/powerprocess/IsOpen.java
+END

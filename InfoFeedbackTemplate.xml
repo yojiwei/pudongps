@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="GBK"?>
+<DEP_DataExchangeData>
+	<OperationType NOTNULL="N" COMPARETO="操作方式">LBOA</OperationType>
+	<MessageTitle NOTNULL="N" COMPARETO="标题">标题</MessageTitle>
+	<MessageID NOTNULL="N" COMPARETO="ID">11</MessageID>
+	<MessageBody>
+		<!-- 内容主体，可重复 start-->
+		<MessageChild>
+			<!-- 依申请公开信息在公文备案系统的主键 -->
+			<id></id>
+			<!-- 流水号-->
+			<flownum NOTNULL="Y" COMPARETO="流水号"></flownum>
+			<!-- 受理方式 现场登记:1,E-mail申请:2,信函申请:3,电报申请:4,传真申请:5,其它:6-->
+			<signmode NOTNULL="Y" COMPARETO="受理方式" REGEX="^[1,2,3,4,5]$"></signmode>
+			<!-- 申请人类别 公民:0,法人/其他组织:1-->
+			<proposer NOTNULL="Y" COMPARETO="申请人类别" REGEX="^[0,1]$"></proposer>
+			<!-- 申请受理时间-->
+			<applytime NOTNULL="Y" COMPARETO="申请受理时间"></applytime>
+			<!-- 申请到期时间-->
+			<limittime  NOTNULL="Y" COMPARETO="申请到期时间"></limittime>
+			<!-- 申请人（个人）姓名 -->
+			<pname NOTNULL="Y" COMPARETO="申请人（个人）姓名" PARENTNAME="proposera" COMPAREVALUE="0"></pname>
+			<!-- 申请人（法人或者其他组织）名称 -->
+			<ename NOTNULL="Y" COMPARETO="申请人（法人或者其他组织）名称"  PARENTNAME="proposera" COMPAREVALUE="1"></ename>
+			<!-- 法人代表 -->
+			<edeputy NOTNULL="Y" COMPARETO="法人代表"  PARENTNAME="proposera" COMPAREVALUE="1"></edeputy>
+			<!-- 证件名称 -->
+			<pcard NOTNULL="Y" COMPARETO="证件名称"  PARENTNAME="proposera" COMPAREVALUE="0"></pcard>
+			<!-- 证件号码 -->
+			<pcardnum NOTNULL="Y" COMPARETO="证件号码"  PARENTNAME="proposera" COMPAREVALUE="0"></pcardnum>
+			<!-- 通信地址 -->
+			<paddress NOTNULL="Y" COMPARETO="通信地址"></paddress>
+			<!-- 邮政编码 -->
+			<pzipcode NOTNULL="N" COMPARETO="邮政编码"></pzipcode>
+			<!-- 联系电话 -->
+			<ptele NOTNULL="Y" COMPARETO="联系电话"></ptele>
+			<!-- 联系人姓名 -->
+			<elinkman NOTNULL="N" COMPARETO="联系人姓名"></elinkman>
+			<!-- 电子邮箱 -->
+			<pemail NOTNULL="N" COMPARETO="电子邮箱"></pemail>
+			<!-- 信息名称 -->
+			<infotitle NOTNULL="Y" COMPARETO="信息名称"><![CDATA[信息名称]]></infotitle>
+			<!-- 所需信息内容描述 -->
+			<commentinfo NOTNULL="N" COMPARETO="所需信息内容描述"><![CDATA[所需信息内容描述]]></commentinfo>
+			<!-- 文号 -->
+			<indexnum NOTNULL="N" COMPARETO="文号"></indexnum>
+			<!-- 备注 -->
+			<memo NOTNULL="N" COMPARETO="备注"><![CDATA[备注]]></memo>
+			<!-- 获取政府信息的方式 邮寄:0,递送:1,电子邮件:2,传真:3,当面领取:4,现场查阅:5-->
+			<gainmode NOTNULL="N" COMPARETO="获取政府信息的方式"></gainmode>
+			<!-- 政府信息的载体形式 纸质文本:0,电子邮件:1,磁盘:2,光盘:3-->
+			<offermode NOTNULL="N" COMPARETO="政府信息的载体形式"></offermode>
+			<!-- 所需政府信息的用途 生产的需要:1,生活的需要:2,科研的需要:3,查验自身信息:4-->
+			<purpose NOTNULL="N" COMPARETO="所需政府信息的用途"></purpose>
+			<!-- 特别声明：个人需申请免除收费，主要理由 属于享受城乡居民最低生活保障对象:1,确有其他经济困难的:2-->
+			<free NOTNULL="N" COMPARETO="特别声明"></free>
+			<!-- 是否分办 1是 0否  -->
+			<isfb NOTNULL="N" COMPARETO="分办"></isfb>
+			<!-- 附件 -->
+			<FILEPUBATTACH NOTNULL="N" COMPARETO="附件信息">
+				<!--附件信息 以下可重复 start-->
+				<PUBATTACH>
+					<FILENAME NOTNULL="N" COMPARETO="附件名">附件名</FILENAME>
+					<FILEREALNAME NOTNULL="N" COMPARETO="附件文件名">附件名</FILEREALNAME>
+					<FILECONTENT NOTNULL="N" PARENTNAME="FILENAME" COMPAREVALUE="" COMPARETO="base64 编码以后的字符串">base64 编码以后的字符串</FILECONTENT>
+				</PUBATTACH>
+				<!--附件信息 以上可重复 end-->
+				</FILEPUBATTACH>
+			</MessageChild>
+			<!-- 内容主体，可重复 end-->
+	</MessageBody>
+	<!-- 以下部分请原文放在xml里 start-->
+	<SourceUnitCode NOTNULL="Y" COMPARETO="源单位代号">3118</SourceUnitCode>
+	<SourceCaseCode NOTNULL="Y" COMPARETO="消息来源事项代号">369</SourceCaseCode>
+	<DestUnit>
+		<DestUnitCode NOTNULL="Y" COMPARETO="目标单位代号">216</DestUnitCode>
+		<DestCaseCode NOTNULL="Y" COMPARETO="消息目标事项代号">371</DestCaseCode>
+		<InterFaceCode NOTNULL="Y" COMPARETO="消息提交的目标接口代号">324</InterFaceCode>
+	</DestUnit>
+	<Sender NOTNULL="N" COMPARETO="发送人姓名">环保局承办人</Sender>
+	<SendTime NOTNULL="N" COMPARETO="发送消息时间" REGEX="((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)) (0[1-9]|1[0-9]|2[0-3])+:[0-5][0-9]+:[0-5][0-9]">15:44</SendTime>
+	<EndTime NOTNULL="N" COMPARETO="收到消息时间" REGEX="((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)) (0[1-9]|1[0-9]|2[0-3])+:[0-5][0-9]+:[0-5][0-9]">2007-12-7 15:44:13</EndTime>
+</DEP_DataExchangeData>

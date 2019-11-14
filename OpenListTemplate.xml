@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="gb2312"?>
+<stat month="reportmonth" year="reportyear">
+	<districtStat>
+		<district>
+			<name columnname="dt_name">浦东新区</name>
+			<id columnname="dt_code">SH00PD</id>
+			<!--申请总数-->
+			<sqzs columnname="totalshenqing">1</sqzs>
+			<!--当面申请数-->
+			<dmsqs columnname="interviewapply">2</dmsqs>
+			<!--传真申请数-->
+			<czsqs columnname="faxapply">3</czsqs>
+			<!--电子邮件申请数-->
+			<dzyjsqs columnname="emailapply">4</dzyjsqs>
+			<!--网上申请数-->
+			<wssqs columnname="webapply">5</wssqs>
+			<!--信函申请数-->
+			<xhsqs columnname="letterapply">6</xhsqs>
+			<!--其他形式申请数-->
+			<qtxssqs columnname="otherapply">7</qtxssqs>
+			<!--对申请的答复总数-->
+			<dsqddfzs columnname="totaldafu">8</dsqddfzs>
+			<!--同意公开答复数-->
+			<tygkdfs columnname="aopen">9</tygkdfs>
+			<!--同意部分公开答复数-->
+			<tybfgkdfs columnname="apartopen">10</tybfgkdfs>
+			<!--不予公开答复总数-->
+			<fjgkdfzs columnname="totalbugongkai">11</fjgkdfzs>
+			<!--“非《规定》所指政府信息”数-->
+			<fgdszzfxxs columnname="fgdszzfxxs">12</fgdszzfxxs>
+			<!--“信息不存在”数-->
+			<xxbczs columnname="noinfo">13</xxbczs>
+			<!--“非本部门掌握”数-->
+			<fbbmzws columnname="nodept">14</fbbmzws>
+			<!--“申请内容不明确”数-->
+			<sqnrbmqs columnname="nobound">15</sqnrbmqs>
+			<!--“国家秘密”数-->
+			<mygkfw1s columnname="noopen1">16</mygkfw1s>
+			<!--“商业秘密”数-->
+			<mygkfw2s columnname="noopen2">17</mygkfw2s>
+			<!--“个人隐私”数-->
+			<mygkfw3s columnname="noopen3">18</mygkfw3s>
+			<!--“过程中且影响安全稳定”数-->
+			<mygkfw4s columnname="noopen4">19</mygkfw4s>
+			<!--“安全稳定”数-->
+			<mygkfw5s columnname="noopen5">20</mygkfw5s>
+			<!--“法律法规规定的其他情形”数-->
+			<mygkfw6s columnname="noopen6">21</mygkfw6s>
+			<!--“重复申请数”数-->
+			<cfsqs columnname="cfsqs">22</cfsqs>
+			<!--“申请人主动撤消数”数-->
+			<sqrzdcxs columnname="none">23</sqrzdcxs>
+			<!--“非政府信息公开申请”数-->
+			<fzfxxgksqs columnname="none">24</fzfxxgksqs>
+			<!--收取费用总额-->
+			<fyzs columnname="totalshoufei">25.0</fyzs>
+			<!--主动公开信息收取费用-->
+			<zdfyzs columnname="totalzdsf">26.0</zdfyzs>
+			<!--邮寄费-->
+			<zdyjf columnname="zdmailcharge">27.0</zdyjf>
+			<!--递送费-->
+			<zddsf columnname="none">28.0</zddsf>
+			<!--复制费（纸张）-->
+			<zdfzfzz columnname="zdcopychargesheet">29.0</zdfzfzz>
+			<!--复制费（光盘）-->
+			<zdfzfgp columnname="zdcopychargedisk">30.0</zdfzfgp>
+			<!--复制费（软盘）-->
+			<zdfzfrp columnname="zdcopychargefdisk">31.0</zdfzfrp>
+			<!--依申请提供信息收取费用-->
+			<ysqfyzs columnname="totalysqsf">32.0</ysqfyzs>
+			<!--检索费-->
+			<ysqjsf columnname="searchcharge">33.0</ysqjsf>
+			<!--邮寄费-->
+			<ysqyjf columnname="mailcharge">34.0</ysqyjf>
+			<!--递送费-->
+			<ysqdsf columnname="none">35.0</ysqdsf>
+			<!--复制费（纸张）-->
+			<ysqfzfzz columnname="copychargesheet">36.0</ysqfzfzz>
+			<!--复制费（光盘）-->
+			<ysqfzfgp columnname="copychargedisk">37.0</ysqfzfgp>
+			<!--复制费（软盘）-->
+			<ysqfzfrp columnname="copychargefdisk">38.0</ysqfzfrp>
+			<!--其它收费-->
+			<ysqqtsf columnname="none">39.0</ysqqtsf>
+		</district>
+	</districtStat>
+</stat>
+

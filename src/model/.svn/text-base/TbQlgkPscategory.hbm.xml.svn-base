@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkPscategory" 
+    table="TB_QLGK_PSCATEGORY"
+>
+
+    <id
+        name="cateid"
+        type="java.lang.Integer"
+        column="CATEID"
+    >
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="catecode"
+        type="java.lang.String"
+        column="CATECODE"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="categoryname"
+        type="java.lang.String"
+        column="CATEGORYNAME"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="pcateid"
+        type="java.math.BigDecimal"
+        column="PCATEID"
+        length="22"
+    />
+    <property
+        name="dsc"
+        type="java.lang.String"
+        column="DSC"
+        length="100"
+    />
+    <property
+        name="sequence"
+        type="java.math.BigDecimal"
+        column="SEQUENCE"
+        length="22"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

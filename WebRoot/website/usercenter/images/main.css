@@ -1,0 +1,243 @@
+.text-line-info {
+	BORDER-RIGHT: #d6e1c1 1px solid; BORDER-TOP: #d6e1c1 1px solid; BORDER-LEFT: #d6e1c1 1px solid; BORDER-BOTTOM: #d6e1c1 1px solid; BACKGROUND-COLOR: #f6f9ee
+}
+.text-area-info {
+	BORDER-RIGHT: #d6e1c1 1px solid; BORDER-TOP: #d6e1c1 1px solid; BORDER-LEFT: #d6e1c1 1px solid; BORDER-BOTTOM: #d6e1c1 1px solid; BACKGROUND-COLOR: #f6f9ee
+}
+.bttn-info {
+	BORDER-RIGHT: #d6e1c1 1px solid; BORDER-TOP: #d6e1c1 1px solid; BORDER-LEFT: #d6e1c1 1px solid; BORDER-BOTTOM: #d6e1c1 1px solid; BACKGROUND-COLOR: #e0edcf; TEXT-ALIGN: center
+}
+.main-table {
+	FONT-SIZE: 10pt; BORDER-LEFT-COLOR: #3399cc; BORDER-BOTTOM-COLOR: #3399cc; BORDER-TOP-STYLE: double; BORDER-TOP-COLOR: #3399cc; BORDER-RIGHT-STYLE: double; BORDER-LEFT-STYLE: double; TEXT-DECORATION: blink; BORDER-RIGHT-COLOR: #3399cc; BORDER-BOTTOM-STYLE: double
+}
+.dotted-td {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 10pt; PADDING-BOTTOM: 1px; LINE-HEIGHT: 10pt; PADDING-TOP: 1px; BORDER-BOTTOM: blue 1px dotted; TEXT-ALIGN: left
+}
+.guide-table {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; BACKGROUND-IMAGE: url(../../../include/left2.jpg); LINE-HEIGHT: 15pt; TEXT-ALIGN: left
+}
+.outset-table {
+	BORDER-RIGHT: 1px outset; BORDER-TOP: 1px outset; FONT-SIZE: 10pt; BORDER-LEFT: 1px outset; BORDER-BOTTOM: 1px outset; BACKGROUND-COLOR: #bbddff; TEXT-DECORATION: blink
+}
+.dotted-table {
+	BORDER-RIGHT: 1px dotted; BORDER-TOP: 1px dotted; FONT-SIZE: 10pt; BORDER-LEFT: 1px dotted; BORDER-BOTTOM: 1px dotted; TEXT-DECORATION: blink
+}
+.inset-table {
+	BORDER-RIGHT: #9fb7c0 1px inset; BORDER-TOP: #9fb7c0 1px inset; FONT-SIZE: 9pt; BORDER-LEFT: #9fb7c0 1px inset; BORDER-BOTTOM: #9fb7c0 1px inset; BACKGROUND-COLOR: #ebf1f2; TEXT-DECORATION: blink
+}
+.ridge-table {
+	BORDER-RIGHT: #9fb7c0 1px ridge; BORDER-TOP: #9fb7c0 1px ridge; FONT-SIZE: 10pt; BORDER-LEFT: #9fb7c0 1px ridge; BORDER-BOTTOM: #9fb7c0 1px ridge; TEXT-DECORATION: blink
+}
+.groove-table {
+	BORDER-RIGHT: #9fb7c0 1px groove; BORDER-TOP: #9fb7c0 1px groove; BORDER-LEFT: #9fb7c0 1px groove; BORDER-BOTTOM: #9fb7c0 1px groove; TEXT-DECORATION: blink
+}
+.print-table {
+	BORDER-RIGHT: 1px; BORDER-TOP: 1px; BORDER-LEFT: 1px; WIDTH: 110%; BORDER-BOTTOM: 1px; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt
+}
+.content-table {
+	FONT-SIZE: 10pt; TEXT-DECORATION: blink
+}
+.content-body {
+	BORDER-RIGHT: 1px dotted; BORDER-TOP: 1px dotted; FONT-SIZE: 10pt; BORDER-LEFT: 1px dotted; LINE-HEIGHT: 15pt; BORDER-BOTTOM: 1px dotted; BACKGROUND-COLOR: #bbddff; TEXT-DECORATION: blink
+}
+.count-table {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #bbddff; TEXT-ALIGN: center
+}
+.title1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #000000; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #a9ccff; TEXT-ALIGN: center
+}
+.line-odd {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #fff2e2
+}
+.line-even {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #f7fbff
+}
+.Option-Title {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; BACKGROUND-COLOR: #d9e30f
+}
+.Option-odd {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #d9ecff
+}
+.Option-even {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; BACKGROUND-COLOR: #f7fbff
+}
+.bttn {
+	BORDER-RIGHT: #54a3f1 1px outset; BORDER-TOP: #54a3f1 1px outset; BORDER-LEFT: #54a3f1 1px outset; BORDER-BOTTOM: #54a3f1 1px outset; BACKGROUND-COLOR: #bbddff; TEXT-ALIGN: center
+}
+.bttn1 {
+	BORDER-RIGHT: #54a3f1 1px outset; BORDER-TOP: #54a3f1 1px outset; BORDER-LEFT: #54a3f1 1px outset; BORDER-BOTTOM: #54a3f1 1px outset; BACKGROUND-COLOR: #99ccff; TEXT-ALIGN: center
+}
+.text-line {
+	BORDER-RIGHT: #20663b 1px solid; BORDER-TOP: #20663b 1px solid; BORDER-LEFT: #20663b 1px solid; BORDER-BOTTOM: #20663b 1px solid; BACKGROUND-COLOR: #fafcef
+}
+.text-area {
+	BORDER-RIGHT: #20663b 1px inset; BORDER-TOP: #20663b 1px inset; BORDER-LEFT: #20663b 1px inset; BORDER-BOTTOM: #20663b 1px inset; BACKGROUND-COLOR: #fafcef
+}
+.select-a {
+	BORDER-RIGHT: #20663b 1px groove; BORDER-TOP: #20663b 1px groove; BORDER-LEFT: #20663b 1px groove; BORDER-BOTTOM: #20663b 1px groove; BACKGROUND-COLOR: #dfffdf
+}
+.checkbox1 {
+	BORDER-RIGHT: #20663b 1px solid; BORDER-TOP: #20663b 1px solid; BORDER-LEFT: #20663b 1px solid; BORDER-BOTTOM: #20663b 1px solid; BACKGROUND-COLOR: #fafcef; TEXT-ALIGN: center
+}
+.radio1 {
+	BORDER-RIGHT: #20663b 1px solid; BORDER-TOP: #20663b 1px solid; BORDER-LEFT: #20663b 1px solid; BORDER-BOTTOM: #20663b 1px solid; BACKGROUND-COLOR: #fafcef; TEXT-ALIGN: center
+}
+.order {
+	BORDER-LEFT-COLOR: #3399cc; BORDER-BOTTOM-COLOR: #3399cc; WIDTH: 0.3cm; BORDER-TOP-STYLE: double; BORDER-TOP-COLOR: #3399cc; BORDER-RIGHT-STYLE: double; BORDER-LEFT-STYLE: double; HEIGHT: 0.3cm; BACKGROUND-COLOR: pink; BORDER-RIGHT-COLOR: #3399cc; BORDER-BOTTOM-STYLE: double
+}
+SELECT {
+	BORDER-RIGHT: #20663b 1px solid; BORDER-TOP: #20663b 1px solid; BORDER-LEFT: #20663b 1px solid; BORDER-BOTTOM: #20663b 1px solid; BACKGROUND-COLOR: #fafcef
+}
+TEXTAREA {
+	BORDER-RIGHT: #20663b 1px solid; BORDER-TOP: #20663b 1px solid; BORDER-LEFT: #20663b 1px solid; BORDER-BOTTOM: #20663b 1px solid; BACKGROUND-COLOR: #fafcef
+}
+.botton {
+	BORDER-RIGHT: #54a3f1 1px outset; BORDER-TOP: #54a3f1 1px outset; BORDER-LEFT: #54a3f1 1px outset; BORDER-BOTTOM: #54a3f1 1px outset; BACKGROUND-COLOR: #99ccff; TEXT-ALIGN: center
+}
+.be9gray {
+	FONT-SIZE: 9pt; COLOR: #606058; LINE-HEIGHT: 12pt; FONT-FAMILY: "宋体"
+}
+.ebeing9 {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Courier","Arial"
+}
+.being9 {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 13pt
+}
+.ebeing10 {
+	FONT-SIZE: 10.5pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "Courier","Arial"
+}
+.being10 {
+	FONT-SIZE: 10.5pt; LINE-HEIGHT: 12pt; FONT-FAMILY: "宋体"
+}
+.iwhite {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #ffffff; BORDER-LEFT: #ffffff 1px solid; COLOR: #006600; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.igray {
+	BORDER-RIGHT: #f0f0f0 1px solid; BORDER-TOP: #f0f0f0 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f0f0f0; BORDER-LEFT: #f0f0f0 1px solid; COLOR: #006600; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.iBlue {
+	BORDER-RIGHT: #99ccff 1px solid; BORDER-TOP: #99ccff 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #99ccff; BORDER-LEFT: #99ccff 1px solid; COLOR: #000000; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "宋体"
+}
+.iCgray {
+	BORDER-RIGHT: #f0f0f0 1px solid; BORDER-TOP: #f0f0f0 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f0f0f0; BORDER-LEFT: #f0f0f0 1px solid; COLOR: #006600; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "宋体"
+}
+.iCEF {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #ffffff; BORDER-LEFT: #ffffff 1px solid; COLOR: #00346a; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "宋体"
+}
+.iEF {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #ffffff; BORDER-LEFT: #ffffff 1px solid; COLOR: #00346a; BORDER-BOTTOM: 1px solid; FONT-FAMILY: "Courier", "Arial"
+}
+.CBpoint_G {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; COLOR: #339900; LINE-HEIGHT: 14pt; FONT-FAMILY: "Tahoma"
+}
+.CBpoint_R {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; COLOR: #ff6600; LINE-HEIGHT: 14pt; FONT-FAMILY: "Tahoma"
+}
+TD {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15px; TEXT-DECORATION: none
+}
+A {
+	FONT-SIZE: 9pt; COLOR: black; LINE-HEIGHT: 12pt; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: red
+}
+.news {
+	COLOR: #006363; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #ff6633; TEXT-DECORATION: none
+}
+.unnamed5 {
+	FONT-SIZE: 9pt; COLOR: #ff0000; BACKGROUND-COLOR: #cccccc; TEXT-DECORATION: none
+}
+.mnu {
+	FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.hand {
+	CURSOR: hand
+}
+.SplitPage {
+	PAGE-BREAK-BEFORE: always
+}
+BODY {
+	
+}
+.noScroll {
+	SCROLLBAR-FACE-COLOR: white; SCROLLBAR-HIGHLIGHT-COLOR: white; SCROLLBAR-SHADOW-COLOR: white; SCROLLBAR-3DLIGHT-COLOR: white; SCROLLBAR-ARROW-COLOR: black; SCROLLBAR-DARKSHADOW-COLOR: white; SCROLLBAR-BASE-COLOR: white
+}
+.menu-title {
+	FONT-SIZE: 12pt; FILTER: glow(color=white,strength=0) shadow(color=gray,direction=145); WIDTH: 100%; COLOR: blue; LINE-HEIGHT: 30pt; LETTER-SPACING: normal; POSITION: relative; face: "隶书"
+}
+.PrintTable {
+	BORDER-RIGHT: double; BORDER-TOP: double; BORDER-LEFT: double; COLOR: black; BORDER-BOTTOM: double; TEXT-DECORATION: line-through
+}
+.print {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-BOTTOM: medium none; BORDER-COLLAPSE: collapse; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; cellpadding: 0; cellspacing: 0
+}
+.ShadowFont {
+	FONT-SIZE: 10pt; FILTER: shadow(color=black,direction=145,strength=5); WIDTH: 100%; COLOR: #54a3f1; LINE-HEIGHT: 22pt; LETTER-SPACING: normal; POSITION: relative; face: 隶书
+}
+.text-line-login {
+	BORDER-RIGHT: #acacac 1px solid; BORDER-TOP: #acacac 1px solid; BORDER-LEFT: #acacac 1px solid; BORDER-BOTTOM: #acacac 1px solid; BACKGROUND-COLOR: #f9f1e4
+}
+.text-line-appeal {
+	BORDER-RIGHT: #668235 1px solid; BORDER-TOP: #668235 1px solid; BORDER-LEFT: #668235 1px solid; BORDER-BOTTOM: #668235 1px solid; BACKGROUND-COLOR: #fafbf5
+}
+.text-area-appeal {
+	BORDER-RIGHT: #668235 1px solid; BORDER-TOP: #668235 1px solid; BORDER-LEFT: #668235 1px solid; BORDER-BOTTOM: #668235 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.B {
+	FONT-SIZE: 10pt
+}
+.bttn1-info {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 10pt; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid
+}
+A:link {
+	COLOR: #003060; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #003060; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #003060; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ee5d0c; TEXT-DECORATION: underline
+}
+.unnamed1 {
+	LINE-HEIGHT: 15pt
+}
+.text-xx {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #828282 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.text-xx1 {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #828282 1px solid; BORDER-LEFT: #828282 1px solid; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #ddf8fc
+}
+.area-xx {
+	BORDER-RIGHT: #828282 1px solid; BORDER-TOP: #828282 1px solid; BORDER-LEFT: #828282 1px solid; BORDER-BOTTOM: #828282 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.textwhite {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: white; LINE-HEIGHT: normal; FONT-STYLE: normal; LETTER-SPACING: 5pt; FONT-VARIANT: normal
+}
+.text3 {
+	FONT: 15px/120% "幼圆"
+}
+.wj {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px; BACKGROUND-COLOR: #ffffff
+}
+.word {
+	FONT-SIZE: 12px; COLOR: #845c1b
+}
+.solid {
+	BORDER-RIGHT: #9cbbd3 1px solid; BORDER-TOP: #9cbbd3 1px solid; BORDER-LEFT: #9cbbd3 1px solid; BORDER-BOTTOM: #9cbbd3 1px solid; BACKGROUND-COLOR: #d6edff; TEXT-DECORATION: none
+}
+.divBgBlue {
+	FONT-SIZE: 12px; COLOR: #009933; TEXT-DECORATION: underline
+}
+.f12z {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+.font_white {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}

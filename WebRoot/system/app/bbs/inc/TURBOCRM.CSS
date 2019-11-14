@@ -1,0 +1,42 @@
+BODY {
+	BACKGROUND-COLOR: #EBFAFF; BORDER-BOTTOM: transparent 0px solid;  BORDER-LEFT: #6e592e 1px solid; BORDER-RIGHT: #6e592e 1px solid;
+; font-family: "宋体"; font-size: 9pt
+}
+TABLE {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+INPUT {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+SELECT {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+TEXTAREA {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+.viewTable {
+	FONT-FAMILY: 宋体; FONT-SIZE: 9pt
+}
+.viewTh {
+	BACKGROUND-COLOR: #c0e1ff; COLOR: transparent
+}
+.viewCaption {
+	COLOR: #008080; FILTER: DropShadow(Color=#C0C0C0,OffX=2,OffY=1,Positive=1); FONT-FAMILY: 楷体_GB2312; FONT-SIZE: 16pt; FONT-WEIGHT: bolder
+}
+.NavTitle {
+	FONT-SIZE: 12pt
+}
+A:link {
+	COLOR: #0000ff; FONT-FAMILY: "宋体"; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0000ff; FONT-FAMILY: "宋体"; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #0000ff; FONT-FAMILY: 宋体; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff3333; FONT-FAMILY: "宋体"; FONT-SIZE: 9pt; TEXT-DECORATION: underline
+}
+
+.unnamed1 {  border-style: dashed; border-top-width: thin; border-right-width: thin; border-bottom-width: thin; border-left-width: thin}

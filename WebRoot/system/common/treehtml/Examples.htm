@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="Author" CONTENT="moonpiazza">
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<link rel="stylesheet" type="text/css" href="treeRes/XMLSelTree.css">
+</HEAD>
+<body  leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<BODY>
+</HTML>
+
+<table width="100%" height="51" border="0" cellpadding="0" cellspacing="0" background="images/bg.jpg">
+  <tr>
+    <td><table border="0"  cellpadding="0" cellspacing="10">
+        <tr>
+          <td>
+					 <FORM METHOD=POST ACTION="" name='form2'>
+			<INPUT TYPE="text" NAME="content" value="">
+			</FORM>
+		  
+		  </td>
+          <td> <input onclick="on_choose();" type="button" value="确定" id=button1 name=button1>
+            <input type="reset" name="Submit2" value="重置"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table><div style="overflow: auto; width: 100%; height:371; border: 0px solid #336699">
+<table width="100%" border="0" cellpadding="10" cellspacing="0" class="kuang">
+  <tr>
+    <td> 
+	<DIV id="SrcDiv" onselectstart="selectstart()"></DIV>
+
+
+</td>
+  </tr>
+</table>
+</DIV>
+<SCRIPT LANGUAGE=javascript src="treeRes/XMLSelTree.js"></SCRIPT>
+<SCRIPT LANGUAGE=javascript>
+<!--
+var m_sXMLFile	= "TreeNode.xml";						// 主菜单项文件(可改为TreeNode.asp)
+var m_sXSLPath	= "treeRes/";						// xsl文件相对路径
+var m_oSrcDiv	= SrcDiv;								// HTML标记(菜单容器，菜单在此容器显示)
+function window.onload()
+{
+	InitTree(m_sXMLFile, m_sXSLPath, m_oSrcDiv);
+}
+/************************************************
+** GoLink(p_sHref, p_sTarget)
+************************************************/
+function GoLink(p_sHref, p_sTarget)
+{
+	var sHref	= p_sHref;
+	var sTarget	= p_sTarget;
+	//alert(p_sHref);
+	
+	document.form2.content.value= p_sHref
+}
+
+
+function on_choose()
+{
+  var sep = "";
+  var sep1 = '\x01' ;
+  var sep2 = '\x02' ;
+
+  s3 = "content="+document.form2.content.value;
+  returnValue = s3 ;
+  //alert(returnValue)
+  close() ;
+}
+
+//-->
+</SCRIPT>
+

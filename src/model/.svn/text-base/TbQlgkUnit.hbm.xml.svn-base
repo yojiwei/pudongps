@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkUnit" 
+    table="TB_QLGK_UNIT"
+>
+
+    <id
+        name="unitid"
+        type="java.lang.Integer"
+        column="UNITID"
+    >
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="ucode"
+        type="java.lang.String"
+        column="UCODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="uname"
+        type="java.lang.String"
+        column="UNAME"
+        not-null="true"
+        length="80"
+    />
+    <property
+        name="phone"
+        type="java.lang.String"
+        column="PHONE"
+        length="20"
+    />
+    <property
+        name="fax"
+        type="java.lang.String"
+        column="FAX"
+        length="20"
+    />
+    <property
+        name="homepage"
+        type="java.lang.String"
+        column="HOMEPAGE"
+        length="50"
+    />
+    <property
+        name="address"
+        type="java.lang.String"
+        column="ADDRESS"
+        length="80"
+    />
+    <property
+        name="linkman"
+        type="java.lang.String"
+        column="LINKMAN"
+        length="20"
+    />
+    <property
+        name="type"
+        type="java.lang.String"
+        column="TYPE"
+        length="20"
+    />
+    <property
+        name="groupname"
+        type="java.lang.String"
+        column="GROUPNAME"
+        length="200"
+    />
+    <property
+        name="punitid"
+        type="java.math.BigDecimal"
+        column="PUNITID"
+        length="22"
+    />
+    <property
+        name="sortorder"
+        type="java.math.BigDecimal"
+        column="SORTORDER"
+        length="22"
+    />
+    <property
+        name="numofrcds"
+        type="java.math.BigDecimal"
+        column="NUMOFRCDS"
+        length="22"
+    />
+    <property
+        name="hidden"
+        type="java.math.BigDecimal"
+        column="HIDDEN"
+        length="22"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

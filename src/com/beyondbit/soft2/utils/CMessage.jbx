@@ -1,0 +1,19 @@
+[PropertyInfo]
+ms_content,String,false,false, , ,true,<default>
+ms_direction,String,false,false, , ,true,<default>
+ms_id,String,false,false, , ,true,<default>
+ms_isnew,String,false,false, , ,true,<default>
+ms_primaryid,String,false,false, , ,true,<default>
+ms_receiverid,String,false,false, , ,true,<default>
+ms_receivername,String,false,false, , ,true,<default>
+ms_receivetime,String,false,false, , ,true,<default>
+ms_senderid,String,false,false, , ,true,<default>
+ms_sendername,String,false,false, , ,true,<default>
+ms_sendtime,String,false,false, , ,true,<default>
+ms_title,String,false,false, , ,true,<default>
+mt_id,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

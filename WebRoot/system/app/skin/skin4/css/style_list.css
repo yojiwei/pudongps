@@ -1,0 +1,101 @@
+@import url("style.css");
+#DataGrid1 tr {
+    background-color: expression(
+        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+        (
+            (this.sectionRowIndex % 2 == 0) ? "#f3f3f3" : "#f3f3f3"
+        )
+    );
+    color: expression(this.sectionRowIndex == 0 ? "#FFFFFF" : "");   
+    height: expression(this.sectionRowIndex == 0 ? "20" : "24");
+    font-weight: expression(this.sectionRowIndex == 0 ? "" : "");
+    white-space:expression(this.sectionRowIndex == 0 ? "nowrap" : "");
+    TableSelect: expression(
+        this.sectionRowIndex == 0 ? "" : 
+        (
+            onmouseover = function()
+            {
+                this.style.backgroundColor = 
+                (
+                    this.style.backgroundColor != "#C6D3E2" ? "#C6D3E2" : 
+                    (
+                        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+                        (
+                            this.sectionRowIndex % 2 == 0 ? "#f3f3f3" : "#f3f3f3"
+                        )
+                    )
+                )
+            },
+            onmouseout = function()
+            {
+                this.style.backgroundColor = 
+                (
+                    this.style.backgroundColor != "#C6D3E2" ? "#f3f3f3" : 
+                    (
+                        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+                        (
+                            this.sectionRowIndex % 2 == 0 ? "#f3f3f3" : "#f3f3f3"
+                        )
+                    )
+                )
+            }
+        )
+    )
+}
+#ctl00_DataGrid_DataGrid1 tr {
+    background-color: expression(
+        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+        (
+            (this.sectionRowIndex % 2 == 0) ? "#f3f3f3" : "#f3f3f3"
+        )
+    );
+    color: expression(this.sectionRowIndex == 0 ? "#FFFFFF" : "");   
+    height: expression(this.sectionRowIndex == 0 ? "20" : "24");
+    font-weight: expression(this.sectionRowIndex == 0 ? "" : "");
+    white-space:expression(this.sectionRowIndex == 0 ? "nowrap" : "");
+    TableSelect: expression(
+        this.sectionRowIndex == 0 ? "" : 
+        (
+            onmouseover = function()
+            {
+                this.style.backgroundColor = 
+                (
+                    this.style.backgroundColor != "#C6D3E2" ? "#C6D3E2" : 
+                    (
+                        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+                        (
+                            this.sectionRowIndex % 2 == 0 ? "#f3f3f3" : "#f3f3f3"
+                        )
+                    )
+                )
+            },
+            onmouseout = function()
+            {
+                this.style.backgroundColor = 
+                (
+                    this.style.backgroundColor != "#C6D3E2" ? "#f3f3f3" : 
+                    (
+                        this.sectionRowIndex == 0 ? "#CFD4E2" : 
+                        (
+                            this.sectionRowIndex % 2 == 0 ? "#f3f3f3" : "#f3f3f3"
+                        )
+                    )
+                )
+            }
+        )
+    )
+}
+
+
+
+.FindAreaTable1 {
+    font-size: 12px;
+    color: #333333;
+    text-decoration: none;
+    width: 100%;
+    cursor: hand;
+    border:0px;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    text-align: center;
+}

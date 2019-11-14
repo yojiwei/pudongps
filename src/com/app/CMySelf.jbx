@@ -1,0 +1,17 @@
+[PropertyInfo]
+_dtId,long,false,false, , ,false,<default>
+_id,long,false,false, , ,false,<default>
+_login,boolean,false,false, , ,false,<default>
+_name,String,false,false, , ,false,<default>
+_pwd,String,false,false, , ,false,<default>
+_uid,String,false,false, , ,false,<default>
+dtId,long,false,false, , ,true,<default>
+log,CLog,false,false, , ,false,<default>
+login,boolean,false,false, , ,true,<default>
+myID,long,false,false, , ,true,<default>
+myName,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

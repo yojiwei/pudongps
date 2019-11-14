@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function treeopen(a,b){
+	var url = "treehtml.jsp?code="+a;
+	var val = b;
+	var retVal= window.showModalDialog(url,
+                this, "dialogWidth=280px; dialogHeight=460px; help=no; status=no; scroll=no; resizable=yes; " );
+
+	if ( typeof(retVal) != "undefined" ) {
+                var sep1 = '\x01' ;
+                var objRetVal = new Object ;
+                var aL = retVal.split(sep1) ;
+                for (i in aL) {
+                        var aL1 = aL[i].split("=") ;
+                        objRetVal[aL1[0]] = aL1[1] ;
+                }
+				val.value=objRetVal.content;
+                			
+		}
+        return false;
+}
+
+
+//-->
+</SCRIPT>
+<FORM METHOD=POST ACTION="" name = "form2">
+ <INPUT TYPE="text" NAME="test1" onclick="treeopen('yg_sbdw',this);"><INPUT TYPE="text" NAME="test1" onclick="treeopen('yg_ztdw',this);">
+</FORM>
+  
+  
+
+
+
+
+</BODY>
+</HTML>

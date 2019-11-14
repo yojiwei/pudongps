@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.1
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.beyondbit.hibernate.TbQlgkPsfile" 
+    table="TB_QLGK_PSFILE"
+>
+
+    <id
+        name="fileid"
+        type="java.lang.Integer"
+        column="FILEID"
+    >
+        <generator class="increment" />
+    </id>
+	 <property
+        name="des"
+        type="java.lang.String"
+        column="DES"
+		lazy="false"
+    />
+    <property
+        name="psid"
+        type="java.math.BigDecimal"
+        column="PSID"
+        length="22"
+    />
+    <property
+        name="filecode"
+        type="java.lang.String"
+        column="FILECODE"
+        length="20"
+    />
+    <property
+        name="filename"
+        type="java.lang.String"
+        column="FILENAME"
+        length="80"
+    />
+    <property
+        name="isopen"
+        type="java.lang.Integer"
+        column="ISOPEN"
+        length="1"
+    />
+    <property
+        name="ismust"
+        type="java.lang.Integer"
+        column="ISMUST"
+        length="1"
+    />
+    <property
+        name="isinput"
+        type="java.lang.Integer"
+        column="ISINPUT"
+        length="1"
+    />
+    <property
+        name="isoutput"
+        type="java.lang.Integer"
+        column="ISOUTPUT"
+        length="1"
+    />
+    <property
+        name="edocdata"
+        type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+        column="EDOCDATA" 
+        lazy="true"
+    />
+    <property
+        name="diagrampicdata"
+        type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+        column="DIAGRAMPICDATA" 
+        lazy="true"
+    />
+  
+    <property
+        name="edocname"
+        type="java.lang.String"
+        column="EDOCNAME"
+        length="256"
+    />
+    <property
+        name="edoctype"
+        type="java.lang.String"
+        column="EDOCTYPE"
+        length="64"
+    />
+    <property
+        name="diagrampicname"
+        type="java.lang.String"
+        column="DIAGRAMPICNAME"
+        length="256"
+    />
+    <property
+        name="diagrampictype"
+        type="java.lang.String"
+        column="DIAGRAMPICTYPE"
+        length="64"
+    />
+
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

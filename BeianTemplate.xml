@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="GBK"?>
+<DEP_DATAEXCHANGEDATA>
+	<OPERATIONTYPE NOTNULL="N" COMPARETO="操作方式">LBOA</OPERATIONTYPE>
+	<MESSAGETITLE NOTNULL="N" COMPARETO="标题">标题</MESSAGETITLE>
+	<MESSAGEID NOTNULL="N" COMPARETO="ID">11</MESSAGEID>
+	<MESSAGEBODY>
+		<!-- 内容主体，可重复 start -->
+		<DATASEND>
+			<OPERATER NOTNULL="Y" COLUMNNAME="" COMPARETO="数据操作方式">add/edit/delete</OPERATER>
+			<USERUID NOTNULL="Y" COLUMNNAME="in_category" COMPARETO="信息维护人员在门户网站的登录名">信息维护人员在门户网站的登录名</USERUID>
+			<DATAID NOTNULL="Y" COLUMNNAME="" COMPARETO="数据在业务系统的主键">在业务系统的主键</DATAID>
+			<TITLE NOTNULL="Y" COLUMNNAME="ct_title" COMPARETO="标题">标题</TITLE>
+			<TOPIC NOTNULL="Y" COLUMNNAME="in_subjectid" COMPARETO="主题" REGEX="^[0,1,2,3,9]$">主题</TOPIC>
+			<!-- （机构职能：0；政策法规：1；规划计划：2；业务类：3；其他类：9） -->
+			<ISGONGWEN NOTNULL="Y" COLUMNNAME="in_isgw" COMPARETO="是否为公文" REGEX="^[0,1]$">是否为公文</ISGONGWEN>
+			<!--（是：1；不是：0） -->
+			<INDEX NOTNULL="Y" COLUMNNAME="in_catchnum" COMPARETO="索取号" REGEX="^X[A-Z][0-9][0,1,2,3,9]\d{5}-(19[0-9][0-9]|2\d{3})-\d{3}$">索取号</INDEX>
+			<PUBLISH NOTNULL="Y" COLUMNNAME="in_gongkaitype" COMPARETO="公开类别" REGEX="^[0,1,2,3]$">公开类别</PUBLISH>
+			<!--（主动公开：0；依申请公开：1；不予公开：2；非《规定》所指政府信息：3） -->
+			<CLOSEREASON PARENTNAME="PUBLISH" NOTNULL="Y" COLUMNNAME="in_colseid" COMPAREVALUE="2" COMPARETO="不予公开理由" REGEX="^[0,1,2,3,4,5]$">不予公开理由</CLOSEREASON>
+			<!--（属于国家秘密：0；属于商业秘密：1；属于个人隐私：2；过程中信息且影响安全稳定：3；危及安全和稳定：4；法律法规规定的其他情形：5） -->
+			<ANNAL NOTNULL="N" COLUMNNAME="in_infotype" REGEX="^[0,1,2,3]$">记录形式</ANNAL>
+			<!--文本:0; 图表:1; 照片:2; 影音:3 -->
+			<CARRIER NOTNULL="N" COLUMNNAME="in_carriertype" REGEX="^[0,1,2,3,4]$">载体类型</CARRIER>
+			<!--纸质:0; 胶卷:1; 磁带:2; 磁盘:3; 光盘:4 -->
+			<KEY NOTNULL="N" COLUMNNAME="ct_keywords" COMPARETO="关键字">关键字</KEY>
+			<DESCRIBE NOTNULL="Y" COLUMNNAME="ct_memo" COMPARETO="摘要">摘要</DESCRIBE>
+			<!--以下是公文属性 start -->
+			<FILENUM PARENTNAME="ISGONGWEN" COLUMNNAME="in_filenum" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="文号">文号</FILENUM>
+			<DTNAME PARENTNAME="ISGONGWEN" COLUMNNAME="" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="成文机关">成文机关</DTNAME>
+			<GONGWENTYPE PARENTNAME="ISGONGWEN" COLUMNNAME="in_gongwentype" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="公文种类" REGEX="^([0-9]|1[0,1,2])$">公文种类</GONGWENTYPE>
+			<!--命令(令):0;决定:1; 公告:2;通告:3;通知:4;通报:5;议案:6;报告:7;请示:8;批复:9;意见:10;函:11;会议纪要:12 -->
+			<CREATETIME PARENTNAME="ISGONGWEN" COLUMNNAME="ct_create_time" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="成文日期" REGEX="(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)">成文日期</CREATETIME>
+			<INDRAFT PARENTNAME="ISGONGWEN" COLUMNNAME="in_draft" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="是否重大决定草案" REGEX="^[0,1]$">是否重大决定草案</INDRAFT>
+			<!--（是：1；不是：0） -->
+			<SPECIALFILE PARENTNAME="ISGONGWEN" COLUMNNAME="in_specsfile" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="是否为规范性文件" REGEX="^[0,1]$">是否为规范性文件</SPECIALFILE>
+			<!--（是：1；不是：0） -->
+			<!--以上是公文属性 end -->
+			<ISGOWEB PARENTNAME="ISGONGWEN" COLUMNNAME="in_goweb" COMPAREVALUE="0" NOTNULL="Y" COMPARETO="是否推送到门户" REGEX="^[0,1]$">是否推送到门户</ISGOWEB>
+			<!--（1，报送；0，不报送） -->
+			<SUBJECTCODE PARENTNAME="ISGOWEB" COLUMNNAME="sj_id" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="报送到门户网站的栏目code">报送到门户网站的栏目code:以,间隔</SUBJECTCODE>
+			<OPENTIME PARENTNAME="ISGOWEB" COLUMNNAME="ct_sendtime" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="发布日期（yyyy-MM-dd）" REGEX="(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)">发布日期（yyyy-MM-dd）</OPENTIME>
+			<LINKURL NOTNULL="N" COLUMNNAME="ct_url" REGEX="^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$">链接（http://***）</LINKURL>
+			<SOURCE NOTNULL="N" COLUMNNAME="ct_source">来源</SOURCE>
+			<SPECIAL NOTNULL="N" COLUMNNAME="ct_specialflag" REGEX="^[0,1]$">是否特别提醒</SPECIAL>
+			<!--（是：1；不是：0） -->
+			<ZHUTICI1 NOTNULL="Y" COLUMNNAME="in_zutici1" COMPARETO="主题词1">主题词1</ZHUTICI1>
+			<ZHUTICI2 NOTNULL="Y" COLUMNNAME="in_zutici2" COMPARETO="主题词2">主题词2</ZHUTICI2>
+			<ZUPEITYPE NOTNULL="Y" COLUMNNAME="in_zupeitype" COMPARETO="组配分类">组配分类</ZUPEITYPE>
+			<!-- 机构职能、政策法规、规划计划、行政事务、人事人才、财务审计、国资管理、统计信息、便民信息、其它 -->
+			<IN_GOVOPENCARRIERTYPE NOTNULL="Y" COLUMNNAME="in_govopencarriertype" COMPARETO="公开载体类型">公开载体类型</IN_GOVOPENCARRIERTYPE>
+			<!-- 网站、公报、短信、邮件、电子终端、其他 -->
+			<IN_DZHHXX NOTNULL="Y" COMPAREVALUE="0" COLUMNNAME="in_dzhhxx" REGEX="^[0,1]$" COMPARETO="党政混合信息标识">党政混合信息标识</IN_DZHHXX>
+			<!-- 1（是）或0（否） -->
+			<CONTENT PARENTNAME="ISGOWEB" COLUMNNAME="" COMPAREVALUE="1" NOTNULL="Y" COMPARETO="详细内容">
+				<![CDATA[详细内容]]>
+			</CONTENT>
+			<FILEPUBATTACH NOTNULL="N" COMPARETO="附件信息">
+				<!--附件信息 以下可重复 start -->
+				<PUBATTACH>
+					<FILENAME NOTNULL="N" COMPARETO="附件名">附件名</FILENAME>
+					<FILETYPE NOTNULL="N" PARENTNAME="FILENAME" COMPAREVALUE="" COMPARETO="打开方式">打开方式（APPLICATION/MSWORD）</FILETYPE>
+					<FILELENGTH NOTNULL="N" PARENTNAME="FILENAME" COMPAREVALUE="" REGEX="\d*" COMPARETO="文件长度">文件长度</FILELENGTH>
+					<FILECONTENT NOTNULL="N" PARENTNAME="FILENAME" COMPAREVALUE="" COMPARETO="base64 编码以后的字符串">base64 编码以后的字符串</FILECONTENT>
+					<FILEEXTENSION NOTNULL="N" PARENTNAME="FILENAME" COMPAREVALUE="" COMPARETO="文件后缀">文件后缀（doc）</FILEEXTENSION>
+				</PUBATTACH>
+				<!--附件信息 以上可重复 end -->
+			</FILEPUBATTACH>
+		</DATASEND>
+		<!-- 内容主体，可重复 end -->
+	</MESSAGEBODY>
+	<SOURCEUNITCODE NOTNULL="Y" COMPARETO="源单位代号">135</SOURCEUNITCODE>
+	<SOURCECASECODE NOTNULL="Y" COMPARETO="消息来源事项代号">238</SOURCECASECODE>
+	<DESTUNIT>
+		<DESTUNITCODE NOTNULL="Y" COMPARETO="目标单位代号">110</DESTUNITCODE>
+		<DESTCASECODE NOTNULL="Y" COMPARETO="消息目标事项代号">239</DESTCASECODE>
+		<INTERFACECODE NOTNULL="Y" COMPARETO="消息提交的目标接口代号">168</INTERFACECODE>
+	</DESTUNIT>
+	<SENDER NOTNULL="N" COMPARETO="发送人姓名">环保局承办人</SENDER>
+	<SENDTIME NOTNULL="N" COMPARETO="发送消息时间" REGEX="((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)) (0[1-9]|1[0-9]|2[0-3])+:[0-5][0-9]+:[0-5][0-9]">15:44</SENDTIME>
+	<ENDTIME NOTNULL="N" COMPARETO="收到消息时间" REGEX="((([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)) (0[1-9]|1[0-9]|2[0-3])+:[0-5][0-9]+:[0-5][0-9]">2007-12-7 15:44:13</ENDTIME>
+</DEP_DATAEXCHANGEDATA>

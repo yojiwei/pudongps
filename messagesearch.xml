@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<DEP_DataExchangeData>
+	<OperationType>LBOA</OperationType>
+	<MessageTitle>标题</MessageTitle>
+	<MessageID>11</MessageID>
+	<MessageBody>
+		<queryParam>
+			<queryDeptcode>XB0</queryDeptcode>
+			<startTime>2009-06-01</startTime>
+			<endTime>2009-06-30</endTime>
+			<queryNum>1</queryNum>
+		</queryParam>
+		<recallParam>
+			<![CDATA[]]>
+		</recallParam>
+	</MessageBody>
+</DEP_DataExchangeData>
+<!--queryDeptcode部门code、startTime开始查询时间、endTime结束时间、queryNum页数（默认为1每页显示50条）-->

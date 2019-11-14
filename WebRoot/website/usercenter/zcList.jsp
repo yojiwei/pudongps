@@ -1,0 +1,297 @@
+<%@page contentType="text/html; charset=GBK"%>
+<%@include file="/website/include/head_zw_user.jsp"%>
+<%@page import="java.util.Vector"%>
+<%@page import="com.beyondbit.soft2.utils.XMLUtil"%>
+<%@ page import="org.w3c.dom.*" %>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function deleteThis(wo_id,ow_id){
+	document.userinfo.action="zcResult.jsp?wo_id="+wo_id+"&ow_id="+ow_id;
+	userinfo.submit();
+  }
+-->
+</script>
+<style type="text/css">
+<!--
+.kuang {
+	border: 1px solid #999999;
+}
+-->
+</style>
+
+<%
+//Update 20061231
+Vector vPage = null;
+CDataCn dCn = null;
+CDataImpl dImpl = null;
+
+CDataCn dCnWSB = null;
+CDataImpl dImplWSB = null;
+
+Hashtable content = null;
+String sqlStr  = "";
+String typeid = request.getParameter("typeid");
+String wo_status1 = "";
+String sql  = "";
+Vector vec_pass = null;
+Hashtable map = null;
+String wo_applytime = "";
+String pr_id = "";
+String wo_id = "";
+String wo_status = "";
+String pr_url = "";
+String wo_projectname = "";
+String lsh = "";
+String lsh_sql = "";
+Hashtable lshContent = null;
+String ow_content = "";
+Hashtable owContent = null;
+String owt1_id = "";
+Hashtable owIdHashtable = null;
+String ow_id = "";
+
+try{
+dCn = new CDataCn();
+dImpl = new CDataImpl(dCn);		//新建数据接口对象 
+
+dCnWSB = new CDataCn("wsb");
+dImplWSB = new CDataImpl(dCnWSB);	
+
+User user = (User)session.getAttribute("user");
+
+//点击超链接到本页面时的初始化
+Document contentDoc = null;
+Node subEle = null;
+NamedNodeMap nodeMap = null;
+NodeList list = null;
+%>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+<form method="post" action="ProjectResult.jsp" name="userinfo">
+  <tr>
+                <td height="10">&nbsp;</td>
+              </tr><tr>
+    <td>     <TABLE width=680 border=0 align=center cellPadding=10 cellSpacing=0 
+            bgColor=#FEFFF0 class="kuang">
+                  <TBODY>
+                    <TR> 
+                      <TD>
+								  <%
+	String name = "";
+	String us_id ="";
+	if(user!=null){
+		name =user.getUid();
+		us_id=user.getId();   
+	}
+	
+%>	               
+                      </TD>
+                    </TR>
+					<tr>
+
+					<td>
+
+					<%
+					if (typeid == null) {typeid="1";}
+					if("1".equals(typeid))
+						wo_status1 = "5";
+					else if("2".equals(typeid))
+						wo_status1 = "3";
+					
+					%>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+  <TBODY>
+    <TR>   
+      <TD width=1 bgColor=#b49f66 rowSpan=12><IMG 
+                              height=1 src="" width=1></TD>
+      <TD bgColor=#b49f66 colSpan=15 height=4><IMG 
+                              height=4 src="" width=1></TD>
+      <TD width=1 bgColor=#b49f66 rowSpan=12><IMG 
+                              height=1 src="" width=1></TD>
+    </TR>
+    <TR> 
+      <TD vAlign=top> <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                              border=0>
+          <TBODY>
+            <TR> 
+              <TD> <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                                border=0>
+                  <TBODY>
+                    <TR> 
+                      <TD><IMG height=26 src="/website/images/1<%=typeid%>_info.gif" 
+                                width=705 useMap=#top border=0> </TD>
+                    </TR>
+                  </TBODY>
+                </TABLE></TD>
+            </TR>
+            <TR> 
+              <TD align=middle> <TABLE cellSpacing=3 cellPadding=1 width="100%" 
+                                border=0>
+                  <TBODY>
+                    <TR> 
+                      <TD> 
+                        <!-- 开始 -->
+                        <TABLE cellSpacing=1 cellPadding=0 width="100%" 
+                                bgColor=#b49f66 border=0>
+                          <TBODY>
+                            <TR> 
+                             
+                              <TD width="60%" bgColor=#f2e5d4 height=20> <DIV align=center>事项名称</DIV></TD>
+                              <TD width="20%" bgColor=#f2e5d4 height=20> <DIV align=center>申请时间</DIV></TD>
+							  <%
+								if("1".equals(typeid)){
+							  %>
+                              <TD width="10%" bgColor=#f2e5d4 height=20> <DIV align=center>状态</DIV></TD>                       
+                              <TD width="10%" bgColor=#f2e5d4 height=20> <DIV align=center>删除</DIV></TD>
+							  <%
+								}else{	  
+							  %>
+							  <TD width="20%" bgColor=#f2e5d4 height=20> <DIV align=center>状态</DIV></TD>  
+							   <%
+								}  
+							  %>
+                            </TR>
+
+<%
+
+		if(user!=null){
+			sql  = "select a.wo_projectname,a.wo_applytime,a.pr_id,a.wo_id,a.wo_status,b.pr_url from tb_work a,tb_proceeding b where a.us_id='" + us_id + "' and a.wo_status='" + wo_status1 + "' and a.pr_id=b.pr_id order by a.wo_applytime desc";
+			vec_pass = dImpl.splitPage(sql,request,50);
+			
+			if(vec_pass!=null){
+				for(int i = 0 ; i <vec_pass.size();i++){
+					map = (Hashtable)vec_pass.get(i);
+					wo_applytime = map.get("wo_applytime").toString();
+					pr_id = map.get("pr_id").toString();
+					wo_id = map.get("wo_id").toString();
+					wo_status = map.get("wo_status").toString();
+					pr_url = map.get("pr_url").toString();
+					wo_projectname =CTools.dealNull(map.get("wo_projectname"));
+					
+					wo_projectname = "".equals(wo_projectname) ? "未办事项" : wo_projectname;
+					if("".equals(wo_projectname)){
+						lsh_sql = "SELECT OW_ID,WO_ID,OW_CONTENT,OWT1_ID,OW_ATTPATH FROM TB_ONLINEWORK "
+								+ " WHERE WO_ID = '"+ wo_id +"'";
+						lshContent = dImplWSB.getDataInfo(lsh_sql);
+						if(lshContent != null){
+							ow_content = lshContent.get("ow_content").toString();
+								
+							//------------修改从文件中读取xml内容---------------start---------------------
+							String attPath = dImpl.getInitParameter("wo_attpath");//xml附件存放在本地的路径
+							StringBuffer contentStr = new StringBuffer();//xml文件的内容 
+							
+							BufferedReader in = CFile.read(attPath + "\\\\" + ow_content);
+							String tempStr = "";
+							try{
+								while((tempStr = in.readLine())!=null){
+							 		contentStr.append(tempStr);
+								}
+							}catch(IOException e){
+								e.printStackTrace();
+							}
+							//------------修改从文件中读取xml内容---------------end-----------------------
+
+							contentDoc = XMLUtil.string2Doc(contentStr.toString());
+							Node root = contentDoc.getFirstChild();
+//out.println("-------------------0022334455-------------------" + attPath + "\\\\" + ow_content);if(true)return;
+							if("邀请外国人来沪申请表".equals(root.getNodeName())){
+								list = root.getChildNodes();
+								if(list.getLength() > 0){
+									//基本信息
+									subEle = list.item(0);
+									if("基本信息".equals(subEle.getNodeName())){
+										nodeMap = subEle.getAttributes();
+										lsh = nodeMap.getNamedItem("lsh").getNodeValue();
+									}
+								}
+							}
+							wo_projectname = lsh;
+						}
+						
+					}
+
+					owContent = dImpl.getDataInfo("select owt1_id from tb_onlineworkxmltype where pr_id='" + pr_id + "'");
+					//out.println("select owt1_id from tb_onlineworkxmltype where pr_id='" + pr_id + "'");
+					owt1_id = "";
+					owIdHashtable = dImplWSB.getDataInfo("SELECT OW_ID FROM TB_ONLINEWORK WHERE WO_ID = '"+ wo_id+"'");
+					ow_id = "";
+
+					if(owIdHashtable != null)
+						ow_id = owIdHashtable.get("ow_id").toString();
+					if(owContent != null){
+						owt1_id = owContent.get("owt1_id").toString();
+					}
+					
+					out.print("<tr>");
+					out.print("<td height='20' align='center' bgColor=#ffffff><a href='" + pr_url + "?wo_id=" + wo_id + "&ow_id=" + ow_id + "&wo_status=" + wo_status + "&pr_id=" + pr_id + "&owt1_id=" + owt1_id + "&asd="+CBase64.getEncodeString(user.getUid())+"&rfv="+CBase64.getEncodeString(user.getPwd())+"'>" + wo_projectname + "</a></td>");
+					out.print("<td height='20' bgColor=#ffffff>" + wo_applytime + "</td>");
+					if("1".equals(typeid)){
+						out.print("<td height='20' bgColor=#ffffff align='center'>暂存</td>");
+						out.print("<td height='20' bgColor=#ffffff align='center'><a href='#' onclick=javascript:deleteThis('"+wo_id+"','"+ow_id+"')>删除</a></td>");
+					}else{
+						out.print("<td height='20' bgColor=#ffffff align='center'>暂存</td>");
+					}
+					out.print("</tr>");
+	
+				}
+			}
+
+		}
+%>
+                          </TBODY>
+                        </TABLE>
+                        <!-- 结束 -->
+                      </TD>
+                    </TR>
+                  </TBODY>
+                </TABLE></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR> 
+      <TD bgColor=#b49f66 colSpan=15 height=4><IMG 
+                              height=4 src="" 
+                    width=1></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<MAP 
+      name=top>
+  <AREA shape=RECT coords=28,9,88,24 
+        href="/website/usercenter/zcList.jsp?typeid=1">
+  <AREA 
+        shape=RECT coords=124,9,184,24 
+        href="/website/usercenter/zcList.jsp?typeid=2">
+</MAP>
+					</td>
+					</tr>
+					</TBODY></TABLE>						
+					
+					
+					</td>
+  </tr>
+ </form>
+</table>
+
+
+<%@include file="/website/include/bottom_user.jsp"%>
+<%
+}
+catch(Exception e){
+//e.printStackTrace();
+out.print(e.toString());
+}
+finally{
+dImpl.closeStmt();
+dCn.closeCn(); 
+}
+%>

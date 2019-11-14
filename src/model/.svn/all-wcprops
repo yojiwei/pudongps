@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 193
+/svn/xq_qlgk/!svn/ver/1053/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model
+END
+TbQlgkPowerstd.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 215
+/svn/xq_qlgk/!svn/ver/486/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPowerstd.hbm.xml
+END
+TbQlgkPowerstdlog.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 218
+/svn/xq_qlgk/!svn/ver/343/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPowerstdlog.hbm.xml
+END
+TbQlgkPubattach.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 216
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPubattach.hbm.xml
+END
+TbQlgkStepfile.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 215
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkStepfile.hbm.xml
+END
+TbQlgkUnit.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 211
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkUnit.hbm.xml
+END
+TbQlgkPscategory.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 217
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPscategory.hbm.xml
+END
+TbQlgkSubpowerstd.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/1053/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkSubpowerstd.hbm.xml
+END
+TbQlgkPsfile.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 213
+/svn/xq_qlgk/!svn/ver/424/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPsfile.hbm.xml
+END
+TbQlgkLaw.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 210
+/svn/xq_qlgk/!svn/ver/424/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkLaw.hbm.xml
+END
+TbQlgkPowerstdstep.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 219
+/svn/xq_qlgk/!svn/ver/235/07_%E4%BB%A3%E7%A0%81/%E6%BA%90%E4%BB%A3%E7%A0%81/%E6%9D%83%E5%8A%9B%E5%85%AC%E5%BC%80%E9%80%8F%E6%98%8E%E8%BF%90%E8%A1%8C%E4%B8%93%E7%BD%91/web/WEB-INF/classes/model/TbQlgkPowerstdstep.hbm.xml
+END

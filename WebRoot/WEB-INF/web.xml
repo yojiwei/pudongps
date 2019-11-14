@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+     PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <context-param>
+		<param-name>start-time</param-name>
+		<param-value>2005-3-9 11:20</param-value>
+	</context-param> 
+	<!--listener>
+	  <listener-class>com.util.WGQMsgReceiveListener</listener-class-->
+	  <!--listener-class>com.proceedingservices.ProceedingListener</listener-class-->
+	  <!--listener-class>com.website.CIndexListenter</listener-class>
+	</listener-->
+<!--yo casso-->
+	<filter>   
+    <filter-name>CASFilter</filter-name>   
+    <filter-class>cas.jsp.CASFilter</filter-class>   
+    <init-param>   
+        <param-name>cas.login</param-name>   
+        <param-value>http://localhost:5203/cas/login</param-value>   
+    </init-param>  
+    <init-param>   
+        <param-name>cas.loginnew</param-name>   
+        <param-value>http://localhost:5203/cas/loginnew</param-value>   
+    </init-param> 
+    <init-param>   
+        <param-name>cas.validate</param-name>   
+        <param-value>http://localhost:5203/cas/validate</param-value>   
+    </init-param>   
+    <init-param>   
+        <param-name>cas.ticketUrl</param-name>   
+        <param-value>http://localhost:5203/cas/GetTicket</param-value>   
+    </init-param>
+</filter>   
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/cas/*</url-pattern>
+</filter-mapping>
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/website/usercenter/*</url-pattern>
+</filter-mapping>
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/website/usermanage/*</url-pattern>
+</filter-mapping>
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/website/dxpd/success.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/website/pudongForum/success.jsp</url-pattern>
+</filter-mapping> 
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/connonline/include/success.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>   
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/website/waishi/success.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/fwwb/success.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/pddaxxw/success.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/pddaxxw/successbd.jsp</url-pattern>
+</filter-mapping>
+
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/gsj/success.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/gsj/success_gsbd.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/gsj/auctionInfo.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+    <filter-name>CASFilter</filter-name>   
+   <url-pattern>/gsj/auctionList.jsp</url-pattern>
+</filter-mapping>
+<!--yo casso-->
+
+<!--ph filter-->
+	<filter>
+		<filter-name>ParameterFilter</filter-name>
+		<filter-class>com.website.filter.ParameterFilter</filter-class>
+		<init-param>
+			<param-name>keywords</param-name>
+			<param-value><![CDATA[ exec, drop, use, select,',",<,>, or, and, add, insert, update, delete,<script,</script>]]></param-value>
+		</init-param>
+		<init-param>
+			<param-name>filtertopage</param-name>
+			<param-value>/website/error.html</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/website/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/pddaxxw/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/chuansha/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/connonline/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/csr/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/dwgk/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/english/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/englishweb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/fwwb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/gongwuyuan/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/gsj/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/hdxcjd/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/impsubject/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/jinqiao/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/kuaiji/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/lgw/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/lgwold/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/luguanwei/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/newweb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/pd17da/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/pddjw/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/propose/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/publicservice/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/pudongWeekly/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/waigaoqiao/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ParameterFilter</filter-name>
+		<url-pattern>/zhangjiang/*</url-pattern>
+	</filter-mapping> 
+	
+
+<!--ph filter-->
+
+<!--url filter-->
+<filter>
+		<filter-name>Sqlurl</filter-name>
+		<filter-class>
+			org.Tools.URLfilter
+		</filter-class>
+		<init-param>
+			<param-name>sql</param-name>
+			<param-value>'| exec| execute| and| or| insert| select| delete| update| drop| count|*| chr| mid| master| truncate| char| declare|--|+| like</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forward</param-name>
+			<param-value>/website/error.html</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/website/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/pddaxxw/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/chuansha/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/connonline/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/csr/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/dwgk/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/english/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/englishweb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/fwwb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/gongwuyuan/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/gsj/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/hdxcjd/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/impsubject/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/jinqiao/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/kuaiji/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/lgw/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/lgwold/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/luguanwei/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/newweb/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/pd17da/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/pddjw/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/propose/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/publicservice/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/pudongWeekly/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/waigaoqiao/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>Sqlurl</filter-name>
+		<url-pattern>/zhangjiang/*</url-pattern>
+	</filter-mapping>  
+		<filter-mapping>
+    <filter-name>Sqlurl</filter-name>   
+   <url-pattern>/system/app/*</url-pattern>
+</filter-mapping>
+<!--url filter-->
+
+
+
+
+	<!--listener>
+	  <listener-class>com.util.FolderListener</listener-class>
+	</listener-->
+	
+
+	<!--listener>
+	  <listener-class>com.util.JVMListener</listener-class>
+	</listener-->
+
+
+	<servlet>
+		<servlet-name>Connector</servlet-name>
+		<servlet-class>com.fredck.FCKeditor.connector.ConnectorServlet</servlet-class>
+		<init-param>
+			<param-name>baseDir</param-name>
+			<param-value>/UserFiles/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	 <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/config/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+
+	<servlet>
+		<servlet-name>SimpleUploader</servlet-name>
+		<servlet-class>com.fredck.FCKeditor.uploader.SimpleUploaderServlet</servlet-class>
+		<init-param>
+			<param-name>baseDir</param-name>
+			<param-value>/attach/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>enabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsFile</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsFile</param-name>
+			<param-value>php|php3|php5|phtml|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|dll|reg|cgi</param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsImage</param-name>
+			<param-value>jpg|gif|jpeg|png|bmp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsImage</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>AllowedExtensionsFlash</param-name>
+			<param-value>swf|fla</param-value>
+		</init-param>
+		<init-param>
+			<param-name>DeniedExtensionsFlash</param-name>
+			<param-value></param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+  
+ 
+  
+   <servlet>
+    <servlet-name>YGCGSubmitServlet</servlet-name>
+    <display-name>YGCGSubmitServlet</display-name>
+    <servlet-class>com.beyondbit.soft2.onlinework.YGCGSubmitServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OnlineWorkSubmitServlet</servlet-name>
+    <display-name>OnlineWorkSubmitServlet</display-name>
+    <servlet-class>com.beyondbit.soft2.onlinework.OnlineWorkSubmitServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>DownloadAttachServlet</servlet-name>
+    <display-name>DownloadAttachServlet</display-name>
+    <servlet-class>com.beyondbit.soft2.onlinework.DownloadAttachServlet</servlet-class>
+  </servlet>
+  
+      
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <display-name>Apache-Axis Servlet</display-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AxisServlet
+    </servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <display-name>Axis Admin Servlet</display-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AdminServlet
+    </servlet-class>
+    <load-on-startup>100</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <display-name>SOAPMonitorService</display-name>
+    <servlet-class>
+        org.apache.axis.monitor.SOAPMonitorService
+    </servlet-class>
+    <init-param>
+      <param-name>SOAPMonitorPort</param-name>
+      <param-value>5001</param-value>
+    </init-param>
+    <load-on-startup>100</load-on-startup>
+  </servlet>  
+   
+     
+      <!--dwr-->
+     <servlet> 
+		<servlet-name>dwr-invoker</servlet-name> 
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class> 
+		    <init-param> 
+		      <param-name>debug</param-name> 
+		      <param-value>true</param-value> 
+		    </init-param> 
+		</servlet> 
+		
+		<servlet-mapping> 
+		    <servlet-name>dwr-invoker</servlet-name> 
+		    <url-pattern>/webanycall/*</url-pattern> 
+		</servlet-mapping> 
+
+     	<!--dwr-->
+  <servlet-mapping>
+    <servlet-name>DownloadAttachServlet</servlet-name>
+    <url-pattern>/onlinework/DownloadAttach</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OnlineWorkSubmitServlet</servlet-name>
+    <url-pattern>/onlinework/OnlineWorkSubmit</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Connector</servlet-name>
+    <url-pattern>/system/app/infopublish/editor/editor/filemanager/browser/default/connectors/jsp/connector</url-pattern>
+  </servlet-mapping>
+   
+  <servlet-mapping>
+    <servlet-name>SimpleUploader</servlet-name>
+    <url-pattern>/system/app/infopublish/editor/editor/filemanager/upload/simpleuploader</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>YGCGSubmitServlet</servlet-name>
+    <url-pattern>/onlinework/YGCGSubmit</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/servlet/AxisServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>*.jws</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <url-pattern>/SOAPMonitor</url-pattern>
+  </servlet-mapping>
+
+  <!--servlet-mapping>
+    <servlet-name>debugjsp</servlet-name>
+    <url-pattern>*.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>initGeneratePage</servlet-name>
+  	<url-pattern>/initGeneratepage</url-pattern>
+  </servlet-mapping-->
+   
+   
+  
+
+  
+  	<mime-mapping>
+        <extension>abs</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ai</extension>
+        <mime-type>application/postscript</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>aif</extension>
+        <mime-type>audio/x-aiff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>aifc</extension>
+        <mime-type>audio/x-aiff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>aiff</extension>
+        <mime-type>audio/x-aiff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>aim</extension>
+        <mime-type>application/x-aim</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>art</extension>
+        <mime-type>image/x-jg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>asf</extension>
+        <mime-type>video/x-ms-asf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>asx</extension>
+        <mime-type>video/x-ms-asf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>au</extension>
+        <mime-type>audio/basic</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>avi</extension>
+        <mime-type>video/x-msvideo</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>bmp</extension>
+        <mime-type>image/bmp</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>css</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xls</extension>
+        <mime-type>application/msexcel</mime-type>
+    </mime-mapping> 
+    <mime-mapping>
+        <extension>doc</extension>
+        <mime-type>application/msword</mime-type>
+    </mime-mapping> 
+    <mime-mapping>  
+        <extension>mht</extension>  
+        <mime-type>text/x-mht</mime-type>  
+    </mime-mapping>
+    <mime-mapping>  
+        <extension>rar</extension>  
+        <mime-type>application/octet-stream</mime-type>  
+    </mime-mapping>  
+    <mime-mapping>  
+        <extension>iso</extension>  
+        <mime-type>application/octet-stream</mime-type>  
+     </mime-mapping>  
+     <mime-mapping>  
+        <extension>ape</extension>  
+        <mime-type>application/octet-stream</mime-type>  
+     </mime-mapping>  
+     <mime-mapping>  
+        <extension>rmvb</extension>  
+        <mime-type>application/octet-stream</mime-type>  
+     </mime-mapping>  
+     <mime-mapping>  
+        <extension>ico</extension>  
+        <mime-type>image/x-icon</mime-type>  
+     </mime-mapping> 
+    <mime-mapping>
+        <extension>exe</extension>
+        <mime-type>application/octet-stream</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>gif</extension>
+        <mime-type>image/gif</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>gtar</extension>
+        <mime-type>application/x-gtar</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>gz</extension>
+        <mime-type>application/x-gzip</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>htm</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>jpe</extension>
+        <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>jpeg</extension>
+        <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>jpg</extension>
+        <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mid</extension>
+        <mime-type>audio/x-midi</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>midi</extension>
+        <mime-type>audio/x-midi</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mov</extension>
+        <mime-type>video/quicktime</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>movie</extension>
+        <mime-type>video/x-sgi-movie</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mp1</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mp2</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mp3</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mpa</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mpe</extension>
+        <mime-type>video/mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mpeg</extension>
+        <mime-type>video/mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mpega</extension>
+        <mime-type>audio/x-mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>mpg</extension>
+        <mime-type>video/mpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pbm</extension>
+        <mime-type>image/x-portable-bitmap</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pct</extension>
+        <mime-type>image/pict</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pdf</extension>
+        <mime-type>application/pdf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pgm</extension>
+        <mime-type>image/x-portable-graymap</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pic</extension>
+        <mime-type>image/pict</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pict</extension>
+        <mime-type>image/pict</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pls</extension>
+        <mime-type>audio/x-scpls</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>png</extension>
+        <mime-type>image/png</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pnm</extension>
+        <mime-type>image/x-portable-anymap</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pnt</extension>
+        <mime-type>image/x-macpaint</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ppm</extension>
+        <mime-type>image/x-portable-pixmap</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ppt</extension>
+        <mime-type>application/powerpoint</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>psd</extension>
+        <mime-type>image/x-photoshop</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>swf</extension>
+        <mime-type>application/x-shockwave-flash</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>tar</extension>
+        <mime-type>application/x-tar</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>tif</extension>
+        <mime-type>image/tiff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>tiff</extension>
+        <mime-type>image/tiff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xht</extension>
+        <mime-type>application/xhtml+xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xml</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xsl</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>wav</extension>
+        <mime-type>audio/x-wav</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>vsd</extension>
+        <mime-type>application/x-visio</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>wml</extension>
+        <mime-type>text/vd.wap.wml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>zip</extension>
+        <mime-type>application/zip</mime-type>
+    </mime-mapping> 
+
+ <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+
+  <!--error-page>
+	<error-code>404</error-code>
+	<location>/cuowu.html</location>
+  </error-page>
+   <error-page>
+	<error-code>500</error-code>
+	<location>/cuowu.html</location>
+  </error-page> 
+  <error-page>
+	<exception-type>java.lang.NumberFormatException</exception-type>
+	<location>/cuowu.html</location>
+  </error-page-->
+  
+  <taglib>
+    <taglib-uri>/FCKeditor</taglib-uri>
+    <taglib-location>/WEB-INF/FCKeditor.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
+    <taglib-location>/WEB-INF/config/struts-bean.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>
+    <taglib-location>/WEB-INF/config/struts-html.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>
+    <taglib-location>/WEB-INF/config/struts-logic.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>
+    <taglib-location>/WEB-INF/config/struts-tiles.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/WEB-INF/struts-nested.tld</taglib-uri>
+    <taglib-location>/WEB-INF/config/struts-nested.tld</taglib-location>
+  </taglib>
+  
+</web-app>
