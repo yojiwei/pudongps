@@ -22,16 +22,6 @@ public class CDataCn extends CError
 		   String strDBDriver = "oracle.jdbc.driver.OracleDriver"; 
 		   String strWebname = "gwba";
 		   String strWebpass = "123456"; 
-//		   @pudong--192.168.152.240 
-//		   String strUrl = "dbc:oracle:thin:@192.168.152.240:1521:beyond"; 
-//		   String strDBDriver = "oracle.jdbc.driver.OracleDriver"; 
-//		   String strWebname = "pudongweb0113";
-//		   String strWebpass = "aimer19810216"; 
-//		   @pudong--192.168.152.200 
-//		   String strUrl = "dbc:oracle:thin:@192.168.152.240:1521:beyond"; 
-//		   String strDBDriver = "oracle.jdbc.driver.OracleDriver"; 
-//		   String strWebname = "gwba";
-//		   String strWebpass = "gwba+2009";
 		   //@pudong--
 //		   pro = new ReadProperty();
 //		   String strUrl = "jdbc:oracle:thin:@" + pro.getPropertyValue("dbip") + ":" 
