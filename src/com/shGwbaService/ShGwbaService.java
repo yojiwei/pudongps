@@ -73,7 +73,7 @@ public class ShGwbaService  extends TimerTask{
 						"decode(c.in_gongwentype,0,'命令（令）',1,'决定','2','公告','3','通告','4','通知','5','通报','6','议案','7','报告','8','请示','9','批复','10','意见','11','函','12','会议纪要') as in_gongwentype, " +
 						"decode(c.in_subjectid,0,'机构职能',1,'政策法规','2','规划计划','3','业务类','9','其它') as in_subjectid, decode(c.in_draft,0,'N',1,'Y','N') as in_draft,decode(c.in_isgw,0,'N',1,'Y') as in_isgw," +
 						"decode(c.in_specsfile,0,'N',1,'Y','N') as in_specsfile,decode(c.in_zutici1,'','12125',c.in_zutici1) as in_zutici1,decode(c.in_zutici2,'','12253',c.in_zutici2) as in_zutici2,decode(c.in_zupeitype,'','其它',c.in_zupeitype) as in_zupeitype,d.dt_zzjgdm,d.dt_shortname " +
-						"from tb_content c,tb_deptinfo d,tb_contentdetail cd  where c.isgosh = '0'  and in_filenum is not null and in_filenum <> '无'   and in_isgw = 0 and ct_sendtime > '2000-01-01'  and c.dt_id = d.dt_id and c.ct_id = cd.ct_id  order by c.ct_id desc";
+						"from tb_content c,tb_deptinfo d,tb_contentdetail cd  where c.isgosh = '0'  and in_filenum is not null and in_filenum <> '无'   and in_isgw = 1 and ct_sendtime > '2019-01-01'  and c.dt_id = d.dt_id and c.ct_id = cd.ct_id  order by c.ct_id desc";
 			
 			System.out.println("sendShGwbaAutoOa---------"+xxgksql);
 			
@@ -158,12 +158,12 @@ public class ShGwbaService  extends TimerTask{
 						"decode(c.in_gongwentype,0,'命令（令）',1,'决定','2','公告','3','通告','4','通知','5','通报','6','议案','7','报告','8','请示','9','批复','10','意见','11','函','12','会议纪要') as in_gongwentype, " +
 						"decode(c.in_subjectid,0,'机构职能',1,'政策法规','2','规划计划','3','业务类','9','其它') as in_subjectid, decode(c.in_draft,0,'N',1,'Y','N') as in_draft,decode(c.in_isgw,0,'N',1,'Y') as in_isgw," +
 						"decode(c.in_specsfile,0,'N',1,'Y','N') as in_specsfile,decode(c.in_zutici1,'','12125',c.in_zutici1) as in_zutici1,decode(c.in_zutici2,'','12253',c.in_zutici2) as in_zutici2,decode(c.in_zupeitype,'','其它',c.in_zupeitype) as in_zupeitype,d.dt_zzjgdm,d.dt_shortname " +
-						"from tb_content c,tb_deptinfo d,tb_contentdetail cd  where c.isgosh2 = '0' and in_filenum is not null and in_filenum <> '无'   and in_isgw = 0 and ct_sendtime > '2000-01-01'  and c.dt_id = d.dt_id and c.ct_id = cd.ct_id order by c.ct_id desc";
+						"from tb_content c,tb_deptinfo d,tb_contentdetail cd  where c.isgosh2 = '0' and in_filenum is not null and in_filenum <> '无'   and in_isgw = 1 and ct_sendtime > '2019-01-01'  and c.dt_id = d.dt_id and c.ct_id = cd.ct_id order by c.ct_id desc";
 			
 			System.out.println("sendShGwbaAutoWeb---------"+xxgksql);
 			
 			StringBuffer strB= new StringBuffer();
-			
+			 
 			vPage = dImpl.splitPage(xxgksql, 10,1);//最多取100条
 			if(vPage!=null){
 				for(int i=0;i<vPage.size();i++){
