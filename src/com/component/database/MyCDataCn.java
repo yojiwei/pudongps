@@ -15,20 +15,17 @@ public class MyCDataCn extends CError
    private Connection cn = null;
    private ReadProperty pro = null;
    //硬编码连接
-   public MyCDataCn() { 
+	 public MyCDataCn() { 
 	   try {
-		   String strUrl = "dbc:oracle:thin:@localhost:1521:xworcl"; 
-		   String strDBDriver = "oracle.jdbc.driver.OracleDriver"; 
-		   String strWebname = "casso";
-		   String strWebpass = "123456";
-           // 载入 JDBC 驱动
-           Class.forName(strDBDriver).getInterfaces();
-           // 得到数据库连接
-           cn = DriverManager.getConnection(strUrl, strWebname, strWebpass);
-       }catch (Exception ex){
-            System.out.println(ex);
-       }
-   }
+		    //载入 JDBC 驱动 
+	       Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").getInterfaces();
+	       // 得到数据库连接
+	       cn = DriverManager.getConnection("jdbc:sqlserver://192.168.152.213:1433;DatabaseName=pudong0113", "pudongdbuser2019", "pudong12354pduser");
+	       System.out.println("sqlserver---cn="+cn);
+	   }catch (Exception ex){
+	        System.out.println(ex); 
+	   }
+	}
    //配置文件连接
 //   public MyCDataCn() {
 //	   try {
