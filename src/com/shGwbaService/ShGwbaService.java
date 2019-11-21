@@ -16,6 +16,8 @@ import org.apache.http.client.HttpClient;
 import com.alibaba.fastjson.JSONObject;
 import com.component.database.CDataCn;
 import com.component.database.CDataImpl;
+import com.component.database.MyCDataCn;
+import com.component.database.MyCDataImpl;
 import com.util.CTools;
 
 /**
@@ -142,23 +144,21 @@ public class ShGwbaService  extends TimerTask{
 		String xxgksql = "";
 		String reback = "";
 		String shUrl = "http://10.81.17.123:8080/EpointSHzwdt/rest/archivebaserestaction/addoreditarchive_web";
-		CDataCn cDn=null;
-		CDataImpl dImpl=null;
+		MyCDataCn cDn=null;
+		MyCDataImpl dImpl=null;
 		Hashtable table=null;
 		Vector vPage=null;
 		try {
 			
-			cDn = new CDataCn();
-			dImpl =new CDataImpl(cDn);
+			cDn = new MyCDataCn();
+			dImpl =new MyCDataImpl(cDn);
 			//发送2000年以后的，属于公文的
-			xxgksql = "select c.ct_id as ct_id,c.ct_title as ct_title,c.in_filenum as in_filenum,d.dt_shortname as dt_name,decode(c.in_dzhhxx,0,'N',1,'Y','N') as " +
-						"in_dzhhxx, c.ct_create_time as ct_create_time,c.ct_inserttime as ct_inserttime,c.in_catchnum as in_catchnum," +
-						"decode(c.in_gongkaitype,0,'001',1,'002','2','003','3','003') as  in_gongkaitype,decode(c.in_govopencarriertype,'','其他',c.in_govopencarriertype) as in_govopencarriertype, " +
-						"decode(c.in_colseid,1,'002','2','003','3','005','5','007') as in_colseid,cd.ct_content as ct_content,c.ct_memo as ct_memo,substr(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'),0,INSTR(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'), '(2')-1) as filenumber1,substr(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'),INSTR(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'), '(2')+1,4) as filenumber2,replace(replace(replace(replace(substr(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'),INSTR(replace(replace(replace(replace(replace(replace(replace(replace(in_filenum,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'), '(2')+6,100),'号',''),'第',''),'批次',''),')','') as filenumber3," +
-						"decode(c.in_gongwentype,0,'命令（令）',1,'决定','2','公告','3','通告','4','通知','5','通报','6','议案','7','报告','8','请示','9','批复','10','意见','11','函','12','会议纪要') as in_gongwentype, " +
-						"decode(c.in_subjectid,0,'机构职能',1,'政策法规','2','规划计划','3','业务类','9','其它') as in_subjectid, decode(c.in_draft,0,'N',1,'Y','N') as in_draft,decode(c.in_isgw,0,'N',1,'Y') as in_isgw," +
-						"decode(c.in_specsfile,0,'N',1,'Y','N') as in_specsfile,decode(c.in_zutici1,'','12125',c.in_zutici1) as in_zutici1,decode(c.in_zutici2,'','12253',c.in_zutici2) as in_zutici2,decode(c.in_zupeitype,'','其它',c.in_zupeitype) as in_zupeitype,d.dt_zzjgdm,d.dt_shortname " +
-						"from tb_content c,tb_deptinfo d,tb_contentdetail cd  where c.isgosh2 = '0' and in_filenum is not null and in_filenum <> '无'   and in_isgw = 1 and ct_sendtime > '2019-01-01'  and c.dt_id = d.dt_id and c.ct_id = cd.ct_id order by c.ct_id desc";
+			xxgksql = "select top 100 contentid as ct_id,title as ct_title,serialno as in_catchnum," + 
+					"Substring(replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'),0,CHARINDEX('(2',replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')'))) as filenumber1," + 
+					"Substring(replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')') ,CHARINDEX('(2',replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')') )+1,4) as filenumber2," + 
+					"replace(replace(replace(replace(Substring(replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')') ,CHARINDEX('(2',replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')') )+5,Len(replace(replace(replace(replace(replace(replace(replace(replace(fileno,'（','('),'）',')'),'〔','('),'〕',')'),'【','('),'】',')'),'[','('),']',')') )),'号',''),'第',''),'批次',''),')','') as filenumber3" + 
+					",createtime as ct_create_time,starttime as ct_inserttime,'http://www.pudong.gov.cn/shpd/InfoOpen/InfoDetail.aspx?Id='+convert(varchar,contentid) as openurl,content as ct_content " + 
+					"from content where fileno is not null and fileno <> '' and opentype = '1' and contentid_old is not null and isgosh = '0' and createtime > '2019-01-01' order by contentid desc";
 			
 			System.out.println("sendShGwbaAutoWeb---------"+xxgksql);
 			
@@ -180,7 +180,7 @@ public class ShGwbaService  extends TimerTask{
 			
 			record.put("archdate", CTools.dealNull(table.get("ct_create_time")));
 			record.put("pubdate", CTools.dealNull(table.get("ct_inserttime")));
-			record.put("openurl", "http://www.pudong.gov.cn");
+			record.put("openurl", CTools.dealNull(table.get("openurl")));
 			record.put("content", CTools.dealNull(table.get("ct_content")).replaceAll("\"/attach/infoattach/", "\"http://www.pudong.gov.cn/UpLoadPath/PublishInfo/"));
 			
 			List<HashMap> attachFiles = new ArrayList<HashMap>();
@@ -286,16 +286,16 @@ public class ShGwbaService  extends TimerTask{
 		String xxgksql = "";
 		String reback = "";
 		String shUrl = "http://117.184.226.173/zwgk_interface/rest/archivebaserestaction/delarchive_web";
-		CDataCn cDn=null;
-		CDataImpl dImpl=null;
+		MyCDataCn cDn=null;
+		MyCDataImpl dImpl=null;
 		Hashtable table=null;
 		Vector vPage=null;
 		try {
 			
-			cDn = new CDataCn();
-			dImpl =new CDataImpl(cDn);
+			cDn = new MyCDataCn();
+			dImpl =new MyCDataImpl(cDn);
 						
-			xxgksql = "select c.ct_id as ct_id from tb_content c  where c.ct_id in("+ct_ids+")  order by c.ct_id desc";
+			xxgksql = "select c.contentid as ct_id from content c  where c.contentid in("+ct_ids+")  order by c.contentid desc";
 			
 			System.out.println("---------"+xxgksql);
 			
@@ -391,9 +391,9 @@ public class ShGwbaService  extends TimerTask{
 	 * @param reback
 	 * @param dImpl
 	 */
-	public void updateContent2(String ct_id,String reback,CDataImpl dImpl){
+	public void updateContent2(String ct_id,String reback,MyCDataImpl dImpl){
 		try {
-			dImpl.executeUpdate("update tb_content set isgosh2='"+reback+"' where ct_id='" + ct_id + "'");
+			dImpl.executeUpdate("update content set isgosh='"+reback+"' where contentid='" + ct_id + "'");
 			dImpl.update();
 		} catch (Exception e) {
 			// TODO: handle exception
