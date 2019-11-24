@@ -18,7 +18,7 @@ public class MyCDataCn extends CError
 	 public MyCDataCn() { 
 		 try{
 				
-				String URL = "jdbc:sqlserver://192.168.152.213;DatabaseName=pudong0113";
+				String URL = "jdbc:sqlserver://192.168.152.213:1433;DatabaseName=pudong0113";
 				String userName = "pudongdbuser2019";
 				String userPwd = "pudong12354pduser";
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
