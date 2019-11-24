@@ -18,13 +18,13 @@ public class MyCDataCn extends CError
 	 public MyCDataCn() { 
 		 try{
 				
-				String URL = "jdbc:sqlserver://192.168.152.213:1433;DatabaseName=pudong0113";
+				String URL = "jdbc:sqlserver://192.168.152.213;DatabaseName=pudong0113";
 				String userName = "pudongdbuser2019";
 				String userPwd = "pudong12354pduser";
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 				cn = DriverManager.getConnection(URL, userName, userPwd);//userName是你数据库的用户名如sa,
 				if(cn!=null){
-					System.out.println("conn="+cn);
+					System.out.println("conn="+cn); 
 				}
 				//cn.close();
 			}catch (Exception e){
