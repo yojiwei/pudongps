@@ -16,35 +16,23 @@ public class MyCDataCn extends CError
    private ReadProperty pro = null;
    //硬编码连接
 	 public MyCDataCn() { 
-	   try {
-		    //载入 JDBC 驱动 
-	       Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").getInterfaces();
-	       // 得到数据库连接
-	       cn = DriverManager.getConnection("jdbc:sqlserver://192.168.152.213:1433;DatabaseName=pudong0113", "pudongdbuser2019", "pudong12354pduser");
-	       System.out.println("sqlserver---cn="+cn);
-	   }catch (Exception ex){
-	        System.out.println(ex); 
-	   }
+		 try{
+				
+				String URL = "jdbc:sqlserver://192.168.152.213:1433;DatabaseName=pudong0113";
+				String userName = "pudongdbuser2019";
+				String userPwd = "pudong12354pduser";
+				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+				cn = DriverManager.getConnection(URL, userName, userPwd);//userName是你数据库的用户名如sa,
+				if(cn!=null){
+					System.out.println("conn="+cn);
+				}
+				//cn.close();
+			}catch (Exception e){
+				System.out.println("数据库连接失败");
+				e.printStackTrace();
+			}
 	}
-   //配置文件连接
-//   public MyCDataCn() {
-//	   try {
-//		   pro = new ReadProperty();
-//		   String strUrl = "jdbc:oracle:thin:@" + pro.getPropertyValue("dbip") + ":" 
-//		   		+ pro.getPropertyValue("dbport") + ":" + pro.getPropertyValue("dbsid"); 
-//		   
-//		   String strDBDriver = pro.getPropertyValue("dbdriver"); 
-//		   String strWebname = pro.getPropertyValue("mydbusername");
-//		   String strWebpass = pro.getPropertyValue("mydbpassword");
-//           // 载入 JDBC 驱动
-//           Class.forName(strDBDriver).getInterfaces();
-//           // 得到数据库连接
-//           cn = DriverManager.getConnection(strUrl, strWebname, strWebpass);
-//       }catch (Exception ex){
-//            System.out.println(ex);
-//       }
-//   }
-
+   
    /**
    * Method: getConnection()
    * Description: 返回数据库连接对象

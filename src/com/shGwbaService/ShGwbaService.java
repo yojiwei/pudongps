@@ -462,13 +462,13 @@ public class ShGwbaService  extends TimerTask{
 		//新增公文备案OA
 		//sgs.sendShGwbaAutoOa();
 		//新增公文备案网站
-		//sgs.sendShGwbaAutoWeb();
+		sgs.sendShGwbaAutoWeb();
 		//删除公文备案OA
 		//sgs.deleteShGwbaAutoOa(ct_ids);
 		//删除公文备案网站
 		//sgs.deleteShGwbaAutoWeb(ct_ids);
 		//信息更新量
-		sgs.gwbaCount();
+		//sgs.gwbaCount();
 		
 	}
 	

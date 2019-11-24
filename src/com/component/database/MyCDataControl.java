@@ -27,7 +27,8 @@ public class MyCDataControl extends CError
        MyCDataCn dCn = new MyCDataCn();
        dataCn = dCn;
        cn = dataCn.getConnection();
-       stmt = cn.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,java.sql.ResultSet.CONCUR_UPDATABLE);
+       //stmt = cn.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,java.sql.ResultSet.CONCUR_READ_ONLY);
+       stmt = cn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
        //stmt = cn.createStatement();
      }
      catch(Exception ex)
@@ -56,7 +57,7 @@ public class MyCDataControl extends CError
 
        cn = dataCn.getConnection();
 
-       stmt = cn.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,java.sql.ResultSet.CONCUR_UPDATABLE);
+       stmt = cn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
      }
      catch(Exception ex)
      {
@@ -145,16 +146,6 @@ public class MyCDataControl extends CError
            }
            rs2.close();
            pStmt.close();
-//       if (rs.next())
-//       {
-//         MaxId = rs.getInt("RC_maxid") + 1;
-//         strSql = "update tb_rowcount set RC_maxid = ? where RC_tablename = ?";
-//         pStmt = cn.prepareStatement(strSql);
-//         pStmt.setInt(1,MaxId);
-//         pStmt.setString(2,tableName);
-//         pStmt.execute();
-//         pStmt.close();
-//         rs.close();
        }
        else
        {
