@@ -1,6 +1,5 @@
 /com/
 /db.properties
-/edu/
 /event-config.xml
 /hibernate.cfg.xml
 /hibernate.properties
@@ -10,5 +9,6 @@
 /org/
 /vote/
 /vssver2.scc
+/edu/
 /Evaluate/
 /cas/

@@ -34,7 +34,7 @@ public class ShGwbaService  extends TimerTask{
 		//自动同步公文备案OA
 		sendShGwbaAutoOa();
 		//自动同步公文备案网站
-		sendShGwbaAutoWeb();
+		//sendShGwbaAutoWeb();
 	}
 	
 	
@@ -143,7 +143,7 @@ public class ShGwbaService  extends TimerTask{
 		String xxgkJson = "";
 		String xxgksql = "";
 		String reback = "";
-		String shUrl = "http://10.81.17.123:8080/EpointSHzwdt/rest/archivebaserestaction/addoreditarchive_web";
+		String shUrl = "http://117.184.226.173/zwgk_interface/rest/archivebaserestaction/addoreditarchive_web";
 		MyCDataCn cDn=null;
 		MyCDataImpl dImpl=null;
 		Hashtable table=null;
